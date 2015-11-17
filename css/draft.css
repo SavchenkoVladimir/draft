@@ -5,22 +5,27 @@
 
 /*	The main page	*/
 
-
 body
 {
+	display: none; 
 	width: 100%;
 	margin: auto;
 	height: 100%;		
 	min-height: 850px; 
 	padding: 0;
-	overflow: auto;	
-	background-image: url(http://draft/img/earth.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
+	overflow: auto;
+	color: rgb(80, 80, 80);
 /*	border: 1px solid black; */
 /*	border-bottom:  1px solid black; */
 }
-
+#main_page{
+	width: 100%;
+	height: 100%;
+	overflow: inherit;
+	background-image: url(http://draft/img/earth.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
 #sun
 {
 	width: 100px;
@@ -32,26 +37,26 @@ body
 	background-color: rgb(255, 102, 0);	
 	display: none;
 }
-
+#star{
+	display: none; 
+	position: fixed;
+	z-index: -1;
+	background-image: url(http://draft/img/star_2.jpeg);
+	min-width: 31px;
+	min-height: 31px;
+	border-width: 0;
+	color: rgb(255,255,255);
+}
 header
 {
 	border: 0;
 	width: 100%;
 	overflow: auto;
-	margin-top: 5%;
 	padding: 0;
 	position: relative;
+	margin-top: 60px;
 	background-color: rgba(168, 168, 172, 0.5);
-}
-#clone
-{
-	border: 0;
-	width: 100%;
-	overflow: auto;
-	margin-top: 5%;
-	padding: 0;
-	position: relative;
-	background-color: rgba(0,0,0,0);
+	min-height: 65px;
 }
 	ul{
 		overflow: auto;
@@ -77,12 +82,23 @@ header
 					background-color: rgba(199, 199, 203, 0.5);
 					color: rgb(255,102,0);
 				}
+#clone
+{
+	border: 0;
+	width: 100%;
+	overflow: auto;
+	margin-top: 5%;
+	padding: 0;
+	position: relative;
+	background-color: rgba(0,0,0,0);
+	min-height: 65px;
+}
 
 section{
 	position: relative;
-/*	height: 100%;*/
+	min-height: 800px;
 	width: 85%;
-	margin: auto;
+	margin: auto;	
 	overflow-y: auto;
 /*	border: 1px solid pink;	 */
 }
@@ -99,6 +115,7 @@ section{
 		float: left;
 		position: relative;
 		color: rgb(65, 65, 65);
+		min-height: 70px;
 /*		border: 1px solid yellow;			*/
 	}
 	#css:hover,
@@ -111,56 +128,103 @@ section{
 	#html:hover
 	{
 		color: rgb(99, 99, 99);
-		text-shadow: 1px 1px 1px rgb(139, 139, 139);
+		text-shadow: 1px 1px 1px rgb(139, 139, 139);		
 	}
 		#css3
 		{				
-			margin: 7% 5% 5% 15%;
+			padding: 7% 5% 5% 15%;
 			font-weight: bold;
 			font-size: 1.4em;
 		}
 		#html
 		{
-			margin: 4% 5% 5% 45%;
+			padding: 4% 5% 5% 45%;
 			font-weight: normal;
 			font-size: 1.2em;			
 		}
 		#javascript
 		{
-			margin: 2% 45% 5% 5%;
+			padding: 2% 45% 5% 5%;
 			font-weight: bold;
 			font-size: 1.4em;		
 		}
 		#php
 		{
-			margin: 2% 5% 4% 75%;
+			padding: 2% 5% 4% 75%;
 			font-weight: bold;
 			font-size: 1.5em;		
 		}
 		#www
 		{
-			margin: 7% 5% 4% 25%;
+			padding: 7% 5% 4% 25%;
 			font-weight: bold;
 			font-size: 1.6em;				
 		}
 		#css
 		{
-			margin: 7% 5% 5% 25%;
+			padding: 7% 5% 5% 25%;
 			font-weight: bold;
 			font-size: 1.2em;		
 		}
 		#mysql
 		{
-			margin: 2% 5% 2% 20%;
+			padding: 2% 5% 2% 20%;
 			font-weight: bold;
 			font-size: 1.4em;		
 		}
 		#html5
 		{
-			margin: 3% 5% 14% 70%;
+			padding: 3% 5% 14% 70%;
 			font-weight: bold;
 			font-size: 1.4em;;					
 		}
+	div.list-item
+	{
+		text-align: justify;
+		width: 99%;
+		margin: auto;
+		overflow-y: auto;
+		border-bottom: 1px dashed rgb(209, 209, 209);		
+	}
+		div.list-item:hover
+		{
+			background-color: rgba(200, 200, 200, 0.1);
+			border-bottom: 1px dashed rgb(209, 209, 209);
+			box-shadow: 2px 2px 2px rgb(170, 170, 170);
+		}
+		div.caption
+		{
+			width: 25%;
+			min-height: 110px;
+			height: 110px;			
+			float: left;
+			margin: 12px 15px 12px 15px;
+			padding: 5px;
+			display: table-cell;
+			vertical-align: bottom;
+			overflow: hidden;
+			border-radius: 7px;
+		}
+		div.description
+		{
+			width: 65%;
+			min-height: 110px;			
+			float: left;
+			padding: 15px;
+			overflow: hidden;
+			display: table-cell;
+			vertical-align: bottom;
+		}
+		a.inner
+		{
+			text-decoration: none;
+			color: inherit;
+			display: inline-block; 
+			width: 100%;
+			min-height: 100px;
+			padding: 10px; 
+		}
+	
 			
 footer
 {
@@ -181,7 +245,43 @@ footer
 		{
 			margin-left: 5%;
 		}
-
+	div.share{
+		min-width: 25px;
+		min-height: 25px;
+		margin: 1.5% 3% 1.5% 3%;
+		position: relative;
+		float: right;
+	}
+	#linkedin, #facebook, #vk{
+		display: inline-block;
+		min-width: 25px;
+		min-height: 25px;
+		border-radius: 2px;		
+			}
+		#linkedin{
+			background: url(../img/linkedin_grey.jpg);
+			background-size: 100%;
+		}
+			#linkedin:hover{
+				background: url(../img/linkedin_color.jpg);
+				background-size: 100%;
+			}
+		#facebook{
+			background: url(../img/facebook_grey.jpg);
+			background-size: 100%;
+		}
+			#facebook:hover{
+				background: url(../img/facebook_color.jpg);
+				background-size: 100%;
+			}
+		#vk{
+			background: url(../img/vk_grey.jpg);
+			background-size: 100%;
+		}
+			#vk:hover{
+				background: url(../img/vk_color.jpg);
+				background-size: 100%;
+			}
 a
 {
 	font-weight: bold;

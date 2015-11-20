@@ -2,11 +2,12 @@
 
 /* it is page displaying softly */
 var display = new softDisplaying('body', 3000);
+display.display();
 
 /* Keep header visible on the top of screen */
 var header = document.getElementById('header');
 var glueHeader = new GlueElementTop(header);
-glueHeader.run();
+glueHeader.glue();
 
 /* It is wrighting current year in the footer */
 var beginPlace = $('.beginYear');

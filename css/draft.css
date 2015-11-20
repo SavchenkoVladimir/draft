@@ -37,16 +37,17 @@ body
 	background-color: rgb(255, 102, 0);	
 	display: none;
 }
-#star{
+div#star{
 	display: none; 
 	position: fixed;
 	z-index: -1;
 	background-image: url(http://draft/img/star_2.jpeg);
-	min-width: 31px;
-	min-height: 31px;
+	min-width: 30px;
+	min-height: 30px;	
+	width: 30px;
+	height: 30px;
 	border-width: 0;
-	color: rgb(255,255,255);
-}
+}	
 header
 {
 	border: 0;
@@ -210,7 +211,7 @@ section{
 			width: 65%;
 			min-height: 110px;			
 			float: left;
-			padding: 15px;
+			padding: 20px;
 			overflow: hidden;
 			display: table-cell;
 			vertical-align: bottom;
@@ -222,7 +223,6 @@ section{
 			display: inline-block; 
 			width: 100%;
 			min-height: 100px;
-			padding: 10px; 
 		}
 	
 			
@@ -235,7 +235,9 @@ footer
 	background-color: rgba(128, 128, 152, 0.5);
 /*	border: 1px solid green;	/*! */
 }
-	p.copyright, p.beginYear, p.currentYear
+	p.copyright, 
+	p.beginYear, 
+	p.currentYear
 	{
 		display: inline-block;
 		color: rgb(54, 54, 54);
@@ -252,7 +254,9 @@ footer
 		position: relative;
 		float: right;
 	}
-	#linkedin, #facebook, #vk{
+	#linkedin, 
+	#facebook, 
+	#vk{
 		display: inline-block;
 		min-width: 25px;
 		min-height: 25px;
@@ -287,6 +291,97 @@ a
 	font-weight: bold;
 	margin: 0;	
 }
+
+div#cover
+{
+	display: none;
+	position: fixed;
+	min-width: 100%;
+	min-height: 100%;
+	background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+	z-index: 888;
+}
+	div#contactPage
+	{
+		display: none;
+		position: relative;
+		min-width: 600px;
+		width: 600px;
+		min-height: 700px;
+		height: 700px;
+		border-radius: 10px;
+		margin-top: 5%;
+		padding: 15px;
+		background-color: rgb(255, 255, 255);
+	}
+		p.addressType
+		{
+			display: inline-block;
+			width: 100px;
+		}
+		p.addressDescr{
+			display: inline-block;
+		}
+			p.addressType,
+			p.addressDescr
+			{
+				margin: 2px 2px 2px 2px;
+			}
+		h4.address
+		{
+			margin: 5px;
+		}
+		iframe.address
+		{
+			width: 80%;
+			border: 0;
+			border-radius: 3px;
+			height: 200px;
+		}
+		fieldset.letter
+		{
+			width: 350px;
+			border: 0;
+		}
+			input.letter, 
+			textarea.letter
+			{
+				float: right;
+				width: 200px;
+				border-radius: 3px;				
+			}
+				input.letter:focus, 
+				textarea.letter:focus
+				{
+					background: rgb(247, 255, 252);
+					border-color: rgb(151, 244, 213);
+				}
+			textarea.letter
+			{
+				height: 90px;
+			}
+			button.letter, 
+			button#close
+			{
+				position: relative;
+				float: right;
+				width: 80px;
+				border: 1px solid rgb(200, 200, 200);
+				border-radius: 5px;
+				padding: 2px 13px 2px 13px;
+				font-weight: bolder;
+			}
+			button#close
+			{
+				background-color: rgb(255, 255, 255);
+			}
+				#close:hover
+				{
+					cursor: pointer;
+					background: rgb(245, 245, 245);
+				}
+				
+	
 /*
 html
 css

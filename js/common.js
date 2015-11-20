@@ -20,14 +20,12 @@ InsertCurrenDate.prototype.write = function(){
 function softDisplaying(tagName, time){
 	this.element = document.getElementsByTagName(tagName);
 	this.time = time;
+	var self = this;
 	
 	this.display = function(){
-		var time = this.time;
-		var element = this.element;		
-		document.addEventListener("DOMContentLoaded", function(){$(element).fadeIn(time);
+		document.addEventListener("DOMContentLoaded", function(){$(self.element).fadeIn(self.time);
 		});
 	}
-	this.display();
 }
 
 /* 
@@ -53,23 +51,18 @@ function GlueElementTop(element){
 		return this.deputy;
 	}
 }
-GlueElementTop.prototype.run = function(){
-	var place = this.definePlace();
-	var parent = this.parent;
-	var clone = this.createDeputy();
-	var marginTop = this.marginTop
-	var deputy = this.createDeputy();
-	var element = this.element;
+GlueElementTop.prototype.glue = function(){
+	var self = this;
 
 	window.addEventListener('scroll', function(){
-		if( window.scrollY >= parseInt(marginTop) ){
-			$(element).css({'position': 'fixed', 'margin-top': 0, 'top': 0, 'z-index': 100});
-			if(deputy){
-				parent.insertBefore(deputy, place); // добавили заместителя в документ
+		if( window.scrollY >= parseInt(self.marginTop) ){
+			$(self.element).css({'position': 'fixed', 'margin-top': 0, 'top': 0, 'z-index': 100});
+			if( !document.getElementById('clone') ){
+				self.parent.insertBefore(self.createDeputy(), self.definePlace()); // добавили заместителя в документ
 			}
 		}
-		if( window.scrollY <= parseInt(marginTop) ){
-			$(element).css({'position': '', 'margin-top': '', 'top': '', 'z-index': ''});
+		if( window.scrollY <= parseInt(self.marginTop) ){
+			$(self.element).css({'position': '', 'margin-top': '', 'top': '', 'z-index': ''});
 			if($("#clone")){
 				$("#clone").remove();
 			}			
@@ -80,8 +73,10 @@ GlueElementTop.prototype.run = function(){
 /* 
 	Class movingSun moves the Sun object when the mouse changes its location on the Y axis
 */
+
 function MoveingSun(sunId){
 	this.sun = sunId;
+	
 	$(window).mousemove(function(event){
 		var mouseHeight = event.clientY;
 		var screenWidth = $(window).width(); //получили ширину экрана
@@ -103,12 +98,13 @@ function LisItemDecorating(className){
 	this.className = className;
 }
 LisItemDecorating.prototype.run = function(){
-	var className = this.className;
+	var self = this;
+
 	$('div').mousemove(function(){
 	
 		var element = $(this);
 		
-		if( $(element).attr('class') == className ){
+		if( $(element).attr('class') == self.className ){
 			var children = $(element).children();
 			var caption = children[0];
 			var description = children[1];
@@ -116,11 +112,11 @@ LisItemDecorating.prototype.run = function(){
 			$(description).css({'text-decoration':'underline'});
 		}
 	});
-		$('div').mouseout(function(){
+	$('div').mouseout(function(){
 		
 		var element = $(this);
 		
-		if( $(element).attr('class') == className ){
+		if( $(element).attr('class') == self.className ){
 			var children = $(element).children();
 			var caption = children[0];
 			var description = children[1];
@@ -136,33 +132,93 @@ LisItemDecorating.prototype.run = function(){
 */
 function ShiningStar(time){
 	this.time = time;
+	
 	this.createElement = function(){
-		var element = document.createElement('img');
-		element.setAttribute('id', 'star');
-		return element;
+		this.img = document.createElement('img');
+		this.img.setAttribute('id', 'starBackground');
+		this.element = document.createElement('div');
+		this.element.setAttribute('id', 'star');
+		this.element.appendChild(this.img);
+		return this.element;
 	}
 }
 ShiningStar.prototype.run = function(){
-	var time = this.time;
-	var element = this.createElement();
-	setInterval(function(){
+	var self = this;
+	this.element = this.createElement();
+	
+	function hideElement(){
+		setTimeout(function(){
+			$(self.element).fadeOut((self.time/2));
+		}, (self.time/2) - 25);
+	}
+	
+	function liveElement(){
 			var windowWidth = $(window).width();
 			var windowHeight = $(window).height();
-			element.style.top = (parseInt(Math.random() * windowHeight)) + 'px';
-			element.style.left = (parseInt(Math.random() * windowWidth)) + 'px';
-			document.body.appendChild(element);
-			$(element).fadeIn((time/2) - 50);
 			
-			setTimeout(function(){
-				$(element).fadeOut((time/2));
-			}, (time/2) + 25);
-		}, 
-	this.time);	
+			self.element.style.top = (parseInt(Math.random() * windowHeight)) + 'px';
+			self.element.style.left = (parseInt(Math.random() * windowWidth)) + 'px';
+			
+			document.body.appendChild(self.element);
+			$(self.element).fadeIn((self.time/2) - 50);
+			
+			hideElement();		
+	}
+	setInterval(liveElement, self.time);	
 }
 
+/*
+	The class MakingContactsPage creates a contacts page.
+	The contacts page being downloaded with AJAX and cover current page
+*/
+function MakingContactsPage(referenceId, pageAddress){
+	this.ref = document.getElementById(referenceId);
+	this.name = '';
+	this.email = '';
+	this.message = '';
 
+	//вешаю на  window слушатель событий onchange
+	//при наступлении события определяю элемент на котором сработало это событие
+	//определяю значение свойства name на котором сработало событие 
+	//если значение свойства совпадает с одним из имен свойств объекта - получаем значение формы и записываем
+	//в свойство объекта
+	
+	//вешаем на window слушатель событий потери фокуса
+	//по факту наступления события определяем значение атрибута name на котором сработало событие
+	//если это email - задействую обработчик email 
+	//если все в порядке - оставляю поле зеленым
+	//на остальных полях если они не пустые - поля остаются зеленые а если пустые - становятся красными
+	//также при этом событии срабатывает обработчик который проверяет правильносить заполнения полей форм
+	//если все заполнены верно - активируем кнопку отправить
+	
+	//при нажатии на кнопку отправить
+	
+	//при нажатии на кнопку закрыть - проверяем значения свойств объекта - если они != null - спрашиваем польз
+	//хочет ли он действительно выйти. Если нет - возвращаем false Если да - скрываем все окно и удаляем объект
+	 
+	this.loadPage =	function(){
+		var div = document.createElement('div');
+		$(div).attr('id', 'receiver');
+		$('body').prepend(div);
+		$(div).load(pageAddress);
+		setTimeout(makeSize, 2000);
+		event.preventDefault();
+	};
+	
+	function makeSize(){
+		var screenWidth = $(window).width(); 
+		var screenHeight = $(window).height(); 
+		var cover = document.getElementById('cover');
+		var page = document.getElementById('contactPage');
+		
+		$(page).css({'margin-left':screenWidth/3});
+		$(cover).fadeIn(1000);
+		$(page).fadeIn(2000);
+		$('body').css('overflow', 'hidden');
+	}
 
-
+	$(this.ref).click(this.loadPage);
+}
 
 
 

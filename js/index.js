@@ -19,4 +19,4 @@ var insertDate = new InsertCurrenDate(beginPlace, currentPlace);
 insertDate.write();
 
 /* Making the Contactas page */
-var contacts = new MakingContactsPage('contacts', 'http://draft/php/contacts.php');
+var contacts = new MakingContactsPage('contacts', 'http://draft/php/contactsHTML.php');

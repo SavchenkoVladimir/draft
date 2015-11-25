@@ -4,5 +4,12 @@
 var display = new softDisplaying('body', 3000);
 display.display();
 
-/* Making the Contactas page */
-var contacts = new MakingContactsPage('contacts', 'http://draft/php/contacts.php');
+/*
+	Making the Contactas page. 
+	Object contacts is alredy created in the index.js script
+*/
+contacts.setProperty();
+contacts.painting();
+contacts.buttonUnblock();
+contacts.send('[name="send"]', 'http://draft/php/contactsHandle.php', '#resp');
+contacts.close('#close', '#warning');

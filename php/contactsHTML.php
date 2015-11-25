@@ -5,7 +5,11 @@ echo <<<EOD
 			<div id="contactPage">			
 			
 				<button id="close">Close</button>
-				
+				<div id="warning">
+					<p>The page has an unsaved data.<br /><br />Do You really want to leave the page?</p>
+					<button class="letter">Yes</button>
+					<button class="letter">No</button>
+				</div>
 				<div id="address">
 					<ul>
 						<li>
@@ -38,7 +42,7 @@ echo <<<EOD
 				<hr class="contacts" /><br />
 				
 				<h4 class="address">You can send me a letter as well:</h4>
-				
+				<div id='resp'></div>
 				<fieldset class="letter">
 				<label for="name">Your name</label>
 					<input type="text" name="name" class="letter" maxlength="255"/>
@@ -57,6 +61,7 @@ echo <<<EOD
 				
 			</div>
 			
-		</div>	
+		</div>
+		<script src='../js/contacts.js'></script>
 EOD;
 ?>

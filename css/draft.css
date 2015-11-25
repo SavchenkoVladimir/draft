@@ -296,6 +296,8 @@ div#cover
 {
 	display: none;
 	position: fixed;
+	top: 0;
+	left: 0;
 	min-width: 100%;
 	min-height: 100%;
 	background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
@@ -348,6 +350,7 @@ div#cover
 			{
 				float: right;
 				width: 200px;
+				border: 1px solid rgb(199, 199, 199);
 				border-radius: 3px;				
 			}
 				input.letter:focus, 
@@ -380,8 +383,28 @@ div#cover
 					cursor: pointer;
 					background: rgb(245, 245, 245);
 				}
-				
-	
+			#resp, #warning
+			{
+				display: none;
+				position: fixed;
+				min-width: 350px;
+				min-height: 100px;
+				border: 2px solid rgb(199, 199, 199);
+				background-color: rgba(255, 255, 255, 0.9);
+				border-radius: 5px;
+				padding: 10px;
+				text-align: center;
+			}	
+				#warning > button
+				{
+					display: inherit;
+					margin: 15px 40px 15px 40px;
+					float: left; 
+				}
+					#warning > button:hover
+					{
+						cursor: pointer;						
+					}
 /*
 html
 css

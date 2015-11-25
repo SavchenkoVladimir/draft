@@ -173,29 +173,20 @@ ShiningStar.prototype.run = function(){
 */
 function MakingContactsPage(referenceId, pageAddress){
 	this.ref = document.getElementById(referenceId);
-	this.name = '';
-	this.email = '';
-	this.message = '';
-
-	//вешаю на  window слушатель событий onchange
-	//при наступлении события определяю элемент на котором сработало это событие
-	//определяю значение свойства name на котором сработало событие 
-	//если значение свойства совпадает с одним из имен свойств объекта - получаем значение формы и записываем
-	//в свойство объекта
+	this._name = '';
+	this._email = '';
+	this._message = '';
 	
-	//вешаем на window слушатель событий потери фокуса
-	//по факту наступления события определяем значение атрибута name на котором сработало событие
-	//если это email - задействую обработчик email 
-	//если все в порядке - оставляю поле зеленым
-	//на остальных полях если они не пустые - поля остаются зеленые а если пустые - становятся красными
-	//также при этом событии срабатывает обработчик который проверяет правильносить заполнения полей форм
-	//если все заполнены верно - активируем кнопку отправить
+	this.getElement = function(){
+		var elem = 	event.target;	
+		return elem;
+	}
 	
-	//при нажатии на кнопку отправить
+	this.getElementName = function(elem){
+		var elemName = $(elem).attr('name');
+		return elemName;
+	}
 	
-	//при нажатии на кнопку закрыть - проверяем значения свойств объекта - если они != null - спрашиваем польз
-	//хочет ли он действительно выйти. Если нет - возвращаем false Если да - скрываем все окно и удаляем объект
-	 
 	this.loadPage =	function(){
 		var div = document.createElement('div');
 		$(div).attr('id', 'receiver');
@@ -217,7 +208,145 @@ function MakingContactsPage(referenceId, pageAddress){
 		$('body').css('overflow', 'hidden');
 	}
 
-	$(this.ref).click(this.loadPage);
+	$(this.ref).click(this.loadPage);	
+}
+/* The method sets an object property value after input fields are changed. */
+MakingContactsPage.prototype.setProperty = function(){
+	var self =  this;
+	
+	$(document).change(function(event){
+		var element = event.target;
+		var name = $(element).attr('name');
+		
+		switch(name){
+			case ('name'): self._name = $(element).val();
+				break;
+			case ('email'): self._email = $(element).val();
+				break;
+			case ('message'): self._message = $(element).val();
+				break;
+		}
+	});
+}
+/* The method validates a name property value */
+MakingContactsPage.prototype.nameValidate = function(){
+	if(this._name){
+		return true;		
+	}else{
+		return false;
+	}
+}
+/* The method validates a email property value */
+MakingContactsPage.prototype.emailValidate = function(){
+	if( this._email.match(/.+@.+\..+/i) ){
+		return true;
+	}else{
+		return false;
+	}
+}
+/* The method validates a message property value */
+MakingContactsPage.prototype.messageValidate = function(){
+	if(this._message){
+		return true;		
+	}else{
+		return false;
+	}
+}
+/* The method paints an input fields in depends on valid or invalid value. */
+MakingContactsPage.prototype.painting = function(){
+	var self = this;
+
+	$(document).change(function(event){
+		var element = event.target;
+		var elemName = $(element).attr('name');
+
+		function validate(elem){
+			if( elem == 'name' ){
+				return self.nameValidate();
+			}else if( elem == 'email' ){
+				return self.emailValidate();
+			}else if( elem == 'message' ){
+				return self.messageValidate();
+			}			
+		}
+		
+		if( !validate(elemName) ){
+			$(element).css({'background-color':'rgb(252, 219, 215)', 'border-color':'rgb(255, 59, 56)'});
+		}
+		if( validate(elemName) ){
+			$(element).css({'background-color':'rgb(227, 255, 193)', 'border-color':'rgb(26, 218, 87)'});
+		}		
+	});
+}
+/* The method unblocks the send button if the typed values are allowed */
+MakingContactsPage.prototype.buttonUnblock = function(){
+	var self = this;
+	$(document).change(function(){
+		if( self.nameValidate() && self.emailValidate() && self.messageValidate() ){
+			var button = document.body.querySelector('[name="send"]');
+			button.removeAttribute('disabled');
+			button.style.cursor = 'pointer';
+		}else{
+			var button = document.body.querySelector('[name="send"]');
+			button.setAttribute('disabled', 'true');
+		}
+	});
+}
+/* The method sends a letter. It adopts a buttom name attribute, a script handler address and warning div id */
+MakingContactsPage.prototype.send = function(buttName, address, divId){
+	var self = this;
+	this.cont = document.body.querySelector(divId);
+	this._button = document.body.querySelector(buttName);
+	
+	function makeContainer(divId){
+		var prevSibling = self.cont.previousElementSibling;
+		self.cont.style.left = parseInt(prevSibling.getBoundingClientRect().left) + 100 + 'px';
+		self.cont.style.top = parseInt((prevSibling.getBoundingClientRect().top) - 105) + 'px';
+		$(self.cont).fadeIn(2000);
+	}
+	
+	function containerBlur(divId, time){
+		$(self.cont).fadeOut(time);
+	}
+	
+	$(this._button).click(function(){
+		var str = JSON.stringify(self, ['_name', '_email', '_message']);
+		makeContainer(divId);
+		$(self.cont).load(address, {'querry': str});
+		setTimeout(containerBlur, 10000, divId, 2000);
+	});
+}
+/* The method closes the contact page. It adopts a button id and warning div id */
+MakingContactsPage.prototype.close = function(buttId, divId){
+	var self = this;
+	this.button = document.body.querySelector(buttId);
+	this.div = document.body.querySelector(divId);
+	
+	$(this.button).click(function(){
+		if( self._name != '' || self._email != '' || self._message != ''){
+			self.div.style.top = parseInt(self.button.getBoundingClientRect().top) + 30 + 'px';
+			self.div.style.left = parseInt(self.button.getBoundingClientRect().left) - 290 + 'px';
+			$(self.div).fadeIn(1000);
+			var yes = $(self.div).children()[1];
+			$(yes).click(function(){
+				self._name = self._email = self._message = '';
+				$('#cover').fadeOut(1000);
+			});
+		
+			var no = $(self.div).children()[2];
+			$(no).click(function(){
+				$(self.div).fadeOut(1000);
+				return false;
+			});	
+		}else{
+			$('#cover').fadeOut(1000);
+			$('body').css('overflow', '');
+			setTimeout(function(){
+			$('#receiver').remove()				;
+//				document.body.removeChild(elem);
+			}, 2000);
+		}
+	});
 }
 
 
@@ -226,17 +355,20 @@ function MakingContactsPage(referenceId, pageAddress){
 
 
 
-/* Keep header visible on the top of screen */
-/*
-var header = document.getElementById('header');
-var glueHeader = new GlueElementTop(header);
-glueHeader.run();
-*/
 
-/* It is wrighting current year in the footer */
-/*
-var beginPlace = $('.beginYear');
-var currentPlace = $('.currentYear');
-var insertDate = new InsertCurrenDate(beginPlace, currentPlace);
-insertDate.write();
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

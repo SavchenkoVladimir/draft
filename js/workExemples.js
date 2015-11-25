@@ -26,3 +26,6 @@ var star2 = new ShiningStar(7900);
 star2.run();
 var star3 = new ShiningStar(10100);
 star3.run();
+
+/* Making the Contactas page */
+var contacts = new MakingContactsPage('contacts', 'http://draft/php/contactsHTML.php');

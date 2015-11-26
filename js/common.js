@@ -73,7 +73,6 @@ GlueElementTop.prototype.glue = function(){
 /* 
 	Class movingSun moves the Sun object when the mouse changes its location on the Y axis
 */
-
 function MoveingSun(sunId){
 	this.sun = sunId;
 	
@@ -192,20 +191,25 @@ function MakingContactsPage(referenceId, pageAddress){
 		$(div).attr('id', 'receiver');
 		$('body').prepend(div);
 		$(div).load(pageAddress);
-		setTimeout(makeSize, 2000);
+		setTimeout(makeSize, 1000);
 		event.preventDefault();
 	};
-	
+
 	function makeSize(){
-		var screenWidth = $(window).width(); 
-		var screenHeight = $(window).height(); 
 		var cover = document.getElementById('cover');
 		var page = document.getElementById('contactPage');
-		
-		$(page).css({'margin-left':screenWidth/3});
+
+		if( $(window).width() > 750 ){
+			alert($('body').height());
+			$(page).css({'margin-left': $(window).width()/4, 'margin-top': '5%', 'border-radius': '10px'});
+			$('body').css('overflow-x', 'hidden');
+		}
+		if( $(window).height() > 700 ){
+			$('body').css('overflow-y', 'hidden');
+		}
+		$(cover).css('height', $('body').height());
 		$(cover).fadeIn(1000);
 		$(page).fadeIn(2000);
-		$('body').css('overflow', 'hidden');
 	}
 
 	$(this.ref).click(this.loadPage);	
@@ -331,8 +335,7 @@ MakingContactsPage.prototype.close = function(buttId, divId){
 			$(yes).click(function(){
 				self._name = self._email = self._message = '';
 				$('#cover').fadeOut(1000);
-			});
-		
+			});		
 			var no = $(self.div).children()[2];
 			$(no).click(function(){
 				$(self.div).fadeOut(1000);
@@ -341,10 +344,7 @@ MakingContactsPage.prototype.close = function(buttId, divId){
 		}else{
 			$('#cover').fadeOut(1000);
 			$('body').css('overflow', '');
-			setTimeout(function(){
-			$('#receiver').remove()				;
-//				document.body.removeChild(elem);
-			}, 2000);
+			setTimeout(function(){	$('#receiver').remove(); }, 2000);
 		}
 	});
 }

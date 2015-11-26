@@ -56,7 +56,7 @@ header
 	padding: 0;
 	position: relative;
 	margin-top: 60px;
-	background-color: rgba(168, 168, 172, 0.5);
+	background-color: rgba(170, 170, 170, 0.5);
 	min-height: 65px;
 }
 	ul{
@@ -80,7 +80,7 @@ header
 			}
 				a.nav:hover
 				{				
-					background-color: rgba(199, 199, 203, 0.5);
+					background-color: rgba(170, 170, 170, 0.1);
 					color: rgb(255,102,0);
 				}
 #clone
@@ -295,24 +295,26 @@ a
 div#cover
 {
 	display: none;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	min-width: 100%;
-	min-height: 100%;
-	background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+	min: 100%;
+/*	min-height: 100%;
+	height: 100%;
+*/	background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
 	z-index: 888;
 }
 	div#contactPage
 	{
 		display: none;
-		position: relative;
+/*		position: relative;*/
 		min-width: 600px;
 		width: 600px;
 		min-height: 700px;
 		height: 700px;
-		border-radius: 10px;
-		margin-top: 5%;
+/*		border-radius: 10px;*/
+		margin: auto;
 		padding: 15px;
 		background-color: rgb(255, 255, 255);
 	}

@@ -358,12 +358,20 @@ function RepeatTheWords(divId, address){
 	this.timeGap;
 	this.parent;
 	this.child;
+	this.children;
 	this.parentHeight;		
 	this._divHeight;
 	this._heightStep;
 	this.engWordPlace;
 	this.rusWordPlace;
-//	alert($(this.section).attr('class') + ' ' + this.address);
+	this.counter = 0;
+	this.wordsKit;
+	this.resArr = [];
+	this.changeIdTimeout;
+	this.setTiptimeout;
+	this.paintAnswerTimeout;
+	this.disableBlockTimeout
+	this.intervalId;
 }
 RepeatTheWords.prototype.load = function(buttonIdentifyer){
 	var self = this;
@@ -372,7 +380,6 @@ RepeatTheWords.prototype.load = function(buttonIdentifyer){
 		$(self.section).load(self.address);
 	});	
 }
-
 /* Метод принимает время исполнения в милисекундах и идентификатор блока. Находит единственного потомка и придает ему 
 свойство height от 0 до своей высоты за 50 итераций*/
 RepeatTheWords.prototype.showTime = function(timeLength, divParentId, divChildId){
@@ -387,19 +394,26 @@ RepeatTheWords.prototype.showTime = function(timeLength, divParentId, divChildId
 
 	this.heightChanging = function(){
 		self._divHeight += self._heightStep;
-		self.child.style.height = parseInt(self._divHeight) + 'px';
+		self.child.style.height = parseInt(self._divHeight) + 'px';		
 		if( self._divHeight >= self.parentHeight ){
-			clearInterval(intervalId);
+			clearInterval(self.intervalId);
 		}
 	}
-	var intervalId = setInterval(self.heightChanging, 100);
+	this.intervalId = setInterval(self.heightChanging, 100);
 }
 /* Метод принимает массив из трех элементов, идентификатор местa для размещения англ. слова и идентификатор двух мест для русских слов. Первый элемент массива размешает в англ месте, вторые два в случайном порядке размещает два русских. Месту с вторым словом из массива присваивается id=1(true),месту с третьим элементом присваиваем id=0(false) */
-RepeatTheWords.prototype.placeWords = function(wordsArr, englishPlace, russianPlace){
+RepeatTheWords.prototype.placeWords = function(wordsArr, englishPlace, russianPlace, tipPlace){
+	var self = this;
 	this.engWordPlace = document.body.querySelector(englishPlace);
 	this.rusWordPlace = document.body.querySelectorAll(russianPlace);
-	
+	this.tipPlace = document.body.querySelector(tipPlace);
+
+	if(wordsArr == null){
+		self.showResults('.repeatTheWords');
+	}
+			
 	this.engWordPlace.textContent = wordsArr[0];
+	this.tipPlace.textContent = 'Try answer';
 	
 	this.rand = Math.round(Math.random());
 	if(this.rand === 1){
@@ -417,20 +431,116 @@ RepeatTheWords.prototype.placeWords = function(wordsArr, englishPlace, russianPl
 		this.rusWordPlace[1].setAttribute('id', 1);
 	}
 }
-/* Метод getAnswer слушает клики на блоках ответов и возвращает true или false. Принимает селектор блоков */
-RepeatTheWords.prototype.getAnswer = function(divSelector){
-	this.ansversCont = document.body.querySelectorAll(divSelector);
-	$(this.ansversCont).click(function(event){
-		var cont = 	event.target;
-		if($(cont).attr('id') == 1){
-			return true;			
-		}else{
-			return false;
+/* Метод принимает селектор родителя и возвращает коллекцию потомков */
+RepeatTheWords.prototype.getChildren = function(divSelector){
+	this.parentElem = document.body.querySelector(divSelector);
+	return $(this.parentElem).children();
+}
+/* Метод принимает 2 номера клавиш и идентификатор блока с потомками. При нажатии на клавиши - генерируется событие click на конкретных потомках блока */
+RepeatTheWords.prototype.clickGeneration = function(butt1, butt2, divSelector){
+	var self = this;
+	this.children = this.getChildren(divSelector);
+
+	this.click = new MouseEvent('click');
+	
+	$(document).keydown(function(event){
+		if( event.which == 37){
+			self.children[0].dispatchEvent(self.click);
+		}
+		if( event.which == 39){
+			self.children[2].dispatchEvent(self.click);
 		}
 	});
 }
-
-
+/* Метод раскрашивает блок зеленым если получает true или коричневым если false */
+RepeatTheWords.prototype.paintAnswer = function(answer, divSelector){
+	var div = document.body.querySelector(divSelector);
+	if(answer){
+		$(div).css({'color': 'rgb(255, 255, 255)', 'background': 'rgb(19, 221, 33)', 'border': '0'}).html('&#10003;');
+	}
+	if(!answer){
+		$(div).css({'color': 'rgb(255, 255, 255)', 'background': 'rgb(239, 148, 67)', 'border': '0'}).html('&#10007;');
+	}
+	function resetColor(div){
+		$(div).css({'color': 'rgb(150, 150, 150)', 'background': '', 'border': ''}).html('?');
+	}
+	this.paintAnswerTimeout = setTimeout(resetColor, 500, div);
+}
+/* метод меняет id=1 на id=0 по истечении переданного времени */
+RepeatTheWords.prototype.changeId = function(time){
+	var div = document.getElementById('1');
+	function change(){
+		div.setAttribute('id', '0');
+	}
+	this.changeIdTimeout = setTimeout(change, time); //!!!
+}
+/* Устанавливает подсказку внизу страницы */
+RepeatTheWords.prototype.setTip = function(divSelector, time){	
+	function setTip(divSelector){
+		var div = document.body.querySelector(divSelector);
+		$(div).html('Your time is over');
+	}
+	this.setTiptimeout = setTimeout(setTip, time, divSelector); //!!!
+}
+/* Метод делает массив ответов */
+RepeatTheWords.prototype.makeResArray = function(currentArr, answer){
+	var elem = currentArr;
+	elem.push(answer);
+	this.resArr.push(elem);
+}
+/* Метод красит текст блока серым по истечении переданного методу времени */
+RepeatTheWords.prototype.disableBlock = function(divId, timeMs, name){
+	var block = document.body.querySelector(name);
+	if(block){
+		block.removeAttribute('name');
+	}	
+	
+	function disable(divId){
+		var div = document.getElementById(divId);				
+		div.setAttribute('name', 'disabled');
+	}
+	this.disableBlockTimeout = setTimeout(disable, timeMs, divId);
+}
+/* Метод использует данные из массива ответов и рисует таблицу результатов */
+RepeatTheWords.prototype.showResults = function(divSelector){
+	var div = document.body.querySelector(divSelector);
+	alert($(div).attr('class'));
+}
+/* Метод getAnswer слушает клики на блоках ответов и возвращает true или false. Принимает селектор блоков */
+RepeatTheWords.prototype.getAnswer = function(divSelector, wordss){
+	var self = this;
+	this.ansversCont = document.body.querySelectorAll(divSelector);
+	this.placeWords(wordss[0], '.word', '.answer', '.tip');
+	this.showTime(5000, 'timeParent', 'timeChild');
+	this.changeId(5250);
+	this.setTip('.tip', 5000);
+	self.disableBlock(0, 4800, '[name="disabled]');
+	
+	$(this.ansversCont).click(function(event){
+		var cont = 	event.target;
+				
+		clearTimeout(self.changeIdTimeout);
+		clearTimeout(self.setTiptimeout);
+		clearInterval(self.intervalId);
+		clearInterval(self.disableBlockTimeout);
+		
+		if($(cont).attr('id') == '1'){
+			var res = true;
+		}
+		if($(cont).attr('id') == '0'){
+			var res = false;
+		}
+		
+		self.paintAnswer(res, '.note');
+		self.makeResArray(wordss[self.counter], res);
+		self.counter++;
+		self.placeWords(wordss[self.counter], '.word', '.answer', '.tip');		
+		self.showTime(5000, 'timeParent', 'timeChild');
+		self.changeId(5250);
+		self.setTip('.tip', 5000);
+		self.disableBlock(0, 4800, "[name='disabled']");
+	});
+}
 
 
 

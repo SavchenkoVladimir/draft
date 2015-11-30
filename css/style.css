@@ -413,6 +413,7 @@ div#repeatTheWords
 	background: -moz-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 100%);
 	background: -o-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 100%);
 	background: -ms-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 80%);
+	background:  linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 80%);
 }
 	section.repeatTheWords
 	{
@@ -423,13 +424,15 @@ div#repeatTheWords
 		{
 			width: 60px;
 			min-height: 60px;
-			background: rgb(239, 148, 67);
+			border: 1px solid rgb(150, 150, 150);
+/*			background: rgb(239, 148, 67);*/
 			border-radius: 30px;
 			margin: auto;
 			margin-top: 70px;
 			text-align: center;
-			color: rgb(255, 255, 255);
-			font-size: 2.5em;
+/*			color: rgb(255, 255, 255);*/
+			color: rgb(150, 150, 150);
+			font-size: 3em;
 		}
 		div.word
 		{
@@ -449,18 +452,37 @@ div#repeatTheWords
 		}
 			div.answer
 			{
-				width: 48.5%;
+				width: 48%;
 				height: 65px;
 				float: left;
 /*				background: rgb(239, 148, 67);*/
 				font-size: 3em;
 				text-align: center;
 				border: 1px solid rgb(245, 245, 245);
+				border-radius: 4px;
+				margin: 2px;
 			}
 				div.answer:hover
 				{
 					background: rgb(250, 250, 250);
+					box-shadow: 2px 2px 2px rgb(220, 220, 220);
 					cursor: pointer;					
+				}
+				div.answer:active
+				{
+					background: -webkit-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+					background: -moz-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+					background: -o-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+					background: -ms-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+					background:  linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+					border-top: 1px solid rgb(230, 230, 230);
+					border-left: 1px solid rgb(230, 230, 230);
+					border-radius: 4px;
+					box-shadow: 0 0 0 rgb(255, 255, 255);
+				}
+				[name='disabled']
+				{
+					color: rgb(150, 150, 150);
 				}
 			div#timeParent
 			{
@@ -483,12 +505,12 @@ div#repeatTheWords
 			div.arrow
 			{
 				width: 49%;
-				float: right;
+				float: left;
 				background: rgb(252, 252, 252);
 				font-size: 1.5em;
 				text-align: center;
 			}		
-		div.result
+		div.tip
 		{
 			font-size: 1.2em;
 			font-weight: bold;
@@ -518,6 +540,16 @@ div#repeatTheWords
 				cursor: pointer;
 				background: rgb(245, 245, 245);
 			}
+			div.go:active
+			{
+				background: -webkit-linear-gradient(bottom, rgb(235, 235, 235), rgb(250, 250, 250) 90%);
+				background: -moz-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+				background: -o-linear-gradient(bottom, rgb(240, 240, 240), rgb(250, 250, 250) 90%);
+				background: -ms-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+				background:  linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+				border-top: 1px solid rgb(230, 230, 230);
+				border-left: 1px solid rgb(230, 230, 230);
+			}
 		
 	div#grass
 	{
@@ -530,8 +562,9 @@ div#repeatTheWords
 		background: url(http://savchenkoPortfolio/img/grass_1.gif)repeat-x  bottom;
 	}
 /*
-	&larr;
-	&rarr;
+	&larr; - стрелка
+	&rarr; - стрелка
+	&#10003; - галочка
 html
 css
 php

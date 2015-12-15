@@ -1,7 +1,5 @@
 'use strict';
 
-var words = ['word', 'слово', 'мир'];
-
 var wordss = [
 	['word', 'слово', 'мир'],
 	['board', 'доска', 'стол'],
@@ -10,13 +8,15 @@ var wordss = [
 	['apple', 'яблоко', 'телефон'],
 	['swim', 'плавать', 'летать'],
 	['table', 'стол', 'дорога'],
-	['cell', 'мобильник', 'самолет']
+	['cell', 'мобильник', 'самолет'],
+	['cat', 'кот', 'хлеб'],
+	['dram', 'барабан', 'земля'],
+	['door', 'дверь', 'стена'],
+	['mood', 'настроение', 'полет'],
+	['gray', 'серый', 'мышь'],
+	['tent', 'палатка', 'молоко'],
+	['attempt', 'попытка', 'металл']
 ];
 
-
-//repeat.showTime(5000, 'timeParent', 'timeChild');
-//repeat.placeWords(words, '.word', '.answer');
-//setTimeout(repeat.showTime, 500, 5000, 'timeParent', 'timeChild');
 repeat.getAnswer('.answer', wordss);
 repeat.clickGeneration(37, 39, '.answerContainer');
-//repeat.highlightElement('.answerContainer');

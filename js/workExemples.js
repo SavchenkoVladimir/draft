@@ -5,8 +5,12 @@ var display = new softDisplaying('body', 3000);
 display.display();
 
 /* Keep header visible on the top of screen */
+/*
 var header = document.getElementById('header');
 var glueHeader = new GlueElementTop(header);
+*/
+//glueHeader.glue();
+var glueHeader = new GlueElementTop('header');
 glueHeader.glue();
 
 /* It is wrighting current year in the footer */
@@ -16,7 +20,7 @@ var insertDate = new InsertCurrenDate(beginPlace, currentPlace);
 insertDate.write();
 
 /* It is decorating the work list items */
-var decorate = new LisItemDecorating('list-item');
+var decorate = new ListItemDecorating('list-item');
 decorate.run();
 
 /* Make three stars shine on the background of page */
@@ -29,3 +33,10 @@ star3.run();
 
 /* Making the Contactas page */
 var contacts = new MakingContactsPage('contacts', 'http://savchenkoPortfolio/php/contactsHTML.php');
+
+/* Glue footer bottom */
+var footerGlued = new GlueElementBottom('#section', 120);
+footerGlued.glue();
+$(window).resize(function(){
+	footerGlued.glue();
+});

@@ -1,31 +1,43 @@
+
 /*
 	This is the style of Portfolio project
 	Author: Vladimir Savchenko
 */
 
-/*	The main page	*/
+@font-face{
+	font-family: ArbatDi;
+	src: url(http://savchenkoPortfolio/css/ArbatDi.ttf);
+}
+
+/*	The main page style	*/
+html
+{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
 
 body
 {
 	display: none; 
 	width: 100%;
 	margin: auto;
-/*	height: 100%;		*/
-/*	min-height: 850px; */
+	margin: 0;
 	padding: 0;
 	overflow: auto;
 	color: rgb(80, 80, 80);	
-/*	border: 1px solid black; */
-/*	border-bottom:  1px solid black; */
+	font-family: Arial, Cambria;
 }
 #main_page{
 	width: 100%;
-/*	min-height: 1000px;		*/
+	min-height: 100%;			
 	height: 100%;
 	overflow: inherit;
 	background-image: url(http://savchenkoPortfolio/img/earth.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
+	background-position: top;
 }
 #sun
 {
@@ -59,6 +71,7 @@ header
 	margin-top: 60px;
 	background-color: rgba(170, 170, 170, 0.5);
 	min-height: 65px;
+	
 }
 	ul{
 		overflow: auto;
@@ -89,20 +102,16 @@ header
 	border: 0;
 	width: 100%;
 	overflow: auto;
-	margin-top: 5%;
 	padding: 0;
 	position: relative;
 	background-color: rgba(0,0,0,0);
-	min-height: 65px;
 }
 
-section{
+section#section{
 	position: relative;
-	min-height: 800px;
 	width: 85%;
 	margin: auto;	
 	overflow-y: auto;
-/*	border: 1px solid pink;	 */
 }
 	#css,
 	#html5,
@@ -118,7 +127,6 @@ section{
 		position: relative;
 		color: rgb(65, 65, 65);
 		min-height: 70px;
-/*		border: 1px solid yellow;			*/
 	}
 	#css:hover,
 	#html5:hover,
@@ -180,6 +188,80 @@ section{
 			font-weight: bold;
 			font-size: 1.4em;;					
 		}
+	footer
+	{	
+		width: 100%;
+		min-width: 100%;
+		background-color: rgba(120, 120, 120, 0.5);
+		position: relative;
+		z-index: 99;
+	}
+		p.copyright, 
+		p.beginYear, 
+		p.currentYear
+		{
+			display: inline-block;
+			color: rgb(54, 54, 54);
+			font-weight: bold;
+		}
+		p.copyright
+		{
+			margin-left: 5%;
+		}
+		div.share
+		{
+			margin-right: 5%;
+			margin-top: 16px;
+			float: right;
+		}
+		#linkedin, 
+		#facebook, 
+		#vk
+		{	
+			display: inline-block;
+			min-width: 25px;
+			min-height: 25px;
+			border-radius: 2px;		
+		}
+			#linkedin
+			{
+			background: url(http://savchenkoPortfolio/img/linkedin_grey.jpg);
+			background-size: 100%;
+			}
+				#linkedin:hover
+				{
+					background: url(http://savchenkoPortfolio/img/linkedin_color.jpg);
+					background-size: 100%;
+				}
+			#facebook
+			{
+				background: url(http://savchenkoPortfolio/img/facebook_grey.jpg);
+				background-size: 100%;
+			}
+				#facebook:hover
+				{
+					background: url(http://savchenkoPortfolio/img/facebook_color.jpg);
+					background-size: 100%;
+				}
+			#vk
+			{
+				background: url(http://savchenkoPortfolio/img/vk_grey.jpg);
+				background-size: 100%;
+			}
+				#vk:hover
+				{
+					background: url(http://savchenkoPortfolio/img/vk_color.jpg);
+					background-size: 100%;
+				}		
+		
+		
+/* The work exemples page */
+#workExemples{
+	width: 100%;
+	min-height: 100%;			
+	height: 100%;
+	overflow: inherit;
+}
 	div.list-item
 	{
 		text-align: justify;
@@ -223,74 +305,8 @@ section{
 			width: 100%;
 			min-height: 100px;
 		}
-	
-			
-footer
-{
-	position: relative;
-	margin-bottom: 0;
-	bottom: 0;
-	width: 100%;
-	z-index: 999;
-	background-color: rgba(120, 120, 120, 0.5);
-}
-	p.copyright, 
-	p.beginYear, 
-	p.currentYear
-	{
-		display: inline-block;
-		color: rgb(54, 54, 54);
-		font-weight: bold;
-	}
-		p.copyright
-		{
-			margin-left: 5%;
-		}
-	div.share{
-		min-width: 25px;
-		min-height: 25px;
-		margin: 1.5% 3% 1.5% 3%;
-		position: relative;
-		float: right;
-	}
-	#linkedin, 
-	#facebook, 
-	#vk{
-		display: inline-block;
-		min-width: 25px;
-		min-height: 25px;
-		border-radius: 2px;		
-			}
-		#linkedin{
-			background: url(../img/linkedin_grey.jpg);
-			background-size: 100%;
-		}
-			#linkedin:hover{
-				background: url(../img/linkedin_color.jpg);
-				background-size: 100%;
-			}
-		#facebook{
-			background: url(../img/facebook_grey.jpg);
-			background-size: 100%;
-		}
-			#facebook:hover{
-				background: url(../img/facebook_color.jpg);
-				background-size: 100%;
-			}
-		#vk{
-			background: url(../img/vk_grey.jpg);
-			background-size: 100%;
-		}
-			#vk:hover{
-				background: url(../img/vk_color.jpg);
-				background-size: 100%;
-			}
-a
-{
-	font-weight: bold;
-	margin: 0;	
-}
 
+/* The contacts page style */
 div#cover
 {
 	display: none;
@@ -298,7 +314,7 @@ div#cover
 	top: 0;
 	left: 0;
 	min-width: 100%;
-	min: 100%;
+/*	min: 100%;*/
 	background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
 	z-index: 888;
 }
@@ -405,43 +421,45 @@ div#cover
 					}
 div#repeatTheWords	
 {
-	position: absolute;
 	width: 100%;
-	min-height: 1030px;
+	min-height: 100%;			
 	height: 100%;
-	background: -webkit-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 80%);
+	overflow: inherit;
+	background: -webkit-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 85%);
 	background: -moz-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 100%);
 	background: -o-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 100%);
-	background: -ms-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 80%);
-	background:  linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 80%);
+	background: -ms-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 85%);
+	background: -linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 85%);
 }
 	section.repeatTheWords
 	{
+		width: 850px;
+		margin: auto;
+		margin-top: 0;
+		padding-top: 50px;
+		padding-bottom: 50px;
 		background: rgb(255, 255, 255);
-		min-height: 850px;
 	}
 		div.note
 		{
 			width: 60px;
-			min-height: 60px;
+			height: 60px;
 			border: 1px solid rgb(150, 150, 150);
-/*			background: rgb(239, 148, 67);*/
 			border-radius: 30px;
 			margin: auto;
-			margin-top: 70px;
-			text-align: center;
-/*			color: rgb(255, 255, 255);*/
+			color: rgb(255, 255, 255);
 			color: rgb(150, 150, 150);
 			font-size: 3em;
+			text-align: center;
 		}
 		div.word
 		{
 			width: 50%;
 			margin: auto;
 			margin-top: 40px;
-			font-size: 3em;
+			font-size: 2.5em;
 			text-align: center;
-/*			background: rgb(239, 148, 67);*/
+			font-family: Cambria;
 		}
 		div.answerContainer, div.arrowContainer, div.result
 		{
@@ -455,12 +473,14 @@ div#repeatTheWords
 				width: 48%;
 				height: 65px;
 				float: left;
-/*				background: rgb(239, 148, 67);*/
-				font-size: 3em;
+				font-size: 2.5em;
 				text-align: center;
 				border: 1px solid rgb(245, 245, 245);
 				border-radius: 4px;
 				margin: 2px;
+				display: table-row;
+				vertical-align: bottom;
+				font-family: Cambria;
 			}
 				div.answer:hover
 				{
@@ -474,7 +494,7 @@ div#repeatTheWords
 					background: -moz-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
 					background: -o-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
 					background: -ms-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
-					background:  linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+					background: -linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
 					border-top: 1px solid rgb(230, 230, 230);
 					border-left: 1px solid rgb(230, 230, 230);
 					border-radius: 4px;
@@ -497,7 +517,6 @@ div#repeatTheWords
 				{
 					min-width: 2px;
 					width: 100%;
-/*					min-height: 30px;*/
 					height: 100%;
 					background-color: rgb(255, 255, 255);
 					float: left;
@@ -546,21 +565,518 @@ div#repeatTheWords
 				background: -moz-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
 				background: -o-linear-gradient(bottom, rgb(240, 240, 240), rgb(250, 250, 250) 90%);
 				background: -ms-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
-				background:  linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+				background: -linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
 				border-top: 1px solid rgb(230, 230, 230);
 				border-left: 1px solid rgb(230, 230, 230);
 			}
-		
+		div.res
+		{
+			width: 600px;
+			height: 100%;
+			margin: auto;
+			overflow-y: auto;			
+		}
+			table.res
+			{
+				width: 600px;
+				background-color: rgba(0, 0, 0, 0.02);
+				font-weight: bolder;
+				border: 1px solid rgb(200, 200, 200);
+				border-radius: 7px;
+			}
+			caption.res
+			{
+				width: 560px;
+				padding: 20px;
+				text-align: left;
+				font-size: 1.5em;
+			}
+			th, td
+			{
+				text-align: left;
+				padding-left: 10px;
+			}
+				.lineThrough
+				{
+					text-decoration: line-through;
+				}
+				.green
+				{
+					color: rgb(18, 180, 38);
+					font-weight: bold;
+				}
+				.red
+				{
+					color: rgb(239, 148, 67);
+					font-weight: bold;
+				}
+			#trainAgan, 
+			#back
+			{
+				display: block;
+				float: left;
+				min-width: 80px;
+				margin: 15px 100px 0 100px;
+				text-align: center;
+				padding: 10px;
+				background-color: rgb(250, 250, 250);
+				border: 1px solid rgb(230, 230, 230);
+				border-radius: 20px;
+				font-weight: bolder;
+			}
+				#trainAgan:hover, 
+				#back:hover
+				{
+					background: rgb(240, 240, 240);
+					cursor: pointer;
+				}
 	div#grass
 	{
-		position: absolute; 
-		bottom: 0;
-		margin-bottom: 0;
-		width: 100%;
-		min-height: 150px;
-		z-index: 1;
 		background: url(http://savchenkoPortfolio/img/grass_1.gif)repeat-x  bottom;
+		min-height: 100px;
+		min-width: 100%;
+		position: relative;
+		top: 53px;
+		z-index: 0;
 	}
+
+/* The Meet a star page */
+div#meetAStar
+{
+	min-height: 100%;			
+	height: 100%;
+	overflow: inherit;
+	font-family: ArbatDi;
+	background: -webkit-linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
+	background: -moz-linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
+	background: -o-linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
+	background: -ms-linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
+	background: -linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
+}
+
+	header.meetAStar
+	{
+		min-width: 100%;
+		width: 100%;	
+		min-height: auto;
+		margin: 0;
+		background: -webkit-linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
+		background: -moz-linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
+		background: -o-linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
+		background: -ms-linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
+		background: -linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
+	}
+		div.logo
+		{
+			font-size: 1.7em;
+			font-weight: bold;
+			width: 170px;
+			font-family: ArbatDi;
+			text-align: center;
+			margin-left: 50px;
+			padding: 5px;
+			border-left: 2px solid rgb(120, 120, 120);
+			border-right: 2px solid rgb(120, 120, 120);
+			float: left;
+		}
+			div.logo:hover
+			{
+				background: -webkit-linear-gradient(bottom, rgb(255, 64, 50) 0%, rgb(255, 138, 95) 100%);
+				background: -moz-linear-gradient(bottom, rgb(255, 64, 50) 0%, rgb(255, 138, 95) 100%);
+				background: -o-linear-gradient(bottom, rgb(255, 64, 50) 0%, rgb(255, 138, 95) 100%);
+				background: -ms-linear-gradient(bottom, rgb(255, 64, 50) 0%, rgb(255, 138, 95) 100%);
+				background: -linear-gradient(bottom, rgb(255, 64, 50) 0%, rgb(255, 138, 95) 100%);
+				cursor: pointer;
+				color: rgb(110, 110, 110);
+			}
+	header.meetAStar > nav > ul
+	{
+		min-height: auto;
+		height: auto;
+		margin: 0;
+		padding: 0;
+	}
+		header.meetAStar > nav > ul > li
+		{
+			list-style: none;
+			list-style-type: none;
+			font-weight: bold;
+			padding: 6px 30px 0 0;
+			float: right;
+		}
+			header.meetAStar > nav > ul > li > img,
+			header.meetAStar > nav > ul > li > a > img
+			{
+				height: 30px;
+				border-radius: 2px;
+			}
+
+	section.meetAStar
+	{	
+		min-width: 80%;
+		margin: auto;
+	}
+		section.meetAStar > article
+		{
+			width: 900px;
+			min-width: 900px;
+			margin: auto;
+			margin-top: 70px;
+			margin-bottom: 30px;
+			height: 540px;
+		}
+			div.small
+			{
+				width: 180px;
+				height: 180px;
+				float: left;
+			}
+			div.small > a
+			{
+				width: inherit;
+				height: inherit;
+			}
+			img.seleblity, img.refresh
+			{
+				width: 180px;
+				height: 180px;
+			}
+			p.titleCont
+			{
+				position: inherit;
+				top: 0;
+				margin: -5px 0 0 5px;
+				padding-left: 10px;
+				background: rgba(240, 240, 240, 0.4);
+				color: rgb(50, 50, 50);
+				font-weight: bolder;
+				z-index: 999;
+			}
+
+/* The travaling company page */
+div#travelingCompany
+{
+	min-height: 100%;			
+	height: 100%;
+	overflow: inherit;
+	font-family: ArbatDi;
+	background-image: url('http://savchenkoPortfolio/img/beach.png');
+	background-size: cover;
+	background-position: top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-color: #9AD7E1;
+}
+	header.travelingCompany
+	{
+		width: 100%;
+		min-height: 40px;
+		height: 40px;
+		margin: 0;
+		background: rgba(0, 0, 0, 0);
+	}
+		header.travelingCompany > ul > li > a
+		{
+			float: right;
+			display: block;
+			padding: 10px 25px 0 0;
+			font-size: 1.2em;
+			font-family: Arial;
+			color: white;
+			text-decoration: none;
+		}
+			header.travelingCompany > ul > li > a:hover
+			{
+				color:	rgb(251, 232, 20);			
+			}
+	section.travelingCompany
+	{
+		width: 970px;
+		margin-top: 0;
+		margin: auto;
+	}
+		header.travelingNav
+		{
+			width: 100%;
+			height:	400px;	
+			padding: 0;
+			margin: 0;
+			background-color: rgba(0, 0, 0, 0);
+		}
+			nav.travelingNav
+			{
+				width: 300px;
+				border-width: 0;
+				height: 400px;
+				float: left;
+				background-color: inherit;			
+			}
+				img.travelingLogo
+				{
+					width: 300px;
+					margin: 0;
+					border-width: 0;
+					border-radius: 3px;
+				}
+				a.travelingNav
+				{
+					width: 280px;
+					height: 30px;
+					display: block;
+					background-color: rgb(70, 126, 234);
+					border-radius: 5px;
+					padding: 9px 0 0 20px;
+					margin: 2px 0 0 0;
+					color:	white;
+					text-decoration: none;
+					font-family: Arial;
+				}
+					a.travelingNav:hover
+					{
+						background-color: rgb(53, 109, 255);
+						color:	rgb(251, 232, 20);			
+					}
+				div.animetionOuter
+				{
+					width: 665px;
+					margin: 0;
+					padding: 0;
+					border: 0;
+					border-radius: 3px;
+					height:395px;
+					float: right;
+					background-color: rgba(255, 255, 255, 1);
+				}
+					div.animationInner
+					{
+						max-width: 630px;
+						margin: auto;
+						margin-top: 10px;
+					}
+						.bxslider
+						{
+							margin: 0;
+							padding: 0;
+							overflow: hidden;
+							border-radius: 3px;
+						}
+	/* Searching field */
+	div.search
+	{
+/*		min-height: 180px;*/
+	}
+		fieldset.f_1,
+		fieldset.f_2,
+		fieldset.f_3,
+		fieldset.f_4
+		{
+			width: 250px;
+			min-height: 170px;
+			margin: 0;
+			padding: 0;
+			float: left;
+			background-color: rgb(70, 126, 234);
+			border-right: 1px solid rgb(150, 150, 150);
+		}
+			fieldset.f_1
+			{
+				width: 280px;
+			}
+			fieldset.f_2
+			{
+				width: 260px;
+			}
+			fieldset.f_3
+			{
+				width: 230px
+			}
+			fieldset.f_4
+			{
+				width: 195px;
+			}			
+			select,
+			input[type='text']
+			{
+				width: 95px;
+				float: right;
+			}
+			input[type='date']
+			{
+				width: 130px;
+				float: right;
+			}
+			button.searchInput
+			{
+				float: right;
+				width: 100px;
+				border-width: 1px;
+				border-radius: 2px;
+				background: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(170, 170, 170) 50%, rgb(255, 255, 255) 
+				100%);
+				background: -moz-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(150, 150, 150) 50%, rgb(255, 255, 255) 
+				100%);
+				background: -o-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(150, 150, 150) 50%, rgb(255, 255, 255) 
+				100%);
+				background: -ms-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(150, 150, 150) 50%, rgb(255, 255, 255) 
+				100%);
+				background: -linear-gradient(top, rgb(255, 255, 255) 0%, rgb(150, 150, 150) 50%, rgb(255, 255, 255) 
+				100%);
+			}
+				button.searchInput:hover
+				{
+					cursor: pointer;
+				}
+	/* Results field */
+	div.results
+	{
+		background: rgb(255, 255, 255);
+		width: 100%;
+		overflow-y: auto;
+	}
+		div.tour
+		{
+			width: 483px;
+			float: left;
+			border-right: 1px dashed rgb(180, 180, 180);
+			border-bottom: 1px dashed rgb(180, 180, 180);
+		}
+			div.tour:hover
+			{
+				box-shadow: 2px 2px 3px rgb(200, 200, 200);
+			}
+			img.hotel
+			{
+				width: 230px;
+				height: 150px;
+				margin: 10px 0 10px 10px;
+				border-radius: 3px;
+				clear: none;
+			}
+			td.header
+			{
+				width: 220px;
+				padding: 5px 5px 0 5px;
+			}
+			p.hotelName, p.cost
+			{
+				font-size: 1.3em;
+				font-weight: bolder;
+			}
+			p.cost
+			{
+				float: right;
+			}
+			p.countryName
+			{
+				margin: 0 0 0 35px;
+				padding: 0;
+			}
+			a.detailed
+			{
+				float: right;
+			}
+		table.descr
+		{
+			width: 225px;
+			float: right;
+			margin: 15px 0 0 0;
+			padding: 0;
+		}
+			p.table
+			{
+				width: 110px;
+				max-height: 60px;
+				overflow: hidden;
+				margin: 0;
+				padding: 0;
+			}
+				td.left, td.descr
+				{
+					margin: 0;
+					padding: 0;
+				}
+				td.left
+				{
+					width: 100px;
+				}
+		div.pager
+		{
+			background: rgb(255, 255, 255);
+			overflow: auto;
+		}
+			a.pager
+			{
+				display: block;
+				position: relative;
+				float: left;
+				border-right: 1px solid rgb(180, 180, 180);
+				padding: 5px 10px 5px 10px;
+				font-family: Arial;
+				font-weight: bolder;
+				text-decoration: none;
+				color: inherit;
+				background: -webkit-linear-gradient(bottom, rgb(180, 180, 180), rgb(255, 255, 255));
+				background: -moz-linear-gradient(bottom, rgb(180, 180, 180), rgb(255, 255, 255));
+				background: -o-linear-gradient(bottom, rgb(180, 180, 180), rgb(255, 255, 255));
+				background: -ms-linear-gradient(bottom, rgb(180, 180, 180), rgb(255, 255, 255));
+				background: -linear-gradient(to bottom, rgb(180, 180, 180), rgb(255, 255, 255));
+			}
+				a.pager:hover
+				{
+					text-decoration: underline;
+					background: -webkit-linear-gradient(bottom, rgb(210, 210, 210), rgb(255, 255, 255));
+					background: -moz-linear-gradient(bottom, rgb(210, 210, 210), rgb(255, 255, 255));
+					background: -o-linear-gradient(bottom, rgb(210, 210, 210), rgb(255, 255, 255));
+					background: -ms-linear-gradient(bottom, rgb(210, 210, 210), rgb(255, 255, 255));
+					background: -linear-gradient(to bottom, rgb(210, 210, 210), rgb(255, 255, 255));
+				}
+		footer.travelingCompany
+		{
+			background: rgba(255, 255, 255, 0);
+			min-height: 60px;
+			height: 70px;
+			margin: auto;
+		}
+			p.currency
+			{
+				display: block;
+				margin: 15px 50px 0 0;
+				float: right;
+			}
+			p.copyright 
+			{
+				margin: 15px 10px 0 50px;
+			}
+			p.beginYear, 
+			p.currentYear
+			{
+				margin: 15px 0 0 0;
+			}
+p
+{
+	margin: 0;
+	padding: 0;
+}		
+img.button
+{
+	width: 20px;
+	height: 13px;
+}
+fieldset
+{
+	border: 0;
+	color: rgba(255, 255, 255, 1);
+}
+button:focus
+{
+	outline: 0;
+}
+a
+{
+	font-weight: bold;
+	margin: 0;	
+}
+	
 /*
 	&larr; - стрелка
 	&rarr; - стрелка

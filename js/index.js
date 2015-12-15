@@ -4,8 +4,7 @@
 var move = new MoveingSun('sun');
 
 /* Keep header visible on the top of screen */
-var header = document.getElementById('header');
-var glueHeader = new GlueElementTop(header);
+var glueHeader = new GlueElementTop('header');
 glueHeader.glue();
 
 /* it is displaying the page softly */
@@ -20,3 +19,10 @@ insertDate.write();
 
 /* Making the Contactas page */
 var contacts = new MakingContactsPage('contacts', 'http://savchenkoPortfolio/php/contactsHTML.php');
+
+/* Glue footer bottom */
+var footerGlued = new GlueElementBottom('#section', 113);
+footerGlued.glue();
+$(window).resize(function(){
+	footerGlued.glue();
+});

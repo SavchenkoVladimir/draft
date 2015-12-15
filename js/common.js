@@ -1,6 +1,39 @@
 'use strict';
 
 /*
+	The StepBack class hangs event listener on a page object and brings page back after click on the object. 
+	It adopts the object css selector and steps quantity.
+*/
+function StepBack(){
+	this.step;
+	this.object;
+}
+StepBack.prototype.go = function(objectSelector, stepsQuantity){
+	var self = this;
+	this.object = document.body.querySelector(objectSelector);
+	this.step = stepsQuantity;
+	
+	$(this.object).click(function(event){
+		window.history.go(self.step);		
+	});
+}
+
+/*
+	The Reload() class hangs event listener on a page object and reload a page after click on the object.
+	It adopts the css object  selector.
+*/
+function Reload(objectSelector){
+	this.object;
+}
+Reload.prototype.execute = function(objectSelector){
+	this.object = document.body.querySelector(objectSelector);
+	
+	$(this.object).click(function(){
+		location.reload();		
+	});
+}
+
+/*
 	Class InsertCurrenDate adopts two arguments: the node contains inception year and 
 	the node where current year will be displayed if the these are different.
 */
@@ -31,34 +64,28 @@ function softDisplaying(tagName, time){
 /* 
 	The class  GlueElementTop keeps element visible on the top of screen 
 */
-function GlueElementTop(element){
-	this.element = element; //получили элемент
-	this.elementMetrics = getComputedStyle(element); //получили характеристики элемента
-	this.marginTop = this.elementMetrics.marginTop; //узнали марджин топ
-	this.elementHeight = this.elementMetrics.minHeight; //узнали его высоту
-	this.parent = this.element.parentElement; //определили родитнльский элемент
-
-	this.definePlace = function(){		
-		this.place = element.nextElementSibling; //узнали следующего соседа
-		return this.place;
-	}
-	
-	this.createDeputy = function(){
+function GlueElementTop(elementId){
+	this.element = document.getElementById(elementId);
+	this.elementMetrics = getComputedStyle(this.element);
+	this.marginTop = this.elementMetrics.marginTop;
+	this.elementHeight = this.elementMetrics.minHeight;
+	this.parent = this.element.parentElement;
+}
+GlueElementTop.prototype.createDeputy = function(){
 		this.deputy = document.createElement('div'); //создали блок заменитель
 		this.deputy.setAttribute('id', 'clone');// присвоили ему id
-		this.deputy.style.minHeight = this.elementHeight; //установили высоту блока
+		this.deputy.style.minHeight = this.elementHeight; //!!!!!Вероятно нужно добавить значение маржин
 		this.deputy.style.marginTop = this.marginTop; //установили верхний марджин
 		return this.deputy;
-	}
 }
 GlueElementTop.prototype.glue = function(){
 	var self = this;
-
-	window.addEventListener('scroll', function(){
+	
+		window.addEventListener('scroll', function(){
 		if( window.scrollY >= parseInt(self.marginTop) ){
 			$(self.element).css({'position': 'fixed', 'margin-top': 0, 'top': 0, 'z-index': 100});
 			if( !document.getElementById('clone') ){
-				self.parent.insertBefore(self.createDeputy(), self.definePlace()); // добавили заместителя в документ
+				$(self.parent).prepend(self.createDeputy());
 			}
 		}
 		if( window.scrollY <= parseInt(self.marginTop) ){
@@ -68,6 +95,27 @@ GlueElementTop.prototype.glue = function(){
 			}			
 		}		
 	});
+}
+
+/*
+	The class GlueElementBottom glues element to bottom of document.
+*/
+function GlueElementBottom(sectionSelector, freeSpace){
+	this.section = document.body.querySelector(sectionSelector);
+	this.freeSpace = freeSpace;
+	this.sectionHeight;
+	this.documentHeight;
+	this.windowHeight;
+}
+GlueElementBottom.prototype.glue = function(){
+	var self = this;
+	this.windowHeight = $(window).height();
+	this.documentHeight = $('body').height();
+	this.sectionHeight = (this.windowHeight - this.freeSpace) + 'px';
+
+	if( this.windowHeight >= this.documentHeight ){
+		$(self.section).css('height', self.sectionHeight);
+	}
 }
 
 /* 
@@ -90,13 +138,13 @@ function MoveingSun(sunId){
 }
 
 /*
-	Class LisItemDecorating adopts element class name and decorates it's children.
+	Class ListItemDecorating adopts element class name and decorates it's children.
 	The class adopts class name.
 */
-function LisItemDecorating(className){
+function ListItemDecorating(className){
 	this.className = className;
 }
-LisItemDecorating.prototype.run = function(){
+ListItemDecorating.prototype.run = function(){
 	var self = this;
 
 	$('div').mousemove(function(){
@@ -107,8 +155,7 @@ LisItemDecorating.prototype.run = function(){
 			var children = $(element).children();
 			var caption = children[0];
 			var description = children[1];
-			$(caption).css({'background-color':'rgba(0,0,255,0.07'});
-			$(description).css({'text-decoration':'underline'});
+			$(caption).css({'background-color':'rgba(0,210,255, 0.1'});
 		}
 	});
 	$('div').mouseout(function(){
@@ -199,7 +246,7 @@ function MakingContactsPage(referenceId, pageAddress){
 		var cover = document.getElementById('cover');
 		var page = document.getElementById('contactPage');
 
-		if( $(window).width() > 750 ){
+		if( $(window).width() > 700 ){
 			$(page).css({'margin-left': $(window).width()/4, 'margin-top': '5%', 'border-radius': '10px'});
 			$('body').css('overflow-x', 'hidden');
 		}
@@ -274,10 +321,10 @@ MakingContactsPage.prototype.painting = function(){
 		}
 		
 		if( !validate(elemName) ){
-			$(element).css({'background-color':'rgb(252, 219, 215)', 'border-color':'rgb(255, 59, 56)'});
+			$(element).css({'background-color':'rgb(255, 244, 242)', 'border-color':'rgb(255, 160, 160)'});
 		}
 		if( validate(elemName) ){
-			$(element).css({'background-color':'rgb(227, 255, 193)', 'border-color':'rgb(26, 218, 87)'});
+			$(element).css({'background-color':'rgb(240, 255, 240)', 'border-color':'rgb(100, 200, 100)'});
 		}		
 	});
 }
@@ -372,6 +419,8 @@ function RepeatTheWords(divId, address){
 	this.paintAnswerTimeout;
 	this.disableBlockTimeout
 	this.intervalId;
+	this.wordsAddress;
+	this.words;
 }
 RepeatTheWords.prototype.load = function(buttonIdentifyer){
 	var self = this;
@@ -387,7 +436,7 @@ RepeatTheWords.prototype.showTime = function(timeLength, divParentId, divChildId
 	this.timeGap = timeLength / 50;
 	this.parent = document.getElementById(divParentId);
 	this.child = document.getElementById(divChildId);
-	this.parentHeight = parseInt(getComputedStyle(self.parent).height);
+	this.parentHeight = this.parent.offsetHeight;
 		
 	this._divHeight = 0;
 	this._heightStep = self.parentHeight / 50;
@@ -409,9 +458,9 @@ RepeatTheWords.prototype.placeWords = function(wordsArr, englishPlace, russianPl
 	this.tipPlace = document.body.querySelector(tipPlace);
 
 	if(wordsArr == null){
-		self.showResults('.repeatTheWords');
-	}
-			
+		self.showResults('.repeatTheWords', 'Your answers are next:');
+	}else{
+					
 	this.engWordPlace.textContent = wordsArr[0];
 	this.tipPlace.textContent = 'Try answer';
 	
@@ -429,6 +478,7 @@ RepeatTheWords.prototype.placeWords = function(wordsArr, englishPlace, russianPl
 	
 		this.rusWordPlace[1].textContent = wordsArr[1];
 		this.rusWordPlace[1].setAttribute('id', 1);
+	}
 	}
 }
 /* Метод принимает селектор родителя и возвращает коллекцию потомков */
@@ -502,12 +552,98 @@ RepeatTheWords.prototype.disableBlock = function(divId, timeMs, name){
 	this.disableBlockTimeout = setTimeout(disable, timeMs, divId);
 }
 /* Метод использует данные из массива ответов и рисует таблицу результатов */
-RepeatTheWords.prototype.showResults = function(divSelector){
+RepeatTheWords.prototype.showResults = function(divSelector, captionText){
 	var div = document.body.querySelector(divSelector);
-	alert($(div).attr('class'));
+	
+	this.resHeader = document.createElement('div');
+	$(this.resHeader).attr('class', 'res');
+	
+	this.table = document.createElement('table');
+	$(this.table).attr('class', 'res');
+	$(this.resHeader).append(this.table);
+
+	this.caption = document.createElement('caption');
+	$(this.caption).attr('class', 'res').html(captionText);
+	$(this.table).prepend(this.caption);
+	
+	this.tbody = document.createElement('tbody');
+	$(this.table).append(this.tbody);
+	
+	this.tHead = document.createElement('tr');
+	$(this.tHead).attr('class', 'tHead');
+	$(this.tbody).append(this.tHead);
+	
+	this.stat = document.createElement('th');
+	$(this.stat).html('Status');
+	$(this.tHead).append(this.stat);
+	
+	this.engWord = document.createElement('th');
+	$(this.engWord).html('English word');
+	$(this.tHead).append(this.engWord);
+	
+	this.answ = document.createElement('th');
+	$(this.answ).html('Your answer');
+	$(this.tHead).append(this.answ);
+	
+	this.rightAnsw = document.createElement('th');
+	$(this.rightAnsw).html('Right answer');
+	$(this.tHead).append(this.rightAnsw);
+	
+	for( var i = 0; i <= (this.resArr.length - 1); i++ ){
+		this._resElem = this.resArr[i];
+		
+		this.tr = document.createElement('tr');
+		
+		this.tdStat = document.createElement('td');		
+		if( this._resElem[3] == true ){
+			$(this.tdStat).html('&#10003').attr('class', 'green');
+		}else{
+			$(this.tdStat).html('&#10007;').attr('class', 'red');
+		}
+		$(this.tr).append(this.tdStat);
+		
+		this.simpleTd = document.createElement('td');
+		$(this.simpleTd).html(this._resElem[0]);
+		$(this.tr).append(this.simpleTd);
+		
+		this.userAnsw = document.createElement('td');
+		if( this._resElem[3] == true ){
+			$(this.userAnsw).html(this._resElem[1]);
+		}else{
+			$(this.userAnsw).html(this._resElem[2]).attr('class', 'lineThrough');
+		}
+		$(this.tr).append(this.userAnsw);
+		
+		this.right = document.createElement('td');
+		$(this.right).html(this._resElem[1]);
+		$(this.tr).append(this.right);
+		
+		$(this.tbody).append(this.tr);
+	}
+	
+	this.agan = document.createElement('button');
+	$(this.agan).attr('id', 'trainAgan').html('Train agan');
+	$(this.resHeader).append(this.agan);
+	
+	this.back = document.createElement('button');
+	$(this.back).attr('id', 'back').html('Back');
+	$(this.resHeader).append(this.back);
+	
+	var children = $(div).children();
+	$(children).remove();
+	$(div).append(this.resHeader);
+	$(this.resHeader).effect('slide', 500);
+	
+	var stepBack = new StepBack;
+	stepBack.go('#back', -1);
+	
+	var reload = new Reload;
+	reload.execute('#trainAgan');
 }
+
 /* Метод getAnswer слушает клики на блоках ответов и возвращает true или false. Принимает селектор блоков */
 RepeatTheWords.prototype.getAnswer = function(divSelector, wordss){
+	
 	var self = this;
 	this.ansversCont = document.body.querySelectorAll(divSelector);
 	this.placeWords(wordss[0], '.word', '.answer', '.tip');
@@ -541,6 +677,246 @@ RepeatTheWords.prototype.getAnswer = function(divSelector, wordss){
 		self.disableBlock(0, 4800, "[name='disabled']");
 	});
 }
+
+/*
+	The class IncreaseeElement increases an element of the page. 
+*/
+function IncreaseElement(elemSelector){
+	this.elemSelector = elemSelector;
+	this.elementTarget;
+	this.parentA;
+	this.parentDiv;
+	this.title;
+	this.titleCont;
+	this.appendix;
+}
+IncreaseElement.prototype.animate = function(){
+	var self = this;
+	$(window).mouseover(function(event){
+		this.elementTarget = event.target;
+
+		self.writeRefName();
+
+		if($(this.elementTarget).attr('class') !== 'seleblity'){
+			return false;
+		}
+		
+		if(($(this.elementTarget).attr('name') == '11' || $(this.elementTarget).attr('name') == '12' ||
+			$(this.elementTarget).attr('name') == '13' || $(this.elementTarget).attr('name') == '14')){
+				
+				self.writeName();
+				self.animateName();
+					
+				$(this.elementTarget).css({'position':'relative', 'z-index':999,});
+				$(this.elementTarget).animate({
+					'width':'230px', 
+					'height':'230px',
+					'border-radius':'7px',
+					'margin-top':'-50px',				
+				}, 500);
+				$(this.elementTarget).animate({}, 500);
+				
+		}else if($(this.elementTarget).attr('name') == '15'){
+			
+			$(this.elementTarget).css({'position':'relative', 'z-index':999});
+			
+			self.writeName();
+			self.animateName();
+						
+			$(this.elementTarget).animate({
+				'width':'230px', 
+				'height':'230px',
+				'border-radius':'7px',
+				'margin-top':'-50px',				
+				'margin-left':'-50px',					
+			}, 500);
+			$(this.elementTarget).animate({}, 500);
+			
+		}else if(($(this.elementTarget).attr('name') == '5' ||	$(this.elementTarget).attr('name') == '10')){			
+			
+			$(this.elementTarget).css({'position':'relative', 'z-index':999});
+			
+			self.writeName();
+			self.animateName();
+			
+			$(this.elementTarget).animate({
+				'width':'230px', 
+				'height':'230px',				
+				'border-radius':'7px',
+				'margin-left':'-50px',
+			}, 500);
+			$(this.elementTarget).animate({}, 500);
+			
+		}else{
+			
+			self.writeName();
+			self.animateName();
+			
+			$(this.elementTarget).css({'position':'relative', 'z-index':999});
+			$(this.elementTarget).animate({
+				'width':'230px', 
+				'height':'230px',				 
+				'border-radius':'7px',
+			}, 500);				
+		}		
+	});
+	
+	$(window).mouseleave(function(event){
+		
+		this.elementTarget = event.target;
+		if($(this.elementTarget).attr('class') == 'seleblity'){
+			$(this.elementTarget).animate({
+				'left':'0',
+				'width':'180px', 
+				'height':'180px',				 
+				'border-radius':'0',
+				'margin':'0',
+			}, 500);
+			$(this.elementTarget).css('position', 'static');
+			$(this.elementTarget).css('z-index', 0);
+			
+			self.dropName();			
+		}
+		self.dropRefName();
+	});	
+}
+
+/*	The method writeName extracts a text from 'value' attribute and write it over the picture. */
+IncreaseElement.prototype.writeName = function(){
+	self.title = $(self.elementTarget).attr('value');//при нависании читаю содержание value, заношу значение в переменную
+	self.parentA = $(self.elementTarget).parent();//нахожу родителя а
+	self.parentDiv = $(self.parentA).parent();//нахожу родителя -> div
+
+	self.appendix = document.createElement('div');//добавляю ему элемент p
+	$(self.parentDiv).append(self.appendix);
+	
+	self.titleCont = document.createElement('p');//добавляю ему элемент p
+	$(self.titleCont).attr('class', 'titleCont');//придаю элементу стили
+	$(self.titleCont).css('position', 'relative');//придаю элементу стили
+	$(self.titleCont).html(self.title);//размещаю в нем текст
+	$(self.parentDiv).append(self.titleCont);
+}
+
+IncreaseElement.prototype.animateName = function(){
+	if($(self.elementTarget).attr('name') == '5' ||	$(self.elementTarget).attr('name') == '10'
+		||	$(self.elementTarget).attr('name') == '15'){
+			$(self.titleCont).animate({'width': '210px', 'margin-left': '-50px'}, 500);
+	}else{
+		$(self.titleCont).animate({'width': '210px'}, 500);
+	}
+}
+IncreaseElement.prototype.dropName = function(){
+	$(self.titleCont).remove();
+	$(self.appendix).remove();
+}
+IncreaseElement.prototype.writeRefName = function(){
+	if( $(self.elementTarget).attr('class') == 'refresh' ){
+		this.writeName();
+	}
+}
+IncreaseElement.prototype.dropRefName = function(){
+	if( $(self.elementTarget).attr('class') == 'refresh' ){
+		this.dropName();
+	}
+}
+
+/*
+	The class FillTheArticle receives an array by AJAX method and fill the article.
+*/
+function FillTheArticle(selector){
+	this.article = document.body.querySelector(selector);
+	this.address;
+	this.data;
+	this.div;
+	this.ref;
+	this.dat;
+}
+/* The method performs AJAX inquiry to the server and execute 'fill' method. */
+FillTheArticle.prototype.load = function(address){
+	this.address = address;
+	
+	$.ajax({
+		url:'http://savchenkoPortfolio/php/meetAStar.php',
+		success:function(data){
+			fillIn.fill(data);
+		}
+	});
+}
+/* The method adopts data and depict them in the page */
+FillTheArticle.prototype.fill = function(data){
+	this.data = JSON.parse(data);
+
+	for( var i = 0; i <= this.data.length - 1; i++ ){
+		this.arrElem = this.data[i];
+		
+		this.img = document.createElement('img');
+		this.img.setAttribute('src', this.arrElem[2]);
+		this.img.setAttribute('class', this.arrElem[3]);
+		this.img.setAttribute('alt', this.arrElem[4]);
+		this.img.setAttribute('value', this.arrElem[5]);
+		this.img.setAttribute('name', (i + 1));
+		
+		this.ref = document.createElement('a');
+		this.ref.setAttribute('href', this.arrElem[1]);
+		this.ref.appendChild(this.img);
+		
+		this.div = document.createElement('div');
+		this.div.setAttribute('class', 'small');
+		this.div.appendChild(this.ref);		
+		
+		this.article.appendChild(this.div);
+	}
+}
+
+/* 
+	The method LoadNewCelebrities execute new AJAX query to the server after refresh button is pressed. 
+*/
+function LoadNewCelebrities(buttName, contName, address){
+	this.cont = document.body.querySelector(contName);
+	this.buttName = buttName;	
+	this.address = address;
+	this.elementTarget;
+}
+LoadNewCelebrities.prototype.load = function(){
+	var self = this;
+
+	$(window).click(function(event){
+		self.elementTarget = event.target;
+		
+		if($(self.elementTarget).attr('class') == self.buttName){
+			self.children = $(self.cont).children();
+			$(self.children).remove();
+		
+			$.ajax({
+				url: self.address,
+				success:function(data){
+					fillIn.fill(data); //!!! very bad
+				}
+			});
+			event.preventDefault();
+		}		
+	});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

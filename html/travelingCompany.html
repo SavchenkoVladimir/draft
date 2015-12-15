@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="robots" content="index, follow" />
+<meta charset="UTF-8" />
+<title>Traveling company</title>
+<meta name="description" content="The kit of work exemples. My name is Vladimir Savchenko. I am a front-end developer. On the site you can find my front-end work exemples." />
+<meta name="keywords" content="front-end, work exemples, portfolio" />
+<link href="http://savchenkoPortfolio/css/style.css" rel="stylesheet">
+<link href="http://savchenkoPortfolio/css/jquery.bxslider.css" rel="stylesheet" />
+<link rel="icon" type="image/png" href="http://savchenkoPortfolio/img/favicon.png">
+</head>
+<body>
+	<div id="travelingCompany">
+		<header class="travelingCompany">
+			<ul>
+				<li><a href="#" class="head">registration</a></li>
+				<li><a href="#" class="head">login</a></li>
+			</ul>
+		</header>
+		
+		<section class="travelingCompany">
+		
+		<header class="travelingNav">
+			<nav class="travelingNav">
+				<ul>
+					<li><a href="#"><img src="http://savchenkoPortfolio/img/Logo.jpg" class="travelingLogo" alt="The traveling 						company logo"></a>
+					</li>				
+					<li><a href="#" class="travelingNav">Choose a tour</a></li>
+					<li><a href="#" class="travelingNav">Hot propositions</a></li>
+					<li><a href="#" class="travelingNav">About us</a></li>
+					<li><a href="#" class="travelingNav">Payment</a></li>
+					<li><a href="#" class="travelingNav">Contacts</a></li>
+				</ul>
+			</nav>			
+			<div class="animetionOuter"> 
+				<div class="animationInner">
+					<ul class="bxslider">
+						<li><img src="http://savchenkoPortfolio/img/slider/slide_1.jpg" alt="Tour image" /></li>
+						<li><img src="http://savchenkoPortfolio/img/slider/slide_2.jpg" alt="Tour image" /></li>
+						<li><img src="http://savchenkoPortfolio/img/slider/slide_3.jpg" alt="Tour image" /></li>
+						<li><img src="http://savchenkoPortfolio/img/slider/slide_4.jpg" alt="Tour image" /></li>
+						<li><img src="http://savchenkoPortfolio/img/slider/slide_5.jpg" alt="Tour image" /></li>
+						<li><img src="http://savchenkoPortfolio/img/slider/slide_6.jpg" alt="Tour image" /></li>
+						<li><img src="http://savchenkoPortfolio/img/slider/slide_7.jpg" alt="Tour image" /></li>
+	 				</ul>
+				</div>
+ 			</div>
+		</header>
+		
+		<div class="search">
+			<fieldset class="f_1">			
+				<fieldset>
+					<form action="#" method="POST">				
+						<label>Choose a country<select name="countryId"></select></label>
+					</form>
+				</fieldset>							
+				<fieldset>
+					<form action="#" method="POST">	
+						<label>Choose a region<select name="cityId"></select></label>
+					</form>
+				</fieldset>				
+				<fieldset>
+					<form action="#" method="POST">
+						<label>Choose a hotel<select name="hotelId"></select></label>
+					</form>
+				</fieldset>				
+				<fieldset>
+					<form action="#" method="POST">
+						Hotel class
+						<label><input name="hotelClass" type="radio" value="2"	/>2*</label>
+						<label><input name="hotelClass" type="radio" value="3" />3*</label>
+						<label><input name="hotelClass" type="radio" value="4" />4*</label>
+						<label><input name="hotelClass" type="radio" value="5" />5*</label>						
+					</form>					
+				</fieldset>				
+			</fieldset>
+						
+			<fieldset class="f_2">
+				<fieldset class="date">
+					<form action="#" method="POST">
+						<label>Traveling starts<input type="date" class="date" name="dateStart" value="" /></label>
+					</form>
+				</fieldset>	
+				<fieldset>
+					<form action="#" method="POST">
+						<label>Inception point<select name="cityStartId"></select></label>
+					</form>	
+				</fieldset>
+				<fieldset class="tourLenght">
+					<form action="#" method="POST">
+						<label>Nights min<select name="nightsMin" class="tourLenght"></select></label>
+					</form>
+				</fieldset>		
+				<fieldset class="tourLenght">
+					<form action="#" method="POST">
+						<label>Nights max<select name="nightsMax" class="tourLenght"></select></label>
+					</form>	
+				</fieldset>
+			</fieldset>
+				
+			<fieldset class="f_3">
+				<fieldset>
+					<form action="#" method="POST">
+						<label>Room type<select name="roomType"></select></label>
+					</form>
+				</fieldset>		
+				<fieldset>
+					<form action="#" method="POST">
+						<label>Diet<select name="diet"></select></label>
+					</form>
+				</fieldset>		
+				<fieldset>
+					<form action="#" method="POST">
+						<label>Cost min<input type="text" name="costMin" class="cost" maxlength="10" 
+						placeholder="100" /></label>
+					</form>
+				</fieldset>				
+				<fieldset>
+					<form action="#" method="POST">
+						<label>Cost max<input type="text" name="costMax" class="cost" maxlength="10" placeholder="10000">
+						</label>
+					</form>
+				</fieldset>		
+			</fieldset>
+		
+			<fieldset class="f_4">
+				<fieldset>
+					<form action="#" method="POST">
+						<label>Currency
+							<select name="currency">					
+								<option value="1">$</option>
+								<option value="2">Е</option>
+								<option value="3">UHR</option>					
+							</select>
+						</label>
+					</form>
+				</fieldset>
+				<form action="#" method="POST">
+					<fieldset>
+						<label>Keywords searching
+						<input type="text" name="searchInput" class="searchInput" />				
+						</label>
+					</fieldset>			
+					<fieldset>
+						<button class="searchInput" type="submit" name="submit">Search
+						<img src="http://savchenkoPortfolio/img/arrow.png" class="button" alt="button image"></button>
+					</fieldset>	
+				</form>
+			</fieldset>		
+		</div>
+		
+		<div class="results">								
+			<div class="tour">
+				<table class="header">
+					<tr class="header">
+						<td class="header"><p class="hotelName">Hotel name</p></td>							
+						<td class="header"><p class="cost">1000$</p></td>							
+					</tr>
+					<tr class="header">
+						<td class="header"><p class="countryName">Country name</p></td>
+					</tr>
+				</table>
+				<a href="#"><img src="http://savchenkoPortfolio/imgTest/hotel.jpg" class="hotel" alt="hotel image" /></a>
+				<table class="descr">
+					<tr class="descr">
+						<td class="left">Date start:</td>
+						<td class="descr"><p class="table">2016-01-01</p></td>
+					</tr>
+					<tr class="descr">
+						<td class="left">Nights:</td>
+						<td class="descr"><p class="table">9</p></td>
+					</tr>
+					<tr class="descr">
+						<td class="left">Start point:</td>
+						<td class="descr"><p class="table">New-york</p></td>
+					</tr>
+					<tr class="descr">
+						<td class="left">Room type:</td>
+						<td class="descr"><p class="table">VIP</p></td>
+					</tr>
+					<tr class="descr">
+						<td class="left">Diet:</td>
+						<td class="descr"><p class="table">Dinner</p></td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class="tour">
+				<table class="header">
+					<tr class="header">
+						<td class="header"><p class="hotelName">Hotel name</p></td>							
+						<td class="header"><p class="cost">1000$</p></td>							
+					</tr>
+					<tr class="header">
+						<td class="header"><p class="countryName">Country name</p></td>
+					</tr>
+				</table>
+				<a href="#"><img src="http://savchenkoPortfolio/imgTest/hotel.jpg" class="hotel" alt="hotel image" /></a>
+				<table class="descr">
+					<tr class="descr">
+						<td class="left">Date start:</td>
+						<td class="descr"><p class="table">2016-01-01</p></td>
+					</tr>
+					<tr class="descr">
+						<td class="left">Nights:</td>
+						<td class="descr"><p class="table">9</p></td>
+					</tr>
+					<tr class="descr">
+						<td class="left">Start point:</td>
+						<td class="descr"><p class="table">New-york</p></td>
+					</tr>
+					<tr class="descr">
+						<td class="left">Room type:</td>
+						<td class="descr"><p class="table">VIP</p></td>
+					</tr>
+					<tr class="descr">
+						<td class="left">Diet:</td>
+						<td class="descr"><p class="table">Dinner</p></td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class="tour">
+				<table class="header">
+					<tr class="header">
+						<td class="header"><p class="hotelName">Hotel name</p></td>							
+						<td class="header"><p class="cost">1000$</p></td>							
+					</tr>
+					<tr class="header">
+						<td class="header"><p class="countryName">Country name</p></td>
+					</tr>
+				</table>
+				<a href="#"><img src="http://savchenkoPortfolio/imgTest/hotel.jpg" class="hotel" alt="hotel image" /></a>
+				<table class="descr">
+					<tr class="descr">
+						<td class="left">Date start:</td>
+						<td class="descr"><p class="table">2016-01-01</p></td>
+					</tr>
+					<tr class="descr">
+						<td class="left">Nights:</td>
+						<td class="descr"><p class="table">9</p></td>
+					</tr>
+					<tr class="descr">
+						<td class="left">Start point:</td>
+						<td class="descr"><p class="table">New-york</p></td>
+					</tr>
+					<tr class="descr">
+						<td class="left">Room type:</td>
+						<td class="descr"><p class="table">VIP</p></td>
+					</tr>
+					<tr class="descr">
+						<td class="left">Diet:</td>
+						<td class="descr"><p class="table">Dinner</p></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="pager">
+			<a href="#" class="pager">Start</a>
+			<a href="#" class="pager">1</a>
+			<a href="#" class="pager">End</a>
+		</div>
+		
+		</section>
+				
+		<footer class="travelingCompany">
+			<p class="copyright">&copy; Vladimir Savchenko</p>
+			<p class="beginYear">2015</p>
+			<p class="currentYear"></p>
+			<div class="share">
+				<a href="#" id="linkedin"></a>
+				<a href="#" id="facebook"></a>
+				<a href="#" id="vk"></a>
+			</div>
+			<p class="currency"> $ - 22,00 Е - 25,00</p>
+			
+		</footer>				
+	</div>
+<script src="http://savchenkoPortfolio/js/jquery-1.11.3.min.js"></script>
+
+<script src="http://savchenkoPortfolio/js/jquery.bxslider.js"></script>
+
+<script>$('.bxslider').bxSlider();</script> 
+
+<script src="http://savchenkoPortfolio/js/common.js"></script>
+<script src="http://savchenkoPortfolio/js/travelingCompany.js"></script>
+</body>
+</html>

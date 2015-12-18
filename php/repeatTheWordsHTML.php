@@ -14,6 +14,6 @@ echo <<<EOD
 			<div class="arrow">&rarr;</div>
 		</div>
 		<div class="tip"></div>
-		<script src="../js/repeatTheWordsLoaded.js"></script>
+		<script src="http://savchenkoPortfolio/js/repeatTheWordsLoaded.js"></script>
 EOD
 ?>

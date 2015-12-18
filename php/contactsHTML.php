@@ -44,16 +44,19 @@ echo <<<EOD
 				<h4 class="address">You can send me a letter as well:</h4>
 				<div id='resp'></div>
 				<fieldset class="letter">
-				<label for="name">Your name</label>
+					<label>Your name:
 					<input type="text" name="name" class="letter" maxlength="255"/>
+					</label>
 				</fieldset>
 				<fieldset class="letter">
-				<label for="email">Your email</label>
+					<label>Your email:
 					<input type="text" name="email" class="letter" maxlength="255"/>
+					</label>
 				</fieldset>
 				<fieldset class="letter">
-				<label for="message">Your message</label>
+					<label>Your message:
 					<textarea name="message" class="letter" maxlength="510"></textarea>
+					</label>
 				</fieldset>
 				<fieldset class="letter">
 				<button name="send" class="letter" disabled>Send</botton>

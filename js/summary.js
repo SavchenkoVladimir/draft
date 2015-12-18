@@ -1,6 +1,6 @@
 'use strict';
 
-/* it is page displaying softly */
+/* it is displaying the page softly */
 var display = new softDisplaying('body', 3000);
 display.display();
 
@@ -14,25 +14,11 @@ var currentPlace = $('.currentYear');
 var insertDate = new InsertCurrenDate(beginPlace, currentPlace);
 insertDate.write();
 
-/* It is decorating the work list items */
-/*
-var decorate = new ListItemDecorating('list-item');
-decorate.run();
-*/
-
-/* Make three stars shine on the background of page */
-var star1 = new ShiningStar(6500);
-star1.run();
-var star2 = new ShiningStar(7900);
-star2.run();
-var star3 = new ShiningStar(10100);
-star3.run();
-
 /* Making the Contactas page */
 var contacts = new MakingContactsPage('contacts', 'http://savchenkoPortfolio/php/contactsHTML.php');
 
 /* Glue footer bottom */
-var footerGlued = new GlueElementBottom('section.workExemples', 120);
+var footerGlued = new GlueElementBottom('section.summary', 180);
 footerGlued.glue();
 $(window).resize(function(){
 	footerGlued.glue();

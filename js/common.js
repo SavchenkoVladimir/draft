@@ -50,11 +50,11 @@ InsertCurrenDate.prototype.write = function(){
 /*
 	The class softDisplaying displays a page softly after the page is completly downloaded.	
 */
-function softDisplaying(tagName, time){
-	this.element = document.getElementsByTagName(tagName);
+function softDisplaying(elemSelector, time){
+	this.element = document.querySelector(elemSelector);
 	this.time = time;
 	var self = this;
-	
+
 	this.display = function(){
 		document.addEventListener("DOMContentLoaded", function(){$(self.element).fadeIn(self.time);
 		});
@@ -421,6 +421,7 @@ function RepeatTheWords(divId, address){
 	this.intervalId;
 	this.wordsAddress;
 	this.words;
+	this.wordsArr;
 }
 RepeatTheWords.prototype.load = function(buttonIdentifyer){
 	var self = this;
@@ -677,6 +678,19 @@ RepeatTheWords.prototype.getAnswer = function(divSelector, wordss){
 		self.disableBlock(0, 4800, "[name='disabled']");
 	});
 }
+/* метод обращается к серверу, получает и обрабатывает ответ и запускает остальные методы */
+RepeatTheWords.prototype.loadWords = function(wordsAddress){
+	var self = this;
+	this.wordsAddress = wordsAddress;
+		$.ajax({
+		url: self.wordsAddress,
+		success:function(data){
+			var wordss = JSON.parse(data);
+			self.getAnswer('.answer', wordss);
+			self.clickGeneration(37, 39, '.answerContainer');
+		}
+	});
+}
 
 /*
 	The class IncreaseeElement increases an element of the page. 
@@ -898,7 +912,90 @@ LoadNewCelebrities.prototype.load = function(){
 	});
 }
 
+/* 
+	The class DescribeRef adopts reference selector and description address. 
+	The class depicts description when reference is mouseover and remove description after mouseleave. 
+*/
+function DescribeRef(refSelector, descrAddress){
+	this.elementsCollection = document.body.querySelectorAll(refSelector);
+	this.descrAddress = descrAddress;
+	this.element;
+	this.definition;
+	this.coords;
+	this.arrow;
+	this.image;
+	this.windowCoord;
+	this.windowWidth;
+	this.windowHeight;
+}
+DescribeRef.prototype.depict = function(){
+	var self = this;
+	
+	$(this.elementsCollection).mouseover(function(event){
+		self.element = event.target;
+		self.coords = $(self.element).offset();
+		
+		self.windowCoord = self.element.getBoundingClientRect();
+		self.windowWidth = $(window).width();
+		self.windowHeight = $(window).height();
+		
+		if( ((self.windowWidth - self.windowCoord.right) < 150) || ((self.windowHeight - self.windowCoord.bottom) < 100) ){
+			self.depictTop();
+		}else{
+			self.depictBottom();
+		}
+		$(self.definition).fadeIn(500);
+	});		
+	self.clear();
+}
+DescribeRef.prototype.depictTop = function(){
+	var self = this;
+	
+	self.definition = document.createElement('div');
+	$(self.definition).attr('class', 'definition');
+	alert(self.coords.left);
+	$(self.definition).css({ 'top': self.coords.top - 75,
+		'left': self.coords.left - 100
+	});
+		
+	self.image = document.createElement('img');
+	$(self.image).attr('src', self.descrAddress);		
+	$(self.image).attr('class', 'innerImage');		
+	$(self.definition).append(self.image);
+				
+	self.arrow = document.createElement('div');
+	$(self.arrow).attr('class', 'pointerBottom');
+	$(self.definition).append(self.arrow);
 
+	$('body').append(self.definition);
+}
+DescribeRef.prototype.depictBottom = function(){
+		var self = this;
+
+		self.definition = document.createElement('div');
+		$(self.definition).attr('class', 'definition');
+		$(self.definition).css({ 'top': self.coords.top + self.element.offsetHeight,
+			'left': self.coords.left + 30
+		});
+		
+		self.arrow = document.createElement('div');
+		$(self.arrow).attr('class', 'pointerTop');
+		$(self.definition).append(self.arrow);
+		
+		self.image = document.createElement('img');
+		$(self.image).attr('src', self.descrAddress);		
+		$(self.image).attr('class', 'innerImage');		
+		$(self.definition).append(self.image);
+	
+		$('body').append(self.definition);	
+}
+DescribeRef.prototype.clear = function(){
+	var self = this;
+	
+	$(this.elementsCollection).mouseout(function(){
+		$(self.definition).remove();
+	});
+}
 
 
 

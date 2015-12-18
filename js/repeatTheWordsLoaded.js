@@ -1,22 +1,3 @@
 'use strict';
 
-var wordss = [
-	['word', 'слово', 'мир'],
-	['board', 'доска', 'стол'],
-	['go', 'идти', 'думать'],
-	['miss', 'скучать', 'достигать'],
-	['apple', 'яблоко', 'телефон'],
-	['swim', 'плавать', 'летать'],
-	['table', 'стол', 'дорога'],
-	['cell', 'мобильник', 'самолет'],
-	['cat', 'кот', 'хлеб'],
-	['dram', 'барабан', 'земля'],
-	['door', 'дверь', 'стена'],
-	['mood', 'настроение', 'полет'],
-	['gray', 'серый', 'мышь'],
-	['tent', 'палатка', 'молоко'],
-	['attempt', 'попытка', 'металл']
-];
-
-repeat.getAnswer('.answer', wordss);
-repeat.clickGeneration(37, 39, '.answerContainer');
+repeat.loadWords('http://savchenkoPortfolio/php/repeatTheWordsWordsArr.php');

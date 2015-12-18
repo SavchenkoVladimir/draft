@@ -21,8 +21,13 @@ insertDate.write();
 var contacts = new MakingContactsPage('contacts', 'http://savchenkoPortfolio/php/contactsHTML.php');
 
 /* Glue footer bottom */
-var footerGlued = new GlueElementBottom('#section', 113);
+var footerGlued = new GlueElementBottom('section.main_page', 113);
 footerGlued.glue();
 $(window).resize(function(){
 	footerGlued.glue();
 });
+
+/* Describe the references */
+var describe = new DescribeRef('section > div > a', 'http://savchenkoPortfolio/img/github.png');
+describe.depict();
+

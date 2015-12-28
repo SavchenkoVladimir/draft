@@ -200,7 +200,6 @@ function MakingContactsPage(referenceId, pageAddress){
 		var page = document.getElementById('contactPage');
 
 		if( $(window).width() > 750 ){
-			alert($('body').height());
 			$(page).css({'margin-left': $(window).width()/4, 'margin-top': '5%', 'border-radius': '10px'});
 			$('body').css('overflow-x', 'hidden');
 		}
@@ -306,7 +305,7 @@ MakingContactsPage.prototype.send = function(buttName, address, divId){
 		var prevSibling = self.cont.previousElementSibling;
 		self.cont.style.left = parseInt(prevSibling.getBoundingClientRect().left) + 100 + 'px';
 		self.cont.style.top = parseInt((prevSibling.getBoundingClientRect().top) - 105) + 'px';
-		$(self.cont).fadeIn(2000);
+		$(self.cont).fadeIn(4000);
 	}
 	
 	function containerBlur(divId, time){
@@ -349,16 +348,87 @@ MakingContactsPage.prototype.close = function(buttId, divId){
 	});
 }
 
+/*
+	The class repeatTheWords deploys the same name page.
+*/
+function RepeatTheWords(divId, address){
+	this.section = document.body.querySelector(divId);
+	this.address = address;
+	this.button;
+	this.timeGap;
+	this.parent;
+	this.child;
+	this.parentHeight;		
+	this._divHeight;
+	this._heightStep;
+	this.engWordPlace;
+	this.rusWordPlace;
+//	alert($(this.section).attr('class') + ' ' + this.address);
+}
+RepeatTheWords.prototype.load = function(buttonIdentifyer){
+	var self = this;
+	this.button = document.body.querySelector(buttonIdentifyer);
+	$(this.button).click(function(){
+		$(self.section).load(self.address);
+	});	
+}
 
+/* Метод принимает время исполнения в милисекундах и идентификатор блока. Находит единственного потомка и придает ему 
+свойство height от 0 до своей высоты за 50 итераций*/
+RepeatTheWords.prototype.showTime = function(timeLength, divParentId, divChildId){
+	var self = this;
+	this.timeGap = timeLength / 50;
+	this.parent = document.getElementById(divParentId);
+	this.child = document.getElementById(divChildId);
+	this.parentHeight = parseInt(getComputedStyle(self.parent).height);
+		
+	this._divHeight = 0;
+	this._heightStep = self.parentHeight / 50;
 
-
-
-
-
-
-
-
-
+	this.heightChanging = function(){
+		self._divHeight += self._heightStep;
+		self.child.style.height = parseInt(self._divHeight) + 'px';
+		if( self._divHeight >= self.parentHeight ){
+			clearInterval(intervalId);
+		}
+	}
+	var intervalId = setInterval(self.heightChanging, 100);
+}
+/* Метод принимает массив из трех элементов, идентификатор местa для размещения англ. слова и идентификатор двух мест для русских слов. Первый элемент массива размешает в англ месте, вторые два в случайном порядке размещает два русских. Месту с вторым словом из массива присваивается id=1(true),месту с третьим элементом присваиваем id=0(false) */
+RepeatTheWords.prototype.placeWords = function(wordsArr, englishPlace, russianPlace){
+	this.engWordPlace = document.body.querySelector(englishPlace);
+	this.rusWordPlace = document.body.querySelectorAll(russianPlace);
+	
+	this.engWordPlace.textContent = wordsArr[0];
+	
+	this.rand = Math.round(Math.random());
+	if(this.rand === 1){
+		this.rusWordPlace[0].textContent = wordsArr[1];
+		this.rusWordPlace[0].setAttribute('id', 1);
+	
+		this.rusWordPlace[1].textContent = wordsArr[2];
+		this.rusWordPlace[1].setAttribute('id', 0);
+	}
+	if(this.rand === 0){
+		this.rusWordPlace[0].textContent = wordsArr[2];
+		this.rusWordPlace[0].setAttribute('id', 0);
+	
+		this.rusWordPlace[1].textContent = wordsArr[1];
+		this.rusWordPlace[1].setAttribute('id', 1);
+	}
+}
+/* Метод getAnswer слушает клики на блоках ответов и возвращает true или false. Принимает селектор блоков */
+RepeatTheWords.prototype.getAnswer = function(divSelector){
+	this.ansversCont = document.body.querySelectorAll(divSelector);
+	$(this.ansversCont).click(function(event){
+		var cont = 	event.target;
+		if($(cont).attr('id') == 1){
+			return true;			
+		}else{
+			return false;
+		}
+	});
+}
 
 
 

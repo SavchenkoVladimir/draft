@@ -11,5 +11,5 @@ display.display();
 contacts.setProperty();
 contacts.painting();
 contacts.buttonUnblock();
-contacts.send('[name="send"]', 'http://draft/php/contactsHandle.php', '#resp');
+contacts.send('[name="send"]', 'http://savchenkoPortfolio/php/contactsHandle.php', '#resp');
 contacts.close('#close', '#warning');

@@ -24,7 +24,7 @@
 		slideMargin: 0,
 		startSlide: 0,
 		randomStart: false,
-		captions: false,
+		captions: true,
 		ticker: false,
 		tickerHover: false,
 		adaptiveHeight: false,

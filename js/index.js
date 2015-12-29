@@ -8,7 +8,7 @@ var glueHeader = new GlueElementTop('header');
 glueHeader.glue();
 
 /* it is displaying the page softly */
-var display = new softDisplaying('body', 3000);
+var display = new softDisplaying('body', 1500);
 display.display();
 
 /* It is wrighting current year in the footer */
@@ -18,7 +18,9 @@ var insertDate = new InsertCurrenDate(beginPlace, currentPlace);
 insertDate.write();
 
 /* Making the Contactas page */
-var contacts = new MakingContactsPage('contacts', 'http://savchenkoPortfolio/php/contactsHTML.php');
+var contacts = new MakingContactsPage('#contacts',
+'../php/contactsHTML.php', '../html/errorPage.html');
+contacts.loadPage();
 
 /* Glue footer bottom */
 var footerGlued = new GlueElementBottom('section.main_page', 113);
@@ -28,6 +30,6 @@ $(window).resize(function(){
 });
 
 /* Describe the references */
-var describe = new DescribeRef('section > div > a', 'http://savchenkoPortfolio/img/github.png');
+var describe = new DescribeRef('section > div > a', '../img/github.png');
 describe.depict();
 

@@ -1,3 +1,3 @@
 'use strict';
 
-repeat.loadWords('http://savchenkoPortfolio/php/repeatTheWordsWordsArr.php');
+repeat.loadWords('../php/repeatTheWordsWordsArr.php', '../html/errorPage.html');

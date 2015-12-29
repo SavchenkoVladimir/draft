@@ -21,15 +21,16 @@ decorate.run();
 */
 
 /* Make three stars shine on the background of page */
-var star1 = new ShiningStar(6500);
+var star1 = new ShiningStar(6500, 'star');
 star1.run();
-var star2 = new ShiningStar(7900);
+var star2 = new ShiningStar(9000, 'star');
 star2.run();
-var star3 = new ShiningStar(10100);
-star3.run();
+
 
 /* Making the Contactas page */
-var contacts = new MakingContactsPage('contacts', 'http://savchenkoPortfolio/php/contactsHTML.php');
+var contacts = new MakingContactsPage('#contacts',
+'../php/contactsHTML.php', '../html/errorPage.html');
+contacts.loadPage();
 
 /* Glue footer bottom */
 var footerGlued = new GlueElementBottom('section.workExemples', 120);

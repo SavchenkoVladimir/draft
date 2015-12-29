@@ -65,6 +65,5 @@ echo <<<EOD
 			</div>
 			
 		</div>
-		<script src='../js/contacts.js'></script>
 EOD;
 ?>

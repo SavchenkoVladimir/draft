@@ -1,8 +1,8 @@
 <?php
-	$querry = $_REQUEST['querry'];
+	$querry = $_REQUEST['data'];
 	$querry = json_decode($querry, true);
-	
-	$name = $querry['_name'];	
+
+	$name = $querry['userName'];	
 	if(!$name){
 		$response = 'Type your name, please.<br />';		
 	}else{
@@ -19,7 +19,7 @@
 		}
 	}
 
-	$email = $querry['_email'];
+	$email = $querry['userEmail'];
 	//Проверяем email	
 	if(!$email){
 		$response .=  'Type your email, please.<br />';
@@ -33,7 +33,7 @@
 		}
 	}
 	
-	$message = $querry['_message'];
+	$message = $querry['userMessage'];
 	if(!$message){
 		$response .= "Where is your message?<br />";
 	}else{

@@ -1,7 +1,7 @@
 'use strict';
 
 /* it is displaying the page softly */
-var display = new softDisplaying('body', 3000);
+var display = new softDisplaying('body', 2000);
 display.display();
 
 /* Keep header visible on the top of screen */
@@ -15,12 +15,17 @@ var insertDate = new InsertCurrenDate(beginPlace, currentPlace);
 insertDate.write();
 
 /* Glue footer bottom */
-var footerGlued = new GlueElementBottom('.repeatTheWords', 65);
+var footerGlued = new GlueElementBottom('.repeatTheWords', 180);
 footerGlued.glue();
 $(window).resize(function(){
 	footerGlued.glue();
 });
 
 /* Run the Repeat the words page*/
-var repeat = new RepeatTheWords('.repeatTheWords', 'http://savchenkoPortfolio/php/repeatTheWordsHTML.php');
-repeat.load('.go');
+var repeat = new RepeatTheWords('.repeatTheWords', '../php/repeatTheWordsHTML.php');
+repeat.load('.go', '../js/repeatTheWordsLoaded.js');
+
+/* Making the Contactas page */
+var contacts = new MakingContactsPage('#contacts',
+'../php/contactsHTML.php', '../html/errorPage.html');
+contacts.loadPage();

@@ -15,7 +15,9 @@ var insertDate = new InsertCurrenDate(beginPlace, currentPlace);
 insertDate.write();
 
 /* Making the Contactas page */
-var contacts = new MakingContactsPage('contacts', 'http://savchenkoPortfolio/php/contactsHTML.php');
+var contacts = new MakingContactsPage('#contacts',
+'../php/contactsHTML.php', '../html/errorPage.html');
+contacts.loadPage();
 
 /* Glue footer bottom */
 var footerGlued = new GlueElementBottom('section.summary', 180);

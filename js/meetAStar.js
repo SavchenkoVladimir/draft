@@ -13,17 +13,13 @@ $(window).resize(function(){
 
 /* Fill the article */
 var fillIn = new FillTheArticle('article');
-fillIn.load('http://savchenkoPortfolio/php/meetAStar.php');
-//fillIn.fill(data);
+fillIn.load('../php/meetAStar.php', '../html/errorPage.html');
 
 /* Increase an element */
-
 var increase = new IncreaseElement('small');
 increase.animate();
 
-
-
 /* Refresh faces */
-
-var refreshFaces = new LoadNewCelebrities('refresh', 'article', 'http://savchenkoPortfolio/php/meetAStar.php');
+var refreshFaces = new LoadNewCelebrities('refresh', 'article',
+  '../php/meetAStar.php', '../html/errorPage.html');
 refreshFaces.load();

@@ -117,7 +117,7 @@ GlueElementBottom.prototype.glue = function(){
   if( this.windowHeight > this.documentHeight ){
     $(self.section).css('min-height', self.sectionHeight);
   }else{
-  	$(self.section).css('min-height', '');
+    $(self.section).css('min-height', '');
   }
 }
 
@@ -178,7 +178,7 @@ ShiningStar.prototype.displayStar = function(){
   $(this.element).fadeIn( (this.time / 2) - 250 );
 }
 ShiningStar.prototype.hideStar = function(){
-  var self = this;	
+  var self = this;  
   setTimeout(function(){ $(self.element).fadeOut( (self.time / 2) - 250 );  }, self.time / 2);
 }
 ShiningStar.prototype.all = function(){
@@ -306,7 +306,7 @@ function MakingContactsPage(refSelector, pageAddress, errorPageAddress){
 }
 /* The method makes container for contacts page. */
 MakingContactsPage.prototype.makeContainer = function(){
-	this.container = document.createElement('div');
+  this.container = document.createElement('div');
     $(this.container).attr('id', 'receiver');
     $('body').prepend(this.container);
 }
@@ -332,10 +332,10 @@ MakingContactsPage.prototype.loadPage = function(){
         self.loadScripts('../js/contacts.js');
       },
       error: function(){
-	    window.location = self.errorPageAddress;
-	  }      
+      window.location = self.errorPageAddress;
+    }      
     });
-    event.preventDefault();
+    return false;
   });
 }
 /* The method displays contacts page softly. */
@@ -367,15 +367,15 @@ MakingContactsPage.prototype.loadScripts = function(scriptsAddress){
 
   $.ajaxSetup({
     type: 'POST',
-  	async: true,
+    async: true,
     url: self.scripsAddress,
     dataType: 'script',
     timeout: 10000,
   });
   $.ajax({
     error: function(){
-	  window.location = self.errorPageAddress;
-	}
+    window.location = self.errorPageAddress;
+  }
   }); 
 }
 /* This method listens input events and changes class property values after an input field has been changed. */
@@ -384,8 +384,9 @@ MakingContactsPage.prototype.setProperty = function(){
 
   document.body.addEventListener('input', changePropertyValue);
 
-  function changePropertyValue(){
-  	self.inputElement = event.target;
+  function changePropertyValue(event){
+
+    self.inputElement = event.target;
     var name = $(self.inputElement).attr('name');
     
     switch(name){
@@ -409,9 +410,9 @@ MakingContactsPage.prototype.nameValidate = function(){
 /* The method returns either true if userEmail has @ and dot after it or false if they are absent. */
 MakingContactsPage.prototype.emailValidate = function(){
   if( this.userEmail ){
-  	if( this.userEmail.match(/.+@.+\..+/i) ){
-		return true;	
-	}    
+    if( this.userEmail.match(/.+@.+\..+/i) ){
+    return true;  
+  }    
   }else{
     return false;
   }
@@ -430,10 +431,10 @@ MakingContactsPage.prototype.painting = function(){
 
   document.body.addEventListener('input', paintInputField);
   
-  function paintInputField(){
-  	var elemName = $(self.inputElement).attr('name');
-  	
-  	function validate(elem){
+  function paintInputField(event){
+    var elemName = $(self.inputElement).attr('name');
+
+    function validate(elem){
       if( elem == 'name' ){
         return self.nameValidate();
       }else if( elem == 'email' ){
@@ -442,8 +443,8 @@ MakingContactsPage.prototype.painting = function(){
         return self.messageValidate();
       }      
     }
-    
-    if( !validate(elemName) ){
+   
+   if( !validate(elemName) ){
       $(event.target).css({'background-color':'rgb(255, 244, 242)', 'border-color':'rgb(255, 160, 160)'});
     }
     if( validate(elemName) ){
@@ -459,10 +460,10 @@ MakingContactsPage.prototype.buttonUnblock = function(buttonSelector){
   document.body.addEventListener('input', unblockButton);
   
   function unblockButton(){
-  	if( self.nameValidate() && self.emailValidate() && self.messageValidate() ){
+    if( self.nameValidate() && self.emailValidate() && self.messageValidate() ){
       self.submitButton.removeAttribute('disabled');
       self.submitButton.style.cursor = 'pointer';
-	}else{
+  }else{
       self.submitButton.setAttribute('disabled', 'true');
       self.submitButton.style.cursor = '';
     }
@@ -485,7 +486,7 @@ MakingContactsPage.prototype.send = function(handlerAddress, respContId){
       timeout: 15000,
       async: true,
     });
-    $.ajax({  		
+    $.ajax({      
       success: function(data){
         makeContainer();
         $(self.respCont).html(data);
@@ -608,9 +609,9 @@ RepeatTheWords.prototype.load = function(buttonIdentifyer, scriptsAddress){
       timeout: 10000,
     });
     $.ajax({
-      success: function(data){      	
-        $(self.section).html(data);
-        loadScript();        
+      success: function(data){        
+        $(self.section).html(data);        
+        loadScript();                
       },
       error: function(){
         window.location = self.errorPageAddress;
@@ -619,7 +620,7 @@ RepeatTheWords.prototype.load = function(buttonIdentifyer, scriptsAddress){
   });
   
   function loadScript(){
-  	$.ajaxSetup({
+    $.ajaxSetup({
       type: 'POST',
       async: true,
       url: self.scriptsAddress,
@@ -634,7 +635,7 @@ RepeatTheWords.prototype.load = function(buttonIdentifyer, scriptsAddress){
   }
 }
 /* The method adopts runtime and div identifier.
-It finds the single child and make his height from 0 to his max height in 50 iterations. */
+It finds the single child and make it's height from 0 to his max height in 50 iterations. */
 RepeatTheWords.prototype.showTime = function(timeLength, divParentId, divChildId){
   var self = this;
   this.timeGap = timeLength / 50;
@@ -689,7 +690,7 @@ RepeatTheWords.prototype.placeWords = function(wordsArr, englishPlace, russianPl
     }
   }
 }
-/* Метод принимает родительский идентификатор узла и возвращает коллекцию его дети. */
+/* The method adopts parent node identifier and return its children collection. */
 RepeatTheWords.prototype.getChildren = function(divSelector){
   this.parentElem = document.body.querySelector(divSelector);
   return $(this.parentElem).children();
@@ -892,8 +893,8 @@ RepeatTheWords.prototype.loadWords = function(wordsAddress, errorPageAddress){
   this.errorPageAddress = errorPageAddress;
   
   $.ajaxSetup({
-  	type: 'POST',
-  	async: true,
+    type: 'POST',
+    async: true,
     dataType: 'json',
     timeout: 10000,
     url: self.wordsAddress
@@ -905,8 +906,8 @@ RepeatTheWords.prototype.loadWords = function(wordsAddress, errorPageAddress){
       self.clickGeneration(37, 39, '.answerContainer');
     },
     error: function(){
-	  window.location = self.errorPageAddress;
-	}
+    window.location = self.errorPageAddress;
+  }
   });
 }
 
@@ -999,7 +1000,7 @@ IncreaseElement.prototype.animate = function(){
 }
 /* The method decreases an element after mouseout event. */
 IncreaseElement.prototype.decrease = function(){
-  var self = this;	
+  var self = this;  
   $(window).mouseleave(function(event){
     
     this.elementTarget = event.target;
@@ -1036,7 +1037,7 @@ IncreaseElement.prototype.writeName = function(){
 }
 /* The method increases an element smoothly. */
 IncreaseElement.prototype.animateName = function(){
-	
+  
   if($(self.elementTarget).attr('name') == '5' ||  $(self.elementTarget).attr('name') == '10'
     ||  $(self.elementTarget).attr('name') == '15'){
       $(self.titleCont).animate({'width': '210px', 'margin-left': '-50px'}, 500);
@@ -1081,8 +1082,8 @@ FillTheArticle.prototype.load = function(address, errorPageAddress){
   this.errorPageAddress = errorPageAddress;
 
   $.ajaxSetup({
-  	type: 'POST',
-  	async: true,
+    type: 'POST',
+    async: true,
     url: self.address,
     timeout: 10000,
     dataType: 'json',
@@ -1093,14 +1094,18 @@ FillTheArticle.prototype.load = function(address, errorPageAddress){
       fillIn.fill(data);
     },
     error: function(){
-		window.location = self.errorPageAddress;
-	}
-  });  
+      window.location = self.errorPageAddress;
+    },
+  });
 }
-/* The method adopts data and depict them in the page. */
 FillTheArticle.prototype.fill = function(data){
+  var self = this;
   this.data = JSON.parse(data);
+  
+  this.article.setAttribute('class', 'load');
+  this.imgCont = document.createElement('div');
 
+    
   for( var i = 0; i <= this.data.length - 1; i++ ){
     this.arrElem = this.data[i];
     
@@ -1119,8 +1124,47 @@ FillTheArticle.prototype.fill = function(data){
     this.div.setAttribute('class', 'small');
     this.div.appendChild(this.ref);    
     
-    this.article.appendChild(this.div);
+    this.imgCont.appendChild(this.div);
   }
+   $(document).ajaxComplete(function(){
+     self.article.appendChild(self.imgCont);
+     self.article.removeAttribute('class');
+   });
+}
+
+FillTheArticle.prototype.refresh = function(buttName, contName, address, errorPageAddress){
+  var self = this;
+  this.cont = document.body.querySelector(contName);
+  this.buttName = buttName;  
+  this.address = address;
+  this.errorPageAddress = errorPageAddress;
+  this.elementTarget;
+  
+  $(window).click(function(event){
+    self.elementTarget = event.target;
+    
+    if($(self.elementTarget).attr('class') == self.buttName){
+      self.children = $(self.cont).children();
+      $(self.children).remove();
+      
+      $.ajaxSetup({
+        type: 'POST',
+        async: true,
+        url: self.address,
+        dataType: 'json',
+        timeout: 10000,
+      });
+      $.ajax({
+        success: function(data){
+          fillIn.fill(data);
+        },
+        error: function(){
+          window.location = self.errorPageAddress;
+        }
+      }); 
+      event.preventDefault();      
+    }    
+  });
 }
 
 /* 
@@ -1144,8 +1188,8 @@ LoadNewCelebrities.prototype.load = function(){
       $(self.children).remove();
       
       $.ajaxSetup({
-      	type: 'POST',
-  	    async: true,
+        type: 'POST',
+        async: true,
         url: self.address,
         dataType: 'json',
         timeout: 10000,
@@ -1155,15 +1199,73 @@ LoadNewCelebrities.prototype.load = function(){
           fillIn.fill(data);
         },
         error: function(){
-		  window.location = self.errorPageAddress;
-	    }
+          window.location = self.errorPageAddress;
+        }
       }); 
       event.preventDefault();
     }    
   });
 }
 
+/*
+  The class Hover makes soft color animation.
+  It adopts an element selector(string), a final color(string) and an animation time(number).
+*/
+function Hover(elementSelector, finalColor, nativeColor, animTime){
+  this.animatedElem = document.body.querySelector(elementSelector);
+  this.finalColor = finalColor;
+  this.nativeColor = nativeColor;
+  this.animTime = animTime;
+}
+Hover.prototype.animation = function(){
+  var self = this;
+  
+  $(this.animatedElem).mouseenter(function(event){
+    $(self.animatedElem).animate({backgroundColor: self.finalColor}, self.animTime);
+  });
 
+  $(self.animatedElem).mouseleave(function(){
+    $(self.animatedElem).animate({backgroundColor: self.nativeColor}, self.animTime);
+  });
+}
+
+/*
+  Class RedioReplacer replaces radio-buttons by pretty images.
+*/
+function RedioReplacer(buttonsName, divIdentifier){
+  this.buttonsCollection = document.body.querySelectorAll(buttonsName);
+  this.replacersCollection = $(divIdentifier).children();
+  this.hoverElemNumber;
+  this.clickedElemNumber;
+}
+RedioReplacer.prototype.replase = function(){
+  var self = this;
+  
+  $(this.replacersCollection).mouseover(function(event){
+  	self.hoverElemNumber = $(event.target).index();
+
+    for( var i = 0; i <= self.hoverElemNumber; i++ ){
+      $(self.replacersCollection[i]).attr('class', 'radio-replacer-checked');
+	}
+	for( var n = self.hoverElemNumber + 1; n <= self.replacersCollection.length; n++ ){
+      $(self.replacersCollection[n]).attr('class', 'radio-replacer');
+	}
+  });
+}
+RedioReplacer.prototype.check = function(){
+  var self = this;
+  
+  $(this.replacersCollection).click(function(event){
+    self.clickedElemNumber = $(event.target).index();
+
+    for( var i = 0; i <= self.replacersCollection.length; i++ ){
+      if( $(self.buttonsCollection[i]).attr('checked') ){
+	    $(self.buttonsCollection[i]).removeAttr('checked');
+	  }                
+    }
+    $(self.buttonsCollection[self.clickedElemNumber]).attr('checked', true);
+  });
+}
 
 /*
   Class ListItemDecorating adopts element class name and decorates it's children.

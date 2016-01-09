@@ -3,7 +3,7 @@
   This is the style of Portfolio project
   Author: Vladimir Savchenko
 */
-
+  
 @font-face{
   font-family: ArbatDi;
   src: url('../css/ArbatDi.ttf');
@@ -17,7 +17,6 @@ html
   margin: 0;
   padding: 0;
 }
-
 body
 {
   display: none; 
@@ -55,93 +54,92 @@ div.star
   display: none; 
   position: fixed;
   z-index: -1;
-  background-image: url('../img/starWork.jpeg');
+  background-image: url('../img/starWork.jpg');
   min-width: 30px;
   min-height: 30px;  
   width: 30px;
   height: 30px;
   border-width: 0;
 }  
-header
-{
-  border: 0;
-  width: 100%;
-  padding: 0;
-  position: relative;
-  margin-top: 60px;
-  background-color: rgba(170, 170, 170, 0.5);
-  height: 65px;  
-}
-  ul
+  header
   {
-    height: 100%;
-    margin: 0;
+    border: 0;
+    width: 100%;
     padding: 0;
+    position: relative;
+    margin-top: 60px;
+    background-color: rgba(170, 170, 170, 0.5);
+    height: 65px;  
   }
-    li
+    ul
     {
-      list-style: none;
-      list-style-type: none;
-      height: inherit;
+      height: 100%;
+      margin: 0;
+      padding: 0;
     }
-      a.nav
+      li
       {
-        text-decoration: none;
-        float: right;        
-        font-size: 1.7em;
-        color: rgb(54, 54, 54);        
-        padding: 17px 20px 15px 10px;
+        list-style: none;
+        list-style-type: none;
         height: inherit;
       }
-        a.nav:hover
-        {        
-          background-color: rgba(170, 170, 170, 0.1);
-          color: rgb(255,102,0);
+        a.nav
+        {
+          text-decoration: none;
+          float: right;        
+          font-size: 1.7em;
+          color: rgb(54, 54, 54);        
+          padding: 17px 20px 15px 10px;
+          height: inherit;
         }
-#clone
-{
-  border: 0;
-  width: 100%;
-  overflow: auto;
-  padding: 0;
-  position: relative;
-  background-color: rgba(0,0,0,0);
-}
-
-section.main_page,
-section.workExemples
-{
-  position: relative;
-  width: 85%;
-  margin: auto;  
-  overflow-y: auto;
-}
-  #css,
-  #html5,
-  #javascript,
-  #www,
-  #php,
-  #css3,
-  #mysql,
-  #html
-  {
-    display: block;
-    float: left;
-    position: relative;
-  }
-    #css:hover,
-    #html5:hover,
-    #javascript:hover,
-    #www:hover,
-    #php:hover,
-    #css3:hover,
-    #mysql:hover,
-    #html:hover
+          a.nav:hover
+          {        
+            background-color: rgba(170, 170, 170, 0.1);
+            color: rgb(255,102,0);
+          }
+    #clone
     {
-      color: rgb(110, 110, 110);
-      text-shadow: 1px 1px 1px rgb(139, 139, 139);    
+      border: 0;
+      width: 100%;
+      overflow: auto;
+      padding: 0;
+      position: relative;
+      background-color: rgba(0,0,0,0);
     }
-  
+
+  section.main_page,
+  section.workExemples
+  {
+    position: relative;
+    width: 85%;
+    margin: auto;  
+    overflow-y: auto;
+  }
+    #css,
+    #html5,
+    #javascript,
+    #www,
+    #php,
+    #css3,
+    #mysql,
+    #html
+    {
+      display: block;
+      float: left;
+      position: relative;
+    }
+      #css:hover,
+      #html5:hover,
+      #javascript:hover,
+      #www:hover,
+      #php:hover,
+      #css3:hover,
+      #mysql:hover,
+      #html:hover
+      {
+        color: rgb(110, 110, 110);
+        text-shadow: 1px 1px 1px rgb(139, 139, 139);    
+      }
     #css3
     {        
       margin: 7% 5% 7% 15%;
@@ -190,43 +188,43 @@ section.workExemples
       font-weight: bold;
       font-size: 1.4em;;          
     }
-  section.main_page > div > a
-  {
-    color: rgb(90, 90, 90);
-  }
-  .definition
-  {
-    display: none;
-    position: absolute;
-    opacity: 0.75;
-  }
-    .innerImage
+    section.main_page > div > a
     {
-      width: 150px;
-      border-radius: 5px;
-      border: 1px solid rgb(210, 210, 210);
+      color: rgb(90, 90, 90);
     }
-    .pointerTop
-    {      
-      border-top: 0 solid rgba(230, 230, 230, 1);
-      border-right: 10px solid rgba(230, 230, 230, 0);
-      border-bottom: 15px solid rgba(230, 230, 230, 1);
-      border-left: 3px solid rgba(230, 230, 230, 0);
-      width: 0;
-      height: 10px;
-      margin-left: 10px;
-    }
-    .pointerBottom
-    {
-      border-top: 15px solid rgba(230, 230, 230, 1);
-      border-right: 3px solid rgba(230, 230, 230, 0);
-      border-bottom: 0 solid rgba(230, 230, 230, 1);
-      border-left: 10px solid rgba(230, 230, 230, 0);
-      width: 0;
-      height: 10px;
-      margin-left: 130px;
-      margin-top: -5px;
-    }
+      .definition
+      {
+        display: none;
+        position: absolute;
+        opacity: 0.75;
+      }
+      .innerImage
+      {
+        width: 150px;
+        border-radius: 5px;
+        border: 1px solid rgb(210, 210, 210);
+      }
+      .pointerTop
+      {      
+        border-top: 0 solid rgba(230, 230, 230, 1);
+        border-right: 10px solid rgba(230, 230, 230, 0);
+        border-bottom: 15px solid rgba(230, 230, 230, 1);
+        border-left: 3px solid rgba(230, 230, 230, 0);
+        width: 0;
+        height: 10px;
+        margin-left: 10px;
+      }
+      .pointerBottom
+      {
+        border-top: 15px solid rgba(230, 230, 230, 1);
+        border-right: 3px solid rgba(230, 230, 230, 0);
+        border-bottom: 0 solid rgba(230, 230, 230, 1);
+        border-left: 10px solid rgba(230, 230, 230, 0);
+        width: 0;
+        height: 10px;
+        margin-left: 130px;
+        margin-top: -5px;
+      }
   footer
   {  
     width: 100%;
@@ -253,573 +251,575 @@ section.workExemples
       margin: 15px 5% 10px 5%;
       float: right;
     }
-    #linkedin, 
-    #facebook, 
-    #vk
-    {  
-      display: inline-block;
-      min-width: 25px;
-      min-height: 25px;
-      border-radius: 2px;    
-    }
-      #linkedin
+      #linkedin, 
+      .linkedin, 
+      #facebook, 
+      .facebook, 
+      #vk,
+      .vk
+      {  
+        display: inline-block;
+        min-width: 25px;
+        min-height: 25px;
+        border-radius: 2px;    
+      }
+      #linkedin,
+      .linkedin
       {
         background: url('../img/linkedin_grey.jpg');
         background-size: 100%;
       }
-        #linkedin:hover
+        #linkedin:hover,
+        .linkedin:hover
         {
           background: url('../img/linkedin_color.jpg');
           background-size: 100%;
         }
           .linkedinPreload
           {
-            width: 0px; 
-            height: 0px; 
-            display: inline; 
             background-image: url('../img/linkedin_color.jpg'); 
           }
-      #facebook
+      #facebook,
+      .facebook
       {
         background: url('../img/facebook_grey.jpg');
         background-size: 100%;
       }
-        #facebook:hover
+        #facebook:hover,
+        .facebook:hover
         {
           background: url('../img/facebook_color.jpg');
           background-size: 100%;
         }
           .facebookPreload
           {
-            width: 0px; 
-            height: 0px; 
-            display: inline; 
             background-image: url('../img/facebook_color.jpg'); 
           }
-      #vk
+      #vk,
+      .vk
       {
         background: url('../img/vk_grey.jpg');
         background-size: 100%;
       }
-        #vk:hover
+        #vk:hover,
+        .vk:hover
         {
           background: url('../img/vk_color.jpg');
           background-size: 100%;
         }
           .vkPreload
           {
+        background-image: url('../img/vk_color.jpg'); 
+          }
+          .linkedinPreload,
+          .vkPreload,
+          .facebookPreload
+          {                 
             width: 0px; 
             height: 0px; 
             display: inline; 
-            background-image: url('../img/vk_color.jpg'); 
-          }
+      }
     
-    
-/* The work exemples page */
-#workExemples{
-  width: 100%;
-  min-width: 970px;
-  min-height: 100%;      
-  height: 100%;
-  overflow: inherit;
-}
-/*  div.list-item
-  {
-    text-align: justify;
-    width: 99%;
-    margin: auto;
-    overflow-y: auto;
-    border-bottom: 1px dashed rgb(209, 209, 209);    
+  /* The work exemples page */
+  #workExemples{
+    width: 100%;
+    min-width: 970px;
+    min-height: 100%;      
+    height: 100%;
+    overflow: inherit;
   }
-    div.list-item:hover
+    section.workExemples
     {
-      background-color: rgba(200, 200, 200, 0.1);
-      border-bottom: 1px dashed rgb(209, 209, 209);
-      box-shadow: 2px 2px 2px rgb(170, 170, 170);
-    }
-    div.caption
-    {
-      width: 25%;
-      min-height: 100px;
-      height: 100px;      
-      float: left;
-      margin: 12px 15px 12px 15px;
-      padding: 15px;
-      overflow: hidden;
-      border-radius: 7px;
-      font-size: 1.3em;
-    }
-    div.description
-    {
-      width: 60%;
-      min-height: 100px;      
-      float: left;
-      padding: 25px;
-      overflow: hidden;
-      font-size: 1.1em;
-    }
-    a.inner
-    {
-      text-decoration: none;
-      color: inherit;
-      display: inline-block; 
-      width: 100%;
-      min-height: 100px;
-    }
-*/
-    div.list-item
-    {
-      width: 99%;
+      width: 970px;
       margin: auto;
-      overflow-y: auto;;
-      border-bottom: 1px dashed rgb(209, 209, 209);
-    }
-      div.list-item:hover
+  }
+      div.list-item
       {
-        background-color: rgba(220, 220, 220, 0.1);
+        width: 99%;
+        margin: auto;
+        overflow-y: auto;;
         border-bottom: 1px dashed rgb(209, 209, 209);
-        box-shadow: 2px 2px 2px rgb(170, 170, 170);
       }
-      div.imgCont
-      {
-        float: left;
-        z-index: 0;
-      }
-        img.example
+        div.list-item:hover
         {
-          width: 200px;
-          height: 170px;
-          border-radius: 5px;
-          margin: 10px;
+          background-color: rgba(220, 220, 220, 0.1);
+          border-bottom: 1px dashed rgb(209, 209, 209);
+          box-shadow: 2px 2px 2px rgb(170, 170, 170);
         }
-      h3.caption
-      {
-        float: left;
-        clear: right;
-        margin: 20px 20px 10px 25px;
-      }
-      div.description
-      {
-        width: 70%;
-        float: left;
-        padding: 10px 20px 10px 25px;
-        overflow: hidden;
-        font-size: 1.1em;
-        text-align: justify;
-      }
-/* The contacts page style */
-div#cover
-{
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
-  z-index: 888;
-}
-  div#contactPage
+        div.imgCont
+        {
+          float: left;
+          z-index: 0;
+        }
+          img.example
+          {
+            width: 200px;
+            height: 170px;
+            border-radius: 5px;
+            margin: 10px;
+          }
+        h3.caption
+        {
+          float: left;
+          clear: right;
+          margin: 20px 20px 10px 25px;
+        }
+        div.description
+        {
+          width: 75%;
+          float: right;
+          padding: 10px 10px 10px 10px;
+          overflow: hidden;
+          font-size: 1.1em;
+          text-align: justify;
+        }
+  /* The contacts page style */
+  div#cover
   {
     display: none;
-    min-width: 600px;
-    width: 600px;
-    min-height: 700px;
-    height: 700px;
-    margin: auto;
-    padding: 15px;
-    background-color: rgb(255, 255, 255);
-    font-weight: bolder;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+    z-index: 888;
   }
-    p.addressType
+    div#contactPage
     {
-      display: inline-block;
-      width: 100px;
+      display: none;
+      min-width: 600px;
+      width: 600px;
+      min-height: 700px;
+      height: 700px;
+      margin: auto;
+      padding: 15px;
+      background-color: rgb(255, 255, 255);
+      font-weight: bolder;
     }
-    p.addressDescr{
-      display: inline-block;
-    }
-      p.addressType,
-      p.addressDescr
+      p.addressType
       {
-        margin: 2px 2px 2px 2px;
+        display: inline-block;
+        width: 100px;
       }
-    h4.address
-    {
-      margin: 5px;
-    }
-    iframe.address
-    {
-      width: 80%;
-      border: 0;
-      border-radius: 3px;
-      height: 200px;
-    }
-    fieldset.letter
-    {
-      width: 350px;
-      border: 0;
-      color: inherit;
-    }
-      input[type='text'].letter, 
-      textarea.letter
-      {
-        float: right;
-        width: 200px;
-        border: 1px solid rgb(199, 199, 199);
-        border-radius: 3px;        
+      p.addressDescr{
+        display: inline-block;
       }
-        input.letter:focus, 
-        textarea.letter:focus
+        p.addressType,
+        p.addressDescr
         {
-          background: rgb(247, 255, 252);
-          border-color: rgb(151, 244, 213);
-          outline-width: 0;
+          margin: 2px 2px 2px 2px;
         }
-      textarea.letter
+      h4.address
       {
-        height: 90px;
+        margin: 5px;
       }
-      button.letter, 
-      button#close
+        iframe.address
+        {
+          width: 80%;
+          border: 0;
+          border-radius: 3px;
+          height: 200px;
+        }
+      fieldset.letter
       {
-        position: relative;
-        float: right;
-        width: 80px;
-        border: 1px solid rgb(200, 200, 200);
-        border-radius: 5px;
-        padding: 2px 13px 2px 13px;
-        font-weight: bolder;
+        width: 350px;
+        border: 0;
+        color: inherit;
       }
-      button#close
+        input[type='text'].letter, 
+        textarea.letter
+        {
+          float: right;
+          width: 200px;
+          border: 1px solid rgb(199, 199, 199);
+          border-radius: 3px;        
+        }
+          input.letter:focus, 
+          textarea.letter:focus
+          {
+            background: rgb(247, 255, 252);
+            border-color: rgb(151, 244, 213);
+            outline-width: 0;
+          }
+        textarea.letter
+        {
+          height: 90px;
+        }
+        button.letter, 
+        button#close
+        {
+          position: relative;
+          float: right;
+          width: 80px;
+          border: 1px solid rgb(200, 200, 200);
+          border-radius: 5px;
+          padding: 2px 13px 2px 13px;
+          font-weight: bolder;
+        }
+        button#close
+        {
+          background-color: rgb(255, 255, 255);
+        }
+          button#close:hover
+          {
+            cursor: pointer;
+            background: rgb(245, 245, 245);
+          }
+            button.letter:active,
+            button#close:active
+            {
+              background: -webkit-linear-gradient(bottom, rgb(200, 200, 200), rgb(255, 255, 255) 90%);
+              background: -moz-linear-gradient(bottom, rgb(200, 200, 200), rgb(255, 255, 255) 90%);
+              background: -o-linear-gradient(bottom, rgb(200, 200, 200), rgb(255, 255, 255) 90%);
+              background: -ms-linear-gradient(bottom, rgb(200, 200, 200), rgb(255, 255, 255) 90%);
+              background: -linear-gradient(bottom, rgb(200, 200, 200), rgb(255, 255, 255) 90%);
+              border-top: 1px solid rgb(230, 230, 230);
+              border-left: 1px solid rgb(230, 230, 230);
+            }
+        #resp, #warning
+        {
+          display: none;
+          position: fixed;
+          min-width: 350px;
+          min-height: 100px;
+          border: 2px solid rgb(199, 199, 199);
+          background-color: rgba(255, 255, 255, 0.9);
+          border-radius: 5px;
+          padding: 10px;
+          text-align: center;
+        }  
+          #warning > button
+          {
+            display: inherit;
+            margin: 15px 40px 15px 40px;
+            float: left; 
+          }
+            #warning > button:hover
+            {
+              cursor: pointer;            
+            }
+  /* The repeat the words page style. */
+  div#repeatTheWords  
+  {
+    width: 100%;
+    min-width: 970px;
+    min-height: 100%;      
+    height: 100%;
+    overflow: inherit;
+    background: -webkit-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 85%);
+    background: -moz-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 100%);
+    background: -o-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 100%);
+    background: -ms-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 85%);
+    background: -linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 85%);
+  }
+    section.repeatTheWords
+    {
+      width: 850px;
+      min-height: 600px;
+      margin: auto;
+      margin-top: 0;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background: rgb(255, 255, 255);
+    }
+    div.trainingContainer
+    {
+    min-height: 321px;
+  }
+      div.note
       {
-        background-color: rgb(255, 255, 255);
+        width: 60px;
+        height: 60px;
+        border: 1px solid rgb(150, 150, 150);
+        border-radius: 30px;
+        margin: auto;
+        color: rgb(255, 255, 255);
+        color: rgb(150, 150, 150);
+        font-size: 3em;
+        text-align: center;
       }
-        #close:hover
+      div.word
+      {
+        width: 50%;
+        margin: auto;
+        margin-top: 40px;
+        font-size: 2.5em;
+        text-align: center;
+        font-family: Cambria;
+      }
+      div.answerContainer, div.arrowContainer, div.result
+      {
+        width: 60%;
+        margin: auto;
+        margin-top: 25px;
+        overflow-y: auto;
+      }
+        div.answer
+        {
+          width: 48%;
+          height: 65px;
+          float: left;
+          font-size: 2.5em;
+          text-align: center;
+          border: 1px solid rgb(245, 245, 245);
+          border-radius: 4px;
+          margin: 2px;
+          display: table-row;
+          vertical-align: bottom;
+          font-family: Cambria;
+        }
+          div.answer:hover
+          {
+            background: rgb(250, 250, 250);
+            box-shadow: 2px 2px 2px rgb(220, 220, 220);
+            cursor: pointer;          
+          }
+          div.answer:active
+          {
+            background: -webkit-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+            background: -moz-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+            background: -o-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+            background: -ms-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+            background: -linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
+            border-top: 1px solid rgb(230, 230, 230);
+            border-left: 1px solid rgb(230, 230, 230);
+            border-radius: 4px;
+            box-shadow: 0 0 0 rgb(255, 255, 255);
+          }
+          [name='disabled']
+          {
+            color: rgb(150, 150, 150);
+          }
+        div#timeParent
+        {
+          min-width: 1%;
+          min-height: 67px;
+          background: rgb(19, 221, 33);
+          height: 100%;
+          float: left;
+          position: relative;
+        }
+          div#timeChild
+          {
+            min-width: 2px;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            float: left;
+          }
+        div.arrow
+        {
+          width: 49%;
+          float: left;
+          background: rgb(252, 252, 252);
+          font-size: 1.5em;
+          text-align: center;
+        }    
+      div.tip
+      {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        color: rgb(150, 150, 150);
+      }
+      div.question
+      {
+        margin-top: 100px;
+        text-align: center;
+        font-size: 3em;
+        color: rgb(0, 0, 129);
+      }
+      div.go
+      {
+        width: 300px;
+        margin: auto;
+        margin-top: 100px;
+        font-size: 3em;
+        text-align: center;
+        color: rgb(71, 178, 0);
+        background: rgb(250, 250, 250);
+        border: solid 1px rgb(200, 200, 200);
+        border-radius: 30px;      
+      }
+        div.go:hover
         {
           cursor: pointer;
           background: rgb(245, 245, 245);
         }
-      #resp, #warning
-      {
-        display: none;
-        position: fixed;
-        min-width: 350px;
-        min-height: 100px;
-        border: 2px solid rgb(199, 199, 199);
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 5px;
-        padding: 10px;
-        text-align: center;
-      }  
-        #warning > button
-        {
-          display: inherit;
-          margin: 15px 40px 15px 40px;
-          float: left; 
-        }
-          #warning > button:hover
+          div.go:active
           {
-            cursor: pointer;            
+            background: -webkit-linear-gradient(bottom, rgb(235, 235, 235), rgb(250, 250, 250) 90%);
+            background: -moz-linear-gradient(bottom, rgb(235, 235, 235), rgb(250, 250, 250) 90%);
+            background: -o-linear-gradient(bottom, rgb(235, 235, 235), rgb(250, 250, 250) 90%);
+            background: -ms-linear-gradient(bottom, rgb(235, 235, 235), rgb(250, 250, 250) 90%);
+            background: -linear-gradient(bottom, rgb(235, 235, 235), rgb(250, 250, 250) 90%);
+            border-top: 1px solid rgb(230, 230, 230);
+            border-left: 1px solid rgb(230, 230, 230);
           }
-/* The repeat the words page style. */
-div#repeatTheWords  
-{
-  width: 100%;
-  min-width: 970px;
-  min-height: 100%;      
-  height: 100%;
-  overflow: inherit;
-  background: -webkit-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 85%);
-  background: -moz-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 100%);
-  background: -o-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 100%);
-  background: -ms-linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 85%);
-  background: -linear-gradient(top, #D7FFFF 0%,#7BF4FF 20%,#00F4FF 75%,#fefefe 85%);
-}
-  section.repeatTheWords
-  {
-    width: 850px;
-    margin: auto;
-    margin-top: 0;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background: rgb(255, 255, 255);
-  }
-    div.note
-    {
-      width: 60px;
-      height: 60px;
-      border: 1px solid rgb(150, 150, 150);
-      border-radius: 30px;
-      margin: auto;
-      color: rgb(255, 255, 255);
-      color: rgb(150, 150, 150);
-      font-size: 3em;
-      text-align: center;
-    }
-    div.word
-    {
-      width: 50%;
-      margin: auto;
-      margin-top: 40px;
-      font-size: 2.5em;
-      text-align: center;
-      font-family: Cambria;
-    }
-    div.answerContainer, div.arrowContainer, div.result
-    {
-      width: 60%;
-      margin: auto;
-      margin-top: 25px;
-      overflow-y: auto;
-    }
-      div.answer
-      {
-        width: 48%;
-        height: 65px;
-        float: left;
-        font-size: 2.5em;
-        text-align: center;
-        border: 1px solid rgb(245, 245, 245);
-        border-radius: 4px;
-        margin: 2px;
-        display: table-row;
-        vertical-align: bottom;
-        font-family: Cambria;
-      }
-        div.answer:hover
-        {
-          background: rgb(250, 250, 250);
-          box-shadow: 2px 2px 2px rgb(220, 220, 220);
-          cursor: pointer;          
-        }
-        div.answer:active
-        {
-          background: -webkit-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
-          background: -moz-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
-          background: -o-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
-          background: -ms-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
-          background: -linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
-          border-top: 1px solid rgb(230, 230, 230);
-          border-left: 1px solid rgb(230, 230, 230);
-          border-radius: 4px;
-          box-shadow: 0 0 0 rgb(255, 255, 255);
-        }
-        [name='disabled']
-        {
-          color: rgb(150, 150, 150);
-        }
-      div#timeParent
-      {
-        min-width: 1%;
-        min-height: 67px;
-        background: rgb(19, 221, 33);
-        height: 100%;
-        float: left;
-        position: relative;
-      }
-        div#timeChild
-        {
-          min-width: 2px;
-          width: 100%;
-          height: 100%;
-          background-color: rgb(255, 255, 255);
-          float: left;
-        }
-      div.arrow
-      {
-        width: 49%;
-        float: left;
-        background: rgb(252, 252, 252);
-        font-size: 1.5em;
-        text-align: center;
-      }    
-    div.tip
-    {
-      font-size: 1.2em;
-      font-weight: bold;
-      text-align: center;
-      color: rgb(150, 150, 150);
-    }
-    div.question
-    {
-      margin-top: 100px;
-      text-align: center;
-      font-size: 3em;
-      color: rgb(0, 0, 129);
-    }
-    div.go
-    {
-      width: 300px;
-      margin: auto;
-      margin-top: 100px;
-      font-size: 3em;
-      text-align: center;
-      color: rgb(71, 178, 0);
-      background: rgb(250, 250, 250);
-      border: solid 1px rgb(200, 200, 200);
-      border-radius: 30px;      
-    }
-      div.go:hover{
-        cursor: pointer;
-        background: rgb(245, 245, 245);
-      }
-      div.go:active
-      {
-        background: -webkit-linear-gradient(bottom, rgb(235, 235, 235), rgb(250, 250, 250) 90%);
-        background: -moz-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
-        background: -o-linear-gradient(bottom, rgb(240, 240, 240), rgb(250, 250, 250) 90%);
-        background: -ms-linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
-        background: -linear-gradient(bottom, rgb(245, 245, 245), rgb(250, 250, 250) 90%);
-        border-top: 1px solid rgb(230, 230, 230);
-        border-left: 1px solid rgb(230, 230, 230);
-      }
-    div.res
-    {
-      width: 600px;
-      height: 100%;
-      margin: auto;
-      overflow-y: auto;      
-    }
-      table.res
+      div.res
       {
         width: 600px;
-        background-color: rgba(0, 0, 0, 0.02);
-        font-weight: bolder;
-        border: 1px solid rgb(200, 200, 200);
-        border-radius: 7px;
+        height: 100%;
+        margin: auto;
+        overflow-y: auto;      
       }
-      caption.res
-      {
-        width: 560px;
-        padding: 20px;
-        text-align: left;
-        font-size: 1.5em;
-      }
-      th, td
-      {
-        text-align: left;
-        padding-left: 10px;
-      }
-        .lineThrough
+        table.res
         {
-          text-decoration: line-through;
+          width: 600px;
+          background-color: rgba(0, 0, 0, 0.02);
+          font-weight: bolder;
+          border: 1px solid rgb(200, 200, 200);
+          border-radius: 7px;
         }
-        .green
+        caption.res
         {
-          color: rgb(18, 180, 38);
-          font-weight: bold;
+          width: 560px;
+          padding: 20px;
+          text-align: left;
+          font-size: 1.5em;
         }
-        .red
+        th, td
         {
-          color: rgb(239, 148, 67);
-          font-weight: bold;
+          text-align: left;
+          padding-left: 10px;
         }
-      #trainAgan, 
-      #back
+          .lineThrough
+          {
+            text-decoration: line-through;
+          }
+          .green
+          {
+            color: rgb(18, 180, 38);
+            font-weight: bold;
+          }
+          .red
+          {
+            color: rgb(239, 148, 67);
+            font-weight: bold;
+          }
+        #trainAgan, 
+        #back
+        {
+          display: block;
+          float: left;
+          min-width: 80px;
+          margin: 15px 100px 0 100px;
+          text-align: center;
+          padding: 10px;
+          background-color: rgb(250, 250, 250);
+          border: 1px solid rgb(230, 230, 230);
+          border-radius: 20px;
+          font-weight: bolder;
+        }
+          #trainAgan:hover, 
+          #back:hover
+          {
+            background: rgb(240, 240, 240);
+            cursor: pointer;
+          }
+            #trainAgan:active, 
+            #back:active
+            {
+              background: -webkit-linear-gradient(bottom, rgb(200, 200, 200), rgb(250, 250, 250) 90%);
+              background: -moz-linear-gradient(bottom, rgb(200, 200, 200), rgb(250, 250, 250) 90%);
+              background: -o-linear-gradient(bottom, rgb(200, 200, 200), rgb(250, 250, 250) 90%);
+              background: -ms-linear-gradient(bottom, rgb(200, 200, 200), rgb(250, 250, 250) 90%);
+              background: -linear-gradient(bottom, rgb(200, 200, 200), rgb(250, 250, 250) 90%);
+              border-top: 1px solid rgb(230, 230, 230);
+              border-left: 1px solid rgb(230, 230, 230);
+            }
+
+    div#grass
+    {
+      background: url('../img/grass_1.gif')repeat-x  bottom;
+      min-height: 100px;
+      min-width: 100%;
+      position: relative;
+      top: 53px;
+      z-index: 0;
+    }
+
+  /* The Meet a star page */
+  div#meetAStar
+  {
+    min-height: 100%;
+    min-width: 900px;  
+    height: 100%;
+    overflow: inherit;
+    font-family: ArbatDi;
+    background: -webkit-linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
+    background: -moz-linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
+    background: -o-linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
+    background: -ms-linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
+    background: -linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
+  }
+    header.meetAStar
+    {
+      min-width: 100%;
+      width: 100%;  
+      height: 50px;
+      margin: 0;
+      background: -webkit-linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
+      background: -moz-linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
+      background: -o-linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
+      background: -ms-linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
+      background: -linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
+    }
+      div.logo
       {
-        display: block;
-        float: left;
-        min-width: 80px;
-        margin: 15px 100px 0 100px;
+        height: 40px;
+        font-size: 1.7em;
+        font-weight: bold;
+        width: 170px;
+        font-family: ArbatDi;
         text-align: center;
-        padding: 10px;
-        background-color: rgb(250, 250, 250);
-        border: 1px solid rgb(230, 230, 230);
-        border-radius: 20px;
-        font-weight: bolder;
+        margin-left: 50px;
+        padding: 5px;
+        border-left: 2px solid rgb(120, 120, 120);
+        border-right: 2px solid rgb(120, 120, 120);
+        float: left;
       }
-        #trainAgan:hover, 
-        #back:hover
+        div.logo:hover
         {
-          background: rgb(240, 240, 240);
+          background: -webkit-linear-gradient(bottom, rgb(255, 8, 0) 0%, rgb(255, 138, 95) 100%);
+          background: -moz-linear-gradient(bottom, rgb(255, 8, 0) 0%, rgb(255, 138, 95) 100%);
+          background: -o-linear-gradient(bottom, rgb(255, 8, 0) 0%, rgb(255, 138, 95) 100%);
+          background: -ms-linear-gradient(bottom, rgb(255, 8, 0) 0%, rgb(255, 138, 95) 100%);
+          background: -linear-gradient(bottom, rgb(255, 8, 0) 0%, rgb(255, 138, 95) 100%);
           cursor: pointer;
+          color: rgb(50, 50, 50);
         }
-  div#grass
-  {
-    background: url('../img/grass_1.gif')repeat-x  bottom;
-    min-height: 100px;
-    min-width: 100%;
-    position: relative;
-    top: 53px;
-    z-index: 0;
-  }
-
-/* The Meet a star page */
-div#meetAStar
-{
-  min-height: 100%;
-  min-width: 900px;  
-  height: 100%;
-  overflow: inherit;
-  font-family: ArbatDi;
-  background: -webkit-linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
-  background: -moz-linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
-  background: -o-linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
-  background: -ms-linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
-  background: -linear-gradient(top, rgb(250, 250, 190) 20%, rgb(250, 250, 200) 65%, rgb(255, 255, 255) 100%);
-}
-
-  header.meetAStar
-  {
-    min-width: 100%;
-    width: 100%;  
-    height: 50px;
-    margin: 0;
-    background: -webkit-linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
-    background: -moz-linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
-    background: -o-linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
-    background: -ms-linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
-    background: -linear-gradient(top, rgba(255, 32, 5, 0.7) 20%, rgb(255, 32, 5) 70%);
-  }
-    div.logo
+   header.meetAStar > nav > ul
     {
-      height: 40px;
-      font-size: 1.7em;
-      font-weight: bold;
-      width: 170px;
-      font-family: ArbatDi;
-      text-align: center;
-      margin-left: 50px;
-      padding: 5px;
-      border-left: 2px solid rgb(120, 120, 120);
-      border-right: 2px solid rgb(120, 120, 120);
-      float: left;
+      min-height: auto;
+      height: auto;
+      margin: 0;
+      padding: 0;
     }
-      div.logo:hover
+      header.meetAStar > nav > ul > li
       {
-        background: -webkit-linear-gradient(bottom, rgb(255, 8, 0) 0%, rgb(255, 138, 95) 100%);
-        background: -moz-linear-gradient(bottom, rgb(255, 8, 0) 0%, rgb(255, 138, 95) 100%);
-        background: -o-linear-gradient(bottom, rgb(255, 8, 0) 0%, rgb(255, 138, 95) 100%);
-        background: -ms-linear-gradient(bottom, rgb(255, 8, 0) 0%, rgb(255, 138, 95) 100%);
-        background: -linear-gradient(bottom, rgb(255, 8, 0) 0%, rgb(255, 138, 95) 100%);
-        cursor: pointer;
-        color: rgb(50, 50, 50);
+        list-style: none;
+        list-style-type: none;
+        font-weight: bold;
+        padding: 6px 30px 0 0;
+        float: right;
       }
-  header.meetAStar > nav > ul
-  {
-    min-height: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
-  }
-    header.meetAStar > nav > ul > li
-    {
-      list-style: none;
-      list-style-type: none;
-      font-weight: bold;
-      padding: 6px 30px 0 0;
-      float: right;
-    }
-      header.meetAStar > nav > ul > li > img,
-      header.meetAStar > nav > ul > li > a > img
-      {
-        height: 30px;
-        border-radius: 2px;
-      }
+        header.meetAStar > nav > ul > li > img,
+        header.meetAStar > nav > ul > li > a > img
+        {
+          height: 30px;
+          border-radius: 2px;
+        }
   section.meetAStar
   {  
     min-width: 80%;
     margin: auto;
+  }
+  .ready
+  {
+    background-image: url('../img/slider/bx_loader.gif');
+    background-position: center;
+    background-repeat: no-repeat;
   }
     section.meetAStar > article
     {
@@ -830,6 +830,12 @@ div#meetAStar
       margin-bottom: 30px;
       height: 540px;
     }
+    .load
+    {
+    background-image: url('../img/slider/bx_loader.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
       div.small
       {
         width: 180px;
@@ -857,139 +863,139 @@ div#meetAStar
         font-weight: bolder;
         z-index: 999;
       }
-
-/* The travaling company page style. */
-div#travelingCompany
-{
-  min-height: 100%;
-  min-width:970px;      
-  height: 100%;
-  overflow: inherit;
-  font-family: ArbatDi;
-  background-image: url('../img/beach.png');
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-color: #9AD7E1;
-}
-  header.travelingCompany
+      
+  /* The travaling company page style. */
+  div#travelingCompany
   {
-    width: 100%;
-    height: 40px;
-    margin: 0;
-    background: rgba(0, 0, 0, 0);
-    border: 0;
-    padding: 0;
-    position: relative;
+    min-height: 100%;
+    min-width:970px;      
+    height: 100%;
+    overflow: inherit;
+    font-family: ArbatDi;
+    background-image: url('../img/beach.png');
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #9AD7E1;
   }
-    header.travelingCompany > ul
+    header.travelingCompany
     {
+      width: 100%;
       height: 40px;
       margin: 0;
+      background: rgba(0, 0, 0, 0);
+      border: 0;
       padding: 0;
+      position: relative;
     }
-    header.travelingCompany > ul > li
-    {
-      list-style: none;
-      list-style-type: none;
-      float: right;
-      display: block;
-    }
-    header.travelingCompany > ul > li > a
-    {
-      display: block;
-      padding: 10px 25px 0 0;
-      font-size: 1.2em;
-      font-family: Arial;
-      color: white;
-      text-decoration: none;
-    }
-      header.travelingCompany > ul > li > a:hover
+      header.travelingCompany > ul
       {
-        color:  rgb(251, 232, 20);      
+        height: 40px;
+        margin: 0;
+        padding: 0;
       }
-    #exit
-    {
-      display: block;
-      margin: 10px 25px 0 0;
-      background: url('../img/exitWite1.jpg');
-      width: 13px;
-      height: 16px;
-    }
-      #exit:hover
-      {
-        background: url('../img/exitYellow.jpg');
-      }
-        div.exitPreload
+        header.travelingCompany > ul > li
         {
-          display: none;
+          list-style: none;
+          list-style-type: none;
+          float: right;
+          display: block;
+        }
+          header.travelingCompany > ul > li > a
+          {
+            display: block;
+            padding: 10px 25px 0 0;
+            font-size: 1.2em;
+            font-family: Arial;
+            color: white;
+            text-decoration: none;
+          }
+            header.travelingCompany > ul > li > a:hover
+            {
+              color:  rgb(251, 232, 20);      
+            }
+      #exit
+      {
+        display: block;
+        margin: 10px 25px 0 0;
+        background: url('../img/exitWite1.jpg');
+        width: 13px;
+        height: 16px;
+      }
+        #exit:hover
+        {
           background: url('../img/exitYellow.jpg');
         }
-  section.travelingCompany
-  {
-    width: 970px;
-    margin-top: 0;
-    margin: auto;
-  }
-  	header.travelingNav
-  	{
-      position: relative;
-      float: left;
-      width: 100%;
-      height: 400px;
-      border: 0;
-      background-color: rgba(0, 0, 0, 0);
-      margin: 0;
-	}
-	  nav.travelingNav
-	  {
-	  	width: 300px;
-	  	height: inherit;
-	  	float: left;
-	  }
-	    nav.travelingNav > ul > li 
-	    {
-          width: 300px;
-          height: auto;
-          display: block;
-
-		}
-        a.travelingLogo,
-        img.travelingLogo
-	    {
-          width: 300px;
-          height: auto;
-          border: 0;     
-          display: block;     
-	    }
-	      img.travelingLogo
-	      {
-            border-radius: 2px;
-            height: 190px;
-		  }
-        nav.travelingNav > ul > li > a
-        {
-          display: block;
-          background-color: rgb(70, 126, 234);
-          border-radius: 5px;
-          font-weight: bold;
-          font-family: Arial;
-          font-size: 1.1em;
-          text-decoration: none;
-          color: rgb(255, 255 , 255);
-          padding: 8px 0 8px 10px;
-          margin: 0 0 3px 0;          
-		}
-		  nav.travelingNav > ul > li > a:hover
+          div.exitPreload
           {
-            background-color: rgb(53, 109, 255);
-            color:  rgb(251, 232, 20);      
+            display: none;
+            background: url('../img/exitYellow.jpg');
           }
-		nav.travelingNav > ul > li > a.travelingLogo
-		{
-          padding: 0 0 0 0;
-		}
+    section.travelingCompany
+    {
+      width: 970px;
+      min-width: 970px;
+      margin-top: 0;
+      margin: auto;
+    }
+      header.travelingNav
+      {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 400px;
+        border: 0;
+        background-color: rgba(0, 0, 0, 0);
+        margin: 0;
+      }
+        nav.travelingNav
+       {
+       width: 300px;
+         height: inherit;
+         float: left;
+     }
+         nav.travelingNav > ul > li 
+        {
+           width: 300px;
+           height: auto;
+           display: block;
+         }
+           a.travelingLogo,
+           img.travelingLogo
+         {
+             width: 300px;
+             height: auto;
+             border: 0;     
+             display: block;     
+           }
+           img.travelingLogo
+           {
+             border-radius: 2px;
+             height: 190px;
+         }
+             nav.travelingNav > ul > li > a
+             {
+               display: block;
+               background-color: rgb(70, 126, 234);
+               border-radius: 5px;
+               font-weight: bold;
+               font-family: Arial;
+               font-size: 1.1em;
+               text-decoration: none;
+               color: rgb(255, 255 , 255);
+               padding: 8px 0 8px 10px;
+               margin: 0 0 3px 0;          
+             }
+               nav.travelingNav > ul > li > a:hover
+               {
+                 background-color: rgb(53, 109, 255);
+                 color:  rgb(251, 232, 20);      
+               }
+               nav.travelingNav > ul > li > a.travelingLogo
+               {
+                  padding: 0 0 0 0;
+           }
        div.animationOuter
         {
           width: 68.5%;
@@ -1003,7 +1009,7 @@ div#travelingCompany
         }
           div.animationInner
           {
-          	width: 620px;
+            width: 620px;
             max-width: 620px;
             margin: auto;
             margin-top: 10px;
@@ -1012,47 +1018,48 @@ div#travelingCompany
           }
             div.bx-wrapper
             {
-				height: 300px;
-			}
-			  div.bx-viewport
-			  {
-			  	height: 270px;
-			  	border-width: 0;
-			  	border-radius: 3px;
-			  }
+        height: 300px;
+      }
+        div.bx-viewport
+        {
+          height: 270px;
+          border-width: 0;
+          border-radius: 3px;
+        }
   /* Searching field */
   div.search
   {
-
+    width: 100%;
+    overflow-y: auto;
+    background-color: rgb(70, 126, 234);
   }
     fieldset.f_1,
     fieldset.f_2,
     fieldset.f_3,
     fieldset.f_4
     {
-      width: 250px;
-      min-height: 175px;
+      height: 175px;
       margin: 0;
       padding: 0;
       float: left;
-      background-color: rgb(70, 126, 234);
-      border-right: 1px solid rgb(150, 150, 150);
+      border-right: 2px solid rgb(150, 150, 150);
     }
       fieldset.f_1
       {
-        width: 280px;
+        width: 29%;
       }
       fieldset.f_2
       {
-        width: 260px;
+        width: 27%;
       }
       fieldset.f_3
       {
-        width: 230px
+        width: 22%
       }
       fieldset.f_4
       {
-        width: 194px;
+        width: 21%;
+        border-right: 0;
       }      
       select,
       input[type='text']
@@ -1062,6 +1069,44 @@ div#travelingCompany
         border: 0;
         border-radius: 2px;
       }
+      input[name='hotelClass']
+      {
+      display: none;
+    }
+    p.label
+    {
+      display: block;
+      float: left;
+    }
+    div.radio-replacer-container
+    {
+      float: right;
+    }
+      div.radio-replacer
+      {
+          width: 25px;
+          height: 25px;
+          margin: 0 0 0 5px;
+          background-image: url(../img/star_input_origin.gif);
+          background-repeat: no-repeat;
+          background-size: contain;
+          float: left;      
+        }
+          div.radio-replacer-checked,
+          div.radio-replacer-1
+          {
+            width: 25px;
+            height: 25px;
+            margin: 0 0 0 5px;
+            background-image: url(../img/star_input_color.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            float: left;
+      }
+        div.radio-replacer-1
+        {
+      background-image: url(../img/star_input_color.png);
+    }    
       input[type='date']
       {
         width: 130px;
@@ -1090,6 +1135,14 @@ div#travelingCompany
         {
           cursor: pointer;
         }
+          button.searchInput:active
+          {
+            background: -webkit-linear-gradient(top, rgb(170, 170, 170) 0%, rgb(255, 255, 255) 50%, rgb(170, 170, 170)100%);
+            background: -moz-linear-gradient(top, rgb(170, 170, 170) 0%, rgb(255, 255, 255) 50%, rgb(170, 170, 170) 100%);
+            background: -o-linear-gradient(top, rgb(170, 170, 170) 0%, rgb(255, 255, 255) 50%, rgb(170, 170, 170) 100%);
+            background: -ms-linear-gradient(top, rgb(170, 170, 170) 0%, rgb(255, 255, 255) 50%, rgb(170, 170, 170) 100%);
+            background: -linear-gradient(top, rgb(170, 170, 170) 0%, rgb(255, 255, 255) 50%, rgb(170, 170, 170) 100%);
+        }
   /* Results field */
   div.results
   {
@@ -1097,14 +1150,14 @@ div#travelingCompany
     width: 100%;
     overflow-y: auto;
   }
-    div.tour
+    article.tour
     {
       width: 483px;
       float: left;
       border-right: 1px dashed rgb(180, 180, 180);
       border-bottom: 1px dashed rgb(180, 180, 180);
     }
-      div.tour:hover
+      article.tour:hover
       {
         box-shadow: 2px 2px 3px rgb(200, 200, 200);
       }
@@ -1194,6 +1247,14 @@ div#travelingCompany
           background: -ms-linear-gradient(bottom, rgb(210, 210, 210), rgb(255, 255, 255));
           background: -linear-gradient(to bottom, rgb(210, 210, 210), rgb(255, 255, 255));
         }
+          a.pager:active
+          {
+            background: -webkit-linear-gradient(bottom, rgb(255, 255, 255), rgb(200, 200, 200) 90%);
+            background: -moz-linear-gradient(bottom, rgb(255, 255, 255), rgb(200, 200, 200) 90%);
+            background: -o-linear-gradient(bottom, rgb(255, 255, 255), rgb(200, 200, 200) 90%);
+            background: -ms-linear-gradient(bottom, rgb(255, 255, 255), rgb(200, 200, 200) 90%);
+            background: -linear-gradient(bottom, rgb(255, 255, 255), rgb(200, 200, 200) 90%);
+          }
     footer.travelingCompany
     {
       background: rgba(255, 255, 255, 0);
@@ -1218,9 +1279,10 @@ div#travelingCompany
       }
       
   /* The Summary page style */
-  div.summary
+  div#summary
   {
-
+    width: 100%;
+    min-width: 970px;
   }
   section.summary
   {
@@ -1233,6 +1295,9 @@ div#travelingCompany
     {
       position: relative;
       float: left;
+      width: 260px;
+      height: 335px;
+      margin: 0 0 25px 0;
     }
       img.face
       {
@@ -1266,7 +1331,7 @@ div#travelingCompany
         margin: 5px 10px 5px 10px;
         float: right;  
       }
-    div.about
+    main.about
     {
       width: 665px;
       overflow-y: auto;
@@ -1275,31 +1340,43 @@ div#travelingCompany
       border: 1px solid gray;
       border-radius: 5px;
     }
-      div.about > p
+      
+      main.about > h3,
+      main.about > h4
+      {
+      text-align: center;
+    }
+      main.about > p
       {
         text-align: justify;
       }
-      div.rule
+      article.rule
       {
         width: 200px;
-        height: 250px;
+        height: 230px;
         border: 1px solid gray;
         border-radius: 5px;
         float: left;
         margin: 9px;
         overflow: hidden;
       }
-        div.rule > h4
+        article.rule > h4      
         {
           text-align: center;
           color: rgb(247, 140, 0);
         }
-        div.rule > p
+        article.rule > p
         {
           font-size: 0.8em;
           margin: 5px;
           text-align: justify;
         }
+        main.about > p > a#linkedin,
+        main.about > p > a#facebook,
+        main.about > p > a#vk
+        {
+         margin: 0 0 0 4px;
+    }
     div.contacts
     {
       width: 245px;
@@ -1339,92 +1416,226 @@ div#travelingCompany
         color: rgb(80, 80, 80);
         font-weight: normal;
       }
+      
+  /* The starWarsCharacters style */
+  div.starWarsCharackters
+  {
+    width: 100%;
+    min-width: 750px;
+    background-color: rgba(0, 0, 65, 0.9);
+  }
+    header.starWarsCharackters
+    {
+    width: 100%;
+    min-width: 970px;
+    height: 360px;
+    margin: 0;
+  }
+    div.starWarsLogo
+    {
+    width: 100%;
+    min-width: 970px;
+    height: 295px;
+    background-image: url('../img/starWars/headerAll.jpeg');
+    background-position: top;
+    background-repeat: no-repeat;
+    }
+    nav.starWarsCharackters
+    {
+      height: 65px;
+      background-color: rgb(34, 34, 34);
+    }
+      ul.starWarsCharackters
+      {
+      width: 969px;
+      min-width: 970px;
+      margin: auto;
+      border-left: 1px solid rgb(85, 85, 85);
+      overflow-x: visible; 
+    }
+      ul.starWarsCharackters > li
+      {
+        width: 119px;
+        height: inherit;
+        list-style: none;
+        list-style-type: none;
+        display: block;
+        float: left;
+        border-right: 1px solid rgb(85, 85, 85);
+      }
+        ul.starWarsCharackters > li > a
+        {
+          display: block;
+          margin: 1px 0 0 0;
+        width: 120px;
+          height: inherit;
+          text-align: center;
+          text-decoration: none;
+          font-family: Arial;
+          color: rgb(170, 170, 170);
+          font-size: 0.8em;
+      }
+              div.sprite
+              {
+          width: 44px;
+          height: 44px;
+          margin: auto;
+          background-image: url('../img/starWars/section_icon_sprite.png');
+        }
+        a#video > div.sprite
+        {
+
+        }
+        a#events > div.sprite
+        {
+          
+        }
+        a#films > div.sprite
+        {
+  
+        }
+        a#tvShows > div.sprite
+        {
+
+        }
+        a#games > div.sprite
+        {
+
+        }
+        a#community > div.sprite
+        {
+
+        }
+        a#characters > div.sprite
+        {
+
+        }
+  section.starWarsCharackters
+  {
+      width: 970px;
+      min-width: 970px;
+      margin: auto;
+      outline: 1px solid red;
+  }
+    div.starWarsVideoCont
+    {
+      width: 100%;
+      height: 300px;
+      outline: 1px solid green;
+    }
+      div.videoCont
+      {
+      width: 550px;
+      height: 300px;
+      outline: 1px solid yellow;
+    }
+    article.starWarsCharackters
+    {
+      width: 100%;
+      height: 800px;
+      outline: 1px solid red;
+    }
+  footer.starWarsCharackters
+  {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('../img/starWars/vader1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(26, 26, 26);
+  }
   /* The 404 page style */
   section.e404
   {
     overflow: auto;
-  	min-height: 500px;
-  	min-width: 750px;
-  	background: url('../img/brick.jpg');
+    min-height: 500px;
+    min-width: 750px;
+    background: url('../img/brick.jpg');
     color: rgb(255, 255, 255);
   }
     article.e404
     {
-		width: 750px;
-		margin: auto;
-	}
-	  div.overLine,
-	  div.underLine
-	  {
-	  	width: 200px;
-	  	height: 5px;
-	  	background-color: rgb(255, 255, 255);
-	  	margin: auto;
-	  	margin-top: 50px;
-	  }
-	  p.caption404,
-	  h1.e404
-	  {
-	  	font-size: 50px;
-	  	font-weight: bold;
-	  	text-align: center; 
-	  }
-	  div.underLine
-	  {
-	  	margin-top: 0;
-	  }
-	  h1.e404
-	  {
-	  	font-size: 70px;
-	  }
-	  p.large404,
-	  p.middle404,
-	  p.small404
-	  {
-	  	text-align: center;
+    width: 750px;
+    margin: auto;
+  }
+    div.overLine,
+    div.underLine
+    {
+      width: 200px;
+      height: 5px;
+      background-color: rgb(255, 255, 255);
+      margin: auto;
+      margin-top: 50px;
+    }
+    p.caption404,
+    h1.e404
+    {
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center; 
+    }
+    div.underLine
+    {
+      margin-top: 0;
+    }
+    h1.e404
+    {
+      font-size: 70px;
+    }
+    p.large404,
+    p.middle404,
+    p.small404
+    {
+      text-align: center;
         font-weight: bold;
-	  }
-	   p.large404
-	   {
-	   	 font-size: 35px;
-	   }
-	   p.middle404,
-	   p.small404
-	   {
-	   	 margin-top: 30px;
-	   	 font-size: 30px;	   	
-	   }
-	   a.button404
-	   {
-	   	 display: block;
-	     width: 170px;
-	     float: left;
-	     font-size: 25px;
-	     font-weight: bolder;
-	     text-align: center;
-	     text-decoration: none;
-	     color: rgb(255, 255, 255);
-	     background-color: rgb(252, 89, 20);
-	     border: 0;
-	     border-radius: 8px;	     
-	     padding-top: 5px;
-	     padding-bottom: 5px;	     
-	   }
-	     a.button404:hover
-	     {
-		 	background-color: rgb(255, 81, 0);
-		 	color: rgb(255, 249, 135);
-		 }
-	   a.left404
-	   {
-	   	 margin: 60px 0 100px 50px;
-	   }
-	   a.right404
-	   {
-	   	margin: 60px 0 100px 320px;
-	   }
+    }
+     p.large404
+     {
+        font-size: 35px;
+     }
+     p.middle404,
+     p.small404
+     {
+        margin-top: 30px;
+        font-size: 30px;       
+     }
+     a.button404
+     {
+        display: block;
+       width: 170px;
+       float: left;
+       font-size: 25px;
+       font-weight: bolder;
+       text-align: center;
+       text-decoration: none;
+       color: rgb(255, 255, 255);
+       background-color: rgb(252, 89, 20);
+       border: 0;
+       border-radius: 8px;       
+       padding-top: 5px;
+       padding-bottom: 5px;       
+     }
+       a.button404:hover
+       {
+       background-color: rgb(255, 81, 0);
+       color: rgb(255, 249, 135);
+     }
+     a.left404
+     {
+        margin: 60px 0 100px 50px;
+     }
+     a.right404
+     {
+       margin: 60px 0 100px 320px;
+     }
+  p.validated
+  {
+    display: block;
+    float: right;
+    margin: 12px 0 0 0;
+  }
 
-	   
 p
 {
   margin: 0;
@@ -1449,30 +1660,10 @@ a
   font-weight: bold;
   margin: 0;  
 }
-
-
-  
-/*
-  &larr; - стрелка
-  &rarr; - стрелка
-  &#10003; - галочка
-html
-css
-php
-mysql
-javascript
-html5
-css3
-www
-
-.coner
+.preloadIndicator
 {
-border-top:10px red solid;
-border-right:10px red solid;
-border-bottom:10px red solid;
-border-left:10px red solid;
-width:30px;
-height:30px;
+  background-image: url('../img/slider/bx_loader.gif');
+  width: 0px; 
+  height: 0px; 
+  display: inline; 
 }
-
-*/

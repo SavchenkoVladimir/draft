@@ -11,15 +11,17 @@ $(window).resize(function(){
 	footerGlued.glue();
 });
 
+/* It is wrighting current year in the footer */
+var beginPlace = $('.beginYear');
+var currentPlace = $('.currentYear');
+var insertDate = new InsertCurrenDate(beginPlace, currentPlace);
+insertDate.write();
+
 /* Fill the article */
 var fillIn = new FillTheArticle('article');
 fillIn.load('../php/meetAStar.php', '../html/errorPage.html');
+fillIn.refresh('refresh', 'article', '../php/meetAStar.php', '../html/errorPage.html');
 
 /* Increase an element */
 var increase = new IncreaseElement('small');
 increase.animate();
-
-/* Refresh faces */
-var refreshFaces = new LoadNewCelebrities('refresh', 'article',
-  '../php/meetAStar.php', '../html/errorPage.html');
-refreshFaces.load();

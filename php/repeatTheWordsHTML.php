@@ -1,5 +1,6 @@
 <?php
 echo <<<EOD
+    <div class="trainingContainer">
     <div class="note">?</div>
     <div class="word"></div>
     <div class="answerContainer">    
@@ -13,7 +14,8 @@ echo <<<EOD
       <div class="arrow">&larr;</div>
       <div class="arrow">&rarr;</div>
     </div>
-    <div class="tip"></div>    
+    <div class="tip"></div>
+    </div>    
 EOD;
   
 ?>

@@ -16,7 +16,7 @@ insertDate.write();
 
 /* Making the Contactas page */
 var contacts = new MakingContactsPage('#contacts',
-'../php/contactsHTML.php', '../html/errorPage.html');
+'../php/contactsHTML.php', '../html/404.html');
 contacts.loadPage();
 
 /* Glue footer bottom */

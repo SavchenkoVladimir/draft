@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 <meta name="robots" content="index, follow" />
 <meta charset="UTF-8" />
@@ -7,78 +7,81 @@
 <meta name="description" content="The kit of work exemples. My name is Vladimir Savchenko. I am a front-end developer. On the site you can find my front-end work exemples." />
 <meta name="keywords" content="front-end, work exemples, portfolio" />
 <link rel="stylesheet" href="../css/style.css">
+<!--[if lt IE 9]>
+  <script src="../js/html5shiv/html5shiv.js"></script>
+<![endif]-->
 <link rel="icon" type="image/png" href="../img/favicon.png">
 
 </head>
 <body>
-	<div id="workExemples">
-		<header id="header">
-			<nav>
-				<ul>
-					<li><a href="#" class="nav" id="contacts">Contacts</a></li>					
-					<li><a href="../html/summary.html" class="nav">Summary</a></li>				
-					<li><a href="../html/index.html" class="nav">Main page</a></li>				
-				</ul>
-			</nav>
-		</header>
-		
-		<section class="workExemples">
-			<div class="list-item">
-				<div class="imgCont">
-					<a href="../html/travelingCompany.html">
-						<img src="../img/travelingCompany.bmp" alt="page print screen"
-						class="example" />
-					</a>
-				</div>
-				<h3 class="caption">Traveling company front page.</h3>
-				<div class="description">This is a main page of traveling company site.</div>				
-			</div>
-			<div class="list-item">
-				<div class="imgCont">
-					<a href="../html/starWarsHeroes.html">
-						<img src="../img/" alt="page print screen"
-						class="example" />
-					</a>
-				</div>
-				<h3 class="caption">Star wars heroes.</h3>
-				<div class="description">In this page you can find all heroes of the movie. You can read about every single hero watch his photos and videos. The page is designed in http://www.starwars.com style. It is not it's part. But I think a lot of people would be pleasured find such page on the site.</div>				
-			</div>
-			<div class="list-item">
-				<div class="imgCont">
-					<a href="../html/repeatTheWords.html">
-						<img src="../img/learnTheWords.bmp" alt="page print screen"
-						class="example" />
-					</a>
-				</div>
-				<h3 class="caption">Repeat the words.</h3>
-				<div class="description">This is the trainer for english words repetition. It is a single page where you can repeat 30 random words in an iteration. During the training you are presented one english word against true and wrong russian words. You have only 5 seconds to reply. The right answer is one score. Good luck.</div>				
-			</div>
-			<div class="list-item">
-				<div class="imgCont">
-					<a href="../html/meetAStar.html">
-						<img src="../img/meetAStar.bmp" alt="page print screen"
-						class="example" />
-					</a>
-				</div>
-				<h3 class="caption">Meet a star</h3>
-				<div class="description">This is a page where you can find most popular movie and music stars. Also, here you can find links to the official sites of them.</div>				
-			</div>			
-		</section>
-	
-		<footer>
-			<p class="copyright">&copy; Vladimir Savchenko</p>
-			<p class="beginYear">2015</p>
-			<p class="currentYear"></p>
-			<div class="share">
-				<a href="https://www.linkedin.com/sharer.php?s=link" id="linkedin"></a>
-				<a href="http://www.facebook.com/sharer.php?s=link" id="facebook"></a>
-				<a href="http://vkontakte.ru/share.php?url=link" id="vk"></a>
-			</div>
-			<div class="linkedinPreload"></div>
-			<div class="facebookPreload"></div>
-			<div class="vkPreload"></div>
-		</footer>
-	</div>
+  <div id="workExemples">
+    <header id="header">
+      <nav>
+        <ul>
+          <li><a href="#" class="nav" id="contacts">Contacts</a></li>          
+          <li><a href="../html/summary.html" class="nav">Summary</a></li>        
+          <li><a href="../html/index.html" class="nav">Main page</a></li>        
+        </ul>
+      </nav>
+    </header>
+    
+    <section class="workExemples">
+      <div class="list-item">
+        <div class="imgCont">
+          <a href="../html/travelingCompany.html">
+            <img src="../img/travelingCompany.bmp" alt="page print screen"
+            class="example" />
+          </a>
+        </div>
+        <h3 class="caption">Traveling company front page.</h3>
+        <div class="description">This is a main page of traveling company site. In the page are realized a slider, pagination, animated buttons, different kind of forms, input type date jQuery polyfill. Traditional radio-buttons were replaced with pretty stars.</div>        
+      </div>
+<!--      <div class="list-item">
+        <div class="imgCont">
+          <a href="../html/starWarsCharacters.html">
+            <img src="../img/" alt="page print screen"
+            class="example" />
+          </a>
+        </div>
+        <h3 class="caption">Star wars chacters.</h3>
+        <div class="description">In this page you can find all heroes of the movie. You can read about every single hero watch his photos and videos. The page is designed in http://www.starwars.com style. It is not it's part. But I think a lot of people would be pleasured find such page on the site.</div>        
+      </div>
+-->      <div class="list-item">
+        <div class="imgCont">
+          <a href="../html/repeatTheWords.html">
+            <img src="../img/learnTheWords.bmp" alt="page print screen"
+            class="example" />
+          </a>
+        </div>
+        <h3 class="caption">Repeat the words.</h3>
+        <div class="description">This is the trainer for english words repetition. It is a single page where you can repeat 15 random words in an iteration. During the training you are presented one english word against true and wrong russian words. You have only 5 seconds to reply. Here are implemented AJAX query, transporting data in JSON, random number generation.</div>        
+      </div>
+      <div class="list-item">
+        <div class="imgCont">
+          <a href="../html/meetAStar.html">
+            <img src="../img/meetAStar.bmp" alt="page print screen"
+            class="example" />
+          </a>
+        </div>
+        <h3 class="caption">Meet a star</h3>
+        <div class="description">This is a page where you can find most popular movie and music stars. Also, here you can find links to the official sites of them. Here are implemented AJAX query, transporting and conversion data in JSON, animations.</div>        
+      </div>      
+    </section>
+  
+    <footer>
+      <p class="copyright">&copy; Vladimir Savchenko</p>
+      <p class="beginYear">2015</p>
+      <p class="currentYear"></p>
+      <div class="share">
+        <a href="https://www.linkedin.com/sharer.php?s=link" id="linkedin"></a>
+        <a href="http://www.facebook.com/sharer.php?s=link" id="facebook"></a>
+        <a href="http://vkontakte.ru/share.php?url=link" id="vk"></a>
+      </div>
+      <div class="linkedinPreload"></div>
+      <div class="facebookPreload"></div>
+      <div class="vkPreload"></div>
+    </footer>
+  </div>
 <script src="../js/jquery-1.11.3.min.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/workExemples.js"></script>

@@ -21,3 +21,7 @@ $( "#datepicker" ).datepicker();
 var radioReplace = new RedioReplacer('[name="hotelClass"]', '.radio-replacer-container');
 radioReplace.replase();
 radioReplace.check();
+
+/* Making dropdown links. */
+var DripdownLnks = new DripdownLnks('nav.travelingNav > ul > li', 'dropdown');
+DripdownLnks.depict();

@@ -1242,14 +1242,14 @@ RedioReplacer.prototype.replase = function(){
   var self = this;
   
   $(this.replacersCollection).mouseover(function(event){
-  	self.hoverElemNumber = $(event.target).index();
+    self.hoverElemNumber = $(event.target).index();
 
     for( var i = 0; i <= self.hoverElemNumber; i++ ){
       $(self.replacersCollection[i]).attr('class', 'radio-replacer-checked');
-	}
-	for( var n = self.hoverElemNumber + 1; n <= self.replacersCollection.length; n++ ){
+  }
+  for( var n = self.hoverElemNumber + 1; n <= self.replacersCollection.length; n++ ){
       $(self.replacersCollection[n]).attr('class', 'radio-replacer');
-	}
+  }
   });
 }
 RedioReplacer.prototype.check = function(){
@@ -1260,13 +1260,60 @@ RedioReplacer.prototype.check = function(){
 
     for( var i = 0; i <= self.replacersCollection.length; i++ ){
       if( $(self.buttonsCollection[i]).attr('checked') ){
-	    $(self.buttonsCollection[i]).removeAttr('checked');
-	  }                
+      $(self.buttonsCollection[i]).removeAttr('checked');
+    }                
     }
     $(self.buttonsCollection[self.clickedElemNumber]).attr('checked', true);
   });
 }
 
+/*
+  The class DripdownLnks make a link children visible after the link is mouseover.
+  The class adopts the link identifier and its child attribute 'class'.
+*/
+function DripdownLnks(linkIdentifier, childClass){
+  this.linksCollection = document.body.querySelectorAll(linkIdentifier);
+  this.childIdentifier = childClass;
+  this.targetedLink;
+  this.children;
+  this.displayed;
+  this.boundingSize;
+}
+/* This method searching for the element for displaying among its children and display this element if it is present. */
+DripdownLnks.prototype.depict = function(){
+  var self = this;
+ 
+  $(this.linksCollection).mouseenter(function(event){
+    self.targetedLink = this;
+    self.children = self.targetedLink.children;
+
+    for( var i = 0; i <= self.children.length; i++){
+      if( $(self.children[i]).attr('class') == self.childIdentifier ){
+        self.displayed = self.children[i];
+      }      
+    }
+    
+    self.makePlace();
+    $(self.displayed).fadeIn(500);
+  });
+   
+  $(this.linksCollection).mouseleave(function(){
+    if( self.displayed ){
+    $(self.displayed).css('display', '');
+  }
+    self.targetedLink = self.children = self.displayed = self.boundingSize = null;
+  });
+}
+/* This method places the displayed element at right from main element. */
+DripdownLnks.prototype.makePlace = function(){
+  var self = this;
+  self.boundingSize = $(self.targetedLink).offset();
+
+  $(self.displayed).css({
+    'top':self.boundingSize.top - $(self.targetedLink).height() + 'px',
+    'left':$(self.targetedLink).width() + 'px'
+  });
+}
 /*
   Class ListItemDecorating adopts element class name and decorates it's children.
   The class adopts class name.

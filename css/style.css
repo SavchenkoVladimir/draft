@@ -951,15 +951,16 @@ div.star
       }
         nav.travelingNav
        {
-       width: 300px;
+         width: 300px;
          height: inherit;
          float: left;
-     }
+       }
          nav.travelingNav > ul > li 
         {
            width: 300px;
            height: auto;
            display: block;
+           margin: 0 0 3px 0;
          }
            a.travelingLogo,
            img.travelingLogo
@@ -974,7 +975,23 @@ div.star
              border-radius: 2px;
              height: 190px;
          }
-             nav.travelingNav > ul > li > a
+             p.travelingNav
+             {
+               background-color: rgb(70, 126, 234);
+               border-radius: 5px;
+               font-weight: bold;
+               font-family: Arial;
+               font-size: 1.1em;
+               text-decoration: none;
+               color: rgb(255, 255 , 255);
+               padding: 8px 0 8px 10px;
+             }
+               p.travelingNav:hover
+               {
+                 background-color: rgb(53, 109, 255);
+                 color:  rgb(251, 232, 20);                       
+               }
+/*             nav.travelingNav > ul > li > a
              {
                display: block;
                background-color: rgb(70, 126, 234);
@@ -995,7 +1012,42 @@ div.star
                nav.travelingNav > ul > li > a.travelingLogo
                {
                   padding: 0 0 0 0;
-           }
+               }
+*/        ul.dropdown
+        {
+		  display: none;
+          width: 220px;
+          height: auto;
+          overflow-x: hidden;
+          background-color: rgba(52, 93, 174, 0.6);
+          padding: 5px;
+          border-radius: 5px;
+          position: absolute;
+          z-index: 10;
+		}
+		  ul.dropdown > li
+		  {
+		  	height: 38px;
+		  }
+		  ul.dropdown > li > a
+		  {
+		  	display: block;
+		  	position: relative;
+		  	width: 200px;
+		  	height: 20px;
+		  	background-color: rgba(70, 126, 234, 0.8);
+		  	border-radius: 3px;
+            margin: 5px;
+            padding: 5px 5px 5px 5px;
+            text-decoration: none;
+            font-weight: bolder;
+            color: rgb(255, 255, 255);
+		  }
+		    ul.dropdown > li > a:hover
+		    {
+			  color: rgb(251, 232, 20);
+			  background-color: rgba(53, 109, 255, 0.8);
+			}
        div.animationOuter
         {
           width: 68.5%;

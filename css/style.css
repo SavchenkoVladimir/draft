@@ -31,7 +31,6 @@ body
 #main_page{
   width: 100%;
   min-width: 970px;
-  min-height: 100%;      
   height: 100%;
   overflow: inherit;
   background-image: url('../img/earthWork.jpg');
@@ -991,31 +990,9 @@ div.star
                  background-color: rgb(53, 109, 255);
                  color:  rgb(251, 232, 20);                       
                }
-/*             nav.travelingNav > ul > li > a
-             {
-               display: block;
-               background-color: rgb(70, 126, 234);
-               border-radius: 5px;
-               font-weight: bold;
-               font-family: Arial;
-               font-size: 1.1em;
-               text-decoration: none;
-               color: rgb(255, 255 , 255);
-               padding: 8px 0 8px 10px;
-               margin: 0 0 3px 0;          
-             }
-               nav.travelingNav > ul > li > a:hover
-               {
-                 background-color: rgb(53, 109, 255);
-                 color:  rgb(251, 232, 20);      
-               }
-               nav.travelingNav > ul > li > a.travelingLogo
-               {
-                  padding: 0 0 0 0;
-               }
-*/        ul.dropdown
+        ul.dropdown
         {
-		  display: none;
+      display: none;
           width: 220px;
           height: auto;
           overflow-x: hidden;
@@ -1024,30 +1001,30 @@ div.star
           border-radius: 5px;
           position: absolute;
           z-index: 10;
-		}
-		  ul.dropdown > li
-		  {
-		  	height: 38px;
-		  }
-		  ul.dropdown > li > a
-		  {
-		  	display: block;
-		  	position: relative;
-		  	width: 200px;
-		  	height: 20px;
-		  	background-color: rgba(70, 126, 234, 0.8);
-		  	border-radius: 3px;
+    }
+      ul.dropdown > li
+      {
+        height: 38px;
+      }
+      ul.dropdown > li > a
+      {
+        display: block;
+        position: relative;
+        width: 200px;
+        height: 20px;
+        background-color: rgba(70, 126, 234, 0.8);
+        border-radius: 3px;
             margin: 5px;
             padding: 5px 5px 5px 5px;
             text-decoration: none;
             font-weight: bolder;
             color: rgb(255, 255, 255);
-		  }
-		    ul.dropdown > li > a:hover
-		    {
-			  color: rgb(251, 232, 20);
-			  background-color: rgba(53, 109, 255, 0.8);
-			}
+      }
+        ul.dropdown > li > a:hover
+        {
+        color: rgb(251, 232, 20);
+        background-color: rgba(53, 109, 255, 0.8);
+      }
        div.animationOuter
         {
           width: 68.5%;
@@ -1473,8 +1450,8 @@ div.star
   div.starWarsCharackters
   {
     width: 100%;
-    min-width: 750px;
-    background-color: rgba(0, 0, 65, 0.9);
+    min-width: 970px;
+    background-color: rgb(21,21,21);
   }
     header.starWarsCharackters
     {
@@ -1485,108 +1462,310 @@ div.star
   }
     div.starWarsLogo
     {
-    width: 100%;
-    min-width: 970px;
-    height: 295px;
-    background-image: url('../img/starWars/headerAll.jpeg');
-    background-position: top;
-    background-repeat: no-repeat;
+      height: 295px;
+      background-image: url('../img/starWars/headerAll.jpeg');
+      background-position: top;
+      background-repeat: no-repeat;
+      background-color: rgb(21,21,21);
     }
+       div.headerWrapper
+      {
+        height: 295px;
+        margin: auto;
+      }
+        div#sw_headerBlur_right,
+        div#sw_headerBlur_left
+        {
+          height: 295px;
+          width: 215px;
+          position: relative;      
+        }
+        div#sw_headerBlur_left
+        {
+          float: left;
+          background: -webkit-linear-gradient(right, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1) 95%);
+          background: -moz-linear-gradient(right, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1) 95%);
+          background: -ms-linear-gradient(right, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1) 95%);
+          background: -o-linear-gradient(right, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1) 95%);
+          background: -linear-gradient(right, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1) 95%);
+        }
+        div#sw_headerBlur_right
+        {
+          float: right;
+          background: -webkit-linear-gradient(left, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1) 95%);
+          background: -moz-linear-gradient(left, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1) 95%);
+          background: -ms-linear-gradient(left, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1) 95%);
+          background: -o-linear-gradient(left, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1) 95%);
+          background: -linear-gradient(left, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1) 95%);
+        }
+        div.socialHeader
+        {
+          padding: 40px 0 0 0;
+        }
+          div.socialHeader > ul > li
+          {
+            list-style: none;
+            list-style-type: none;
+            float: left;
+          }
+            div.socialHeader > ul > li > a
+            {
+              display: block;
+              width: 30px;
+              height: 30px;
+              background-image: url('../img/starWars/social_sprite.png');
+              background-size: 200px;
+              margin: 0 0 0 15px;
+            }
+              a#sw_tumblrHeader
+              {
+                background-position: -28px 0px;
+              }
+             a#sw_twitterHeader
+             {
+               background-position: -56px 0px;
+             }
+             a#sw_instagramHeader
+             {
+               background-position: -84px 0px;
+             }
+             a#sw_googleHeader
+             {
+               background-position: -112px 0px;
+             }
+             a#sw_youtubeHeader
+             {
+               background-position: -140px 0px;
+             }
+        div.swlogo > a
+        {
+          display: block;
+          width: 350px;
+          height: 150px;
+          margin: auto;
+          background-image: url('../img/starWars/sw_logo.png');
+          background-position: center;
+          background-size: cover;
+        }      
     nav.starWarsCharackters
     {
       height: 65px;
+      width: 100%;
       background-color: rgb(34, 34, 34);
     }
       ul.starWarsCharackters
       {
-      width: 969px;
-      min-width: 970px;
-      margin: auto;
-      border-left: 1px solid rgb(85, 85, 85);
-      overflow-x: visible; 
-    }
-      ul.starWarsCharackters > li
-      {
-        width: 119px;
+        width: 970px;
         height: inherit;
-        list-style: none;
-        list-style-type: none;
-        display: block;
-        float: left;
+        border-left: 1px solid rgb(85, 85, 85);
         border-right: 1px solid rgb(85, 85, 85);
+        margin: auto;
       }
-        ul.starWarsCharackters > li > a
+        ul.starWarsCharackters > li
         {
-          display: block;
-          margin: 1px 0 0 0;
-        width: 120px;
+          width: 12.5%;
           height: inherit;
-          text-align: center;
-          text-decoration: none;
-          font-family: Arial;
-          color: rgb(170, 170, 170);
-          font-size: 0.8em;
-      }
-              div.sprite
-              {
-          width: 44px;
-          height: 44px;
-          margin: auto;
-          background-image: url('../img/starWars/section_icon_sprite.png');
+          list-style: none;
+          list-style-type: none;
+          display: block;
+          float: left;
         }
-        a#video > div.sprite
-        {
-
-        }
-        a#events > div.sprite
-        {
-          
-        }
-        a#films > div.sprite
-        {
-  
-        }
-        a#tvShows > div.sprite
-        {
-
-        }
-        a#games > div.sprite
-        {
-
-        }
-        a#community > div.sprite
-        {
-
-        }
-        a#characters > div.sprite
-        {
-
-        }
+          ul.starWarsCharackters > li > a
+          {
+            display: block;
+            margin: 1px 0 0 0;
+            width: 99%;
+            height: 64px;
+            text-align: center;
+            text-decoration: none;
+            font-family: Arial;
+            color: rgb(170, 170, 170);
+            font-size: 0.8em;
+            border-right: 1px solid rgb(85, 85, 85);
+            transition: 1s;
+          }
+            ul.starWarsCharackters > li > a:hover
+            {
+              background-color: rgb(10, 10, 10);
+            }
+            div.sprite
+            {
+              width: 44px;
+              height: 44px;
+              margin: auto;
+              background-image: url('../img/starWars/section_icon_sprite.png');
+            }
+            a#video > div.sprite
+            {
+              background-position: -44px 0px; 
+            }
+            a#events > div.sprite
+            {
+              background-position: -88px 0px;
+            }
+            a#films > div.sprite
+            {
+              background-position: -132px 0px;
+            } 
+            a#tvShows > div.sprite
+            {
+              background-position: -176px 0px;
+            }
+            a#games > div.sprite
+            {
+             background-position: -220px 0px;
+            }
+            a#community > div.sprite
+            {
+              background-position: -264px 0px;
+            }
+            a#characters > div.sprite
+            {
+              background-position: -308px 0px;
+            }
+            a#characters
+            {
+              border-right-width: 0;
+            }
   section.starWarsCharackters
   {
-      width: 970px;
-      min-width: 970px;
-      margin: auto;
-      outline: 1px solid red;
+    width: 970px;
+    margin: auto;
   }
     div.starWarsVideoCont
     {
       width: 100%;
       height: 300px;
-      outline: 1px solid green;
     }
       div.videoCont
       {
-      width: 550px;
-      height: 300px;
-      outline: 1px solid yellow;
+        width: 533px;
+        height: 300px;
+        float: left;
+      }
+        video
+        {
+        width: 100%;
+        height: 100%;
+        }
+      div.famousCharachters
+      {
+      width: 435px;
+      height: inherit;
+      float: right;
     }
+      div.famousCharachters > div
+      {
+      width: 400px;
+      height: 125px;
+      border-radius: 7px;
+      margin: 15px 0 0 15px;
+      overflow: hidden;
+    }
+      div.famousCharachters > div > a > img
+      {
+        width: 150px;
+        height: 125px;
+      }
+      div.sw_blur
+      {
+	  	width: 250px;
+	  	height: 125px;
+	  	background: -webkit-linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
+	  	background: -moz-linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
+	  	background: -ms-linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
+	  	background: -o-linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
+	  	background: -linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
+	  	position: absolute;
+	  	z-index: 1;	  	
+	  }
+      div.famousCharachters > div > div
+      {
+        width: 250px;
+        height: 125px;
+        float: right;
+        background-color: rgb(34, 34, 34);        
+      }
+        div.famousCharachters > div > div > h5
+        {
+          font-weight: bolder;
+          margin: 15px 0 15px 10px;
+          color: rgb(255, 255, 255);
+        }
+        div.famousCharachters > div > div > p
+        {
+          margin: 10px;
+          text-align: justify;
+          font-size: 0.8em;
+          color: rgb(175, 175, 175);
+        }
     article.starWarsCharackters
     {
       width: 100%;
       height: 800px;
-      outline: 1px solid red;
+      overflow: hidden;
+      margin: 20px 0 0 0;
+      border-bottom: 1px solid rgb(85, 85, 85);
     }
+      article.starWarsCharackters > h3
+      {
+      text-align: center;
+      color: rgb(170, 170, 170);
+    }
+      div.charachter
+      {
+      width: 170px;
+      height: 300px;
+      margin: 20px 0 0 20px;
+      border-radius: 7px;
+      float: left;
+      overflow: hidden;
+      background-color: rgb(34, 34, 34);
+    }
+      div.charachter > a > img
+      {
+        width: 170px;
+        height: 200px;
+      }
+      div.charachterLink
+      {
+        background-image: url('../img/starWars/bg_hash_top.png');
+        background-repeat: repeat-x;
+        background-position: top left;
+        height: 100px;
+        width: 100%;
+        margin: 0;
+      }
+        div.charachterLink > p
+        {
+          font-weight: bolder;
+          color: rgb(255, 255, 255);
+          margin: 0 0 30px 10px;
+        }
+        div.charachterLink > div
+        {
+          width: 50px;
+          height: 50px;
+          margin: 0 15px 0 0;
+          float: right;
+          background-image: url('../img/starWars/decal.png');
+          background-position: -45px 0px;
+          opacity: 0.1;
+        }
+      div.showMore
+      {
+        width: 100%;
+        text-align: center;
+        color: rgb(170, 170, 170); 
+      }
+        div.showMore > p
+        {
+          padding: 20px 0 20px 0;
+        }
+          div.showMore > p:hover
+          {
+            cursor: pointer;
+          }
   footer.starWarsCharackters
   {
     width: 100%;
@@ -1597,6 +1776,60 @@ div.star
     background-position: center;
     background-color: rgb(26, 26, 26);
   }
+    div.starwarsFooter
+    {
+      width: 225px;
+      padding: 50px 0 0 0;
+      margin: auto;
+    }
+    div.starwarsFooter > p
+    {
+      text-align: center;
+    }
+      div.starwarsFooter > ul
+      {
+        margin: 25px 0 0 0;
+      }
+        div.starwarsFooter > ul > li
+        {
+          list-style: none;        
+          float: left;
+        }
+          div.starwarsFooter > ul > li > a
+          {          
+            width: 22px;
+            height: 22px;
+            display: block;
+            background-image: url('../img/starWars/social_sprite.png');
+            background-size: 150px;
+            margin: 0 0 0 15px;
+            opacity: 0.5;
+            transition: 0.25s;
+          }
+            div.starwarsFooter > ul > li > a:hover
+            {
+              opacity: 1;
+            }
+         a#sw_tumblrFooter
+         {
+           background-position: -22px 0px;
+         }
+         a#sw_twitterFooter
+         {
+           background-position: -44px 0px;         
+         }
+         a#sw_instagramFooter
+         {
+           background-position: -64px 0px;
+         }
+         a#sw_googleFooter
+         {
+           background-position: -86px 0px;
+         }
+         a#sw_youtubeFooter
+         {
+           background-position: -108px 0px;
+         }    
   /* The 404 page style */
   section.e404
   {

@@ -3,25 +3,9 @@
 	<settings><PM_URL><![CDATA[C:/OpenServer/domains/savchenko_portfolio/]]></PM_URL><PM_HOME_URL><![CDATA[C:/OpenServer/domains/savchenko_portfolio/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\css\style.css"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\common.js"/>
-		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js"/>
-		<file name="C:\OpenServer\domains\savchenkoPortfolio\html\travelingCompany.html"/>
-		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.css"/>
-		<file name="C:\OpenServer\domains\savchenkoPortfolio\css\jquery.bxslider.css"/>
+		<file name="C:\OpenServer\domains\savchenkoPortfolio\html\starWarsCharacters.html"/>
+		<file name="C:\OpenServer\domains\savchenkoPortfolio\html\index.html"/>
 	</lastopfiles>
-	<errors version="5.3">
-		<errfile name="C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.css">
-			<error val="1;451;24;451;2502;1;"/>
-			<error val="1;452;20;452;2502;1;"/>
-			<error val="1;532;24;532;2502;1;"/>
-			<error val="1;533;20;533;2502;1;"/>
-			<error val="1;596;24;596;2502;1;"/>
-			<error val="1;597;20;597;2502;1;"/>
-			<error val="1;663;24;663;2502;1;"/>
-			<error val="1;664;20;664;2502;1;"/>
-			<error val="1;719;24;719;2502;1;"/>
-			<error val="1;720;20;720;2502;1;"/>
-		</errfile>
-	</errors>
 	<codestructure version="5.8">
 		<phptree>
 			<treenode node="_REQUEST;PHP:Var Name;C:\OpenServer\domains\savchenkoPortfolio\php\contactsHandle.php;f11;1;20;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -656,40 +640,50 @@
 				<treenode node="windowWidth;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;205;18;205;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="DripdownLnks;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f0;1273;1;1279;;;;vpos;;v;;r;;d49,1273;;b0,0;;mlinkIdentifier;;pchildClass;;p">
-				<treenode node="childClass;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f38;1273;48;1273;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="DripdownLnks;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f0;1251;1;1258;;;;vpos;;v;;r;;d49,1251;;b0,0;;mlinkIdentifier;;pchildClass;;p">
+				<treenode node="boundingSize;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1257;19;1257;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="childIdentifier;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1275;22;1275;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="childClass;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f38;1251;48;1251;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="children;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1277;15;1277;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="childIdentifier;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1253;22;1253;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="displayed;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1278;16;1278;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="children;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1255;15;1255;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="document;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f25;1274;33;1274;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="displayed;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1256;16;1256;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="linkIdentifier;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f22;1273;36;1273;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="document;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f25;1252;33;1252;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="linksCollection;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1274;22;1274;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="linkIdentifier;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f22;1251;36;1251;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f13;1280;22;1280;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					<treenode node="depict;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f23;1280;1;1301;;;;vpos;;v;;r;;d42,1280;;b0,0;;m">
-						<treenode node="event;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f46;1285;51;1285;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="linksCollection;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1252;22;1252;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f13;1260;22;1260;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="depict;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f23;1260;1;1283;;;;vpos;;v;;r;;d42,1260;;b0,0;;m">
+						<treenode node="event;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f46;1263;51;1263;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 						</treenode>
-						<treenode node="i;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f13;1289;14;1289;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="i;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f13;1267;14;1267;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 						</treenode>
-						<treenode node="linksCollection;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1285;24;1285;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="linksCollection;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1263;24;1263;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 						</treenode>
-						<treenode node="self;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f6;1281;10;1281;;;;vposdepict;;v;;r;;d-1,-1;;b0,0;;m">
-							<treenode node="children;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1287;17;1287;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="self;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f6;1261;10;1261;;;;vposdepict;;v;;r;;d-1,-1;;b0,0;;m">
+							<treenode node="boundingSize;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f62;1281;74;1281;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 							</treenode>
-							<treenode node="displayed;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f12;1291;21;1291;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+							<treenode node="children;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1265;17;1265;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 							</treenode>
-							<treenode node="targetedLink;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1286;21;1286;;;;vposdepict;;v;;r;;d-1,-1;;b0,0;;m">
+							<treenode node="displayed;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f13;1269;22;1269;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+							</treenode>
+							<treenode node="targetedLink;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1264;21;1264;;;;vposdepict;;v;;r;;d-1,-1;;b0,0;;m">
+							</treenode>
+						</treenode>
+					</treenode>
+					<treenode node="makePlace;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f23;1285;1;1293;;;;vpos;;v;;r;;d45,1285;;b0,0;;m">
+						<treenode node="self;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f6;1286;10;1286;;;;vposmakePlace;;v;;r;;d-1,-1;;b0,0;;m">
+							<treenode node="boundingSize;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1287;19;1287;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 							</treenode>
 						</treenode>
 					</treenode>
 				</treenode>
-				<treenode node="targetedLink;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1276;19;1276;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="targetedLink;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1254;19;1254;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="Ea;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-1.11.3.min.js;f23497;3;23678;3;;;;vpos;;v;;r;;d23513,3;;b0,0;;mb;;pc;;p">
@@ -1170,32 +1164,6 @@
 				<treenode node="handler;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f19;758;26;758;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="instance;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f42;758;50;758;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="Hover;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f0;1213;1;1218;;;;vpos;;v;;r;;d66,1213;;b0,0;;melementSelector;;pfinalColor;;pnativeColor;;panimTime;;p">
-				<treenode node="animatedElem;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1214;19;1214;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="animTime;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f57;1213;65;1213;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="document;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f22;1214;30;1214;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="elementSelector;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f15;1213;30;1213;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="finalColor;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f32;1213;42;1213;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="nativeColor;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f44;1213;55;1213;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f6;1219;15;1219;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					<treenode node="animation;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f16;1219;1;1229;;;;vpos;;v;;r;;d38,1219;;b0,0;;m">
-						<treenode node="animatedElem;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1222;21;1222;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-						</treenode>
-						<treenode node="backgroundColor;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f34;1223;49;1223;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-						</treenode>
-						<treenode node="event;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f43;1222;48;1222;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-						</treenode>
-						<treenode node="self;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f6;1220;10;1220;;;;vposanimation;;v;;r;;d-1,-1;;b0,0;;m">
-						</treenode>
-					</treenode>
 				</treenode>
 			</treenode>
 			<treenode node="hue2rgb;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f0;9792;1;9804;;;;vpos;;v;;r;;d28,9792;;b0,0;;mp;;pq;;ph;;p">
@@ -5790,48 +5758,48 @@
 				<treenode node="mb;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-2.1.4.min.js;f6306;3;6308;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="RedioReplacer;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f0;1234;1;1239;;;;vpos;;v;;r;;d50,1234;;b0,0;;mbuttonsName;;pdivIdentifier;;p">
-				<treenode node="buttonsCollection;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1235;24;1235;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="RedioReplacer;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f0;1212;1;1217;;;;vpos;;v;;r;;d50,1212;;b0,0;;mbuttonsName;;pdivIdentifier;;p">
+				<treenode node="buttonsCollection;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1213;24;1213;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="buttonsName;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f23;1234;34;1234;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="buttonsName;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f23;1212;34;1212;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="clickedElemNumber;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1238;24;1238;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="clickedElemNumber;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1216;24;1216;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="divIdentifier;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f36;1234;49;1234;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="divIdentifier;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f36;1212;49;1212;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="document;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f27;1235;35;1235;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="document;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f27;1213;35;1213;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="hoverElemNumber;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1237;22;1237;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="hoverElemNumber;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1215;22;1215;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f14;1240;23;1240;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					<treenode node="check;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f24;1254;1;1267;;;;vpos;;v;;r;;d42,1254;;b0,0;;m">
-						<treenode node="event;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f45;1257;50;1257;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f14;1218;23;1218;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="check;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f24;1232;1;1245;;;;vpos;;v;;r;;d42,1232;;b0,0;;m">
+						<treenode node="event;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f45;1235;50;1235;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 						</treenode>
-						<treenode node="i;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f13;1260;14;1260;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="i;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f13;1238;14;1238;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 						</treenode>
-						<treenode node="replacersCollection;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1257;28;1257;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="replacersCollection;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1235;28;1235;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 						</treenode>
-						<treenode node="self;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f6;1255;10;1255;;;;vposcheck;;v;;r;;d-1,-1;;b0,0;;m">
-							<treenode node="clickedElemNumber;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1258;26;1258;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="self;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f6;1233;10;1233;;;;vposcheck;;v;;r;;d-1,-1;;b0,0;;m">
+							<treenode node="clickedElemNumber;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1236;26;1236;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 							</treenode>
 						</treenode>
 					</treenode>
-					<treenode node="replase;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f24;1240;1;1253;;;;vpos;;v;;r;;d44,1240;;b0,0;;m">
-						<treenode node="event;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f49;1243;54;1243;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="replase;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f24;1218;1;1231;;;;vpos;;v;;r;;d44,1218;;b0,0;;m">
+						<treenode node="event;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f49;1221;54;1221;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 						</treenode>
-						<treenode node="i;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f13;1246;14;1246;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="i;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f13;1224;14;1224;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 						</treenode>
-						<treenode node="n;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f11;1249;12;1249;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="n;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f11;1227;12;1227;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 						</treenode>
-						<treenode node="replacersCollection;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1243;28;1243;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="replacersCollection;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1221;28;1221;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 						</treenode>
-						<treenode node="self;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f6;1241;10;1241;;;;vposreplase;;v;;r;;d-1,-1;;b0,0;;m">
-							<treenode node="hoverElemNumber;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1244;24;1244;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="self;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f6;1219;10;1219;;;;vposreplase;;v;;r;;d-1,-1;;b0,0;;m">
+							<treenode node="hoverElemNumber;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f9;1222;24;1222;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 							</treenode>
 						</treenode>
 					</treenode>
 				</treenode>
-				<treenode node="replacersCollection;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1236;26;1236;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="replacersCollection;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f7;1214;26;1214;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="Reload;JS:Function Name;C:\OpenServer\domains\savchenkoPortfolio\js\common.js;f0;24;1;26;;;;vpos;;v;;r;;d31,24;;b0,0;;mobjectSelector;;p">
@@ -10200,7 +10168,7 @@
 			</treenode>
 			<treenode node="bc;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-1.11.3.min.js;f28258;4;28260;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="beginPlace;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;11;14;11;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;11;14;11;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;14;14;14;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;14;14;14;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;11;14;11;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;7;14;7;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="beginPlace;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;11;14;11;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;7;14;7;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;11;14;11;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;11;14;11;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;14;14;14;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;14;14;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="body;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f2;1510;6;1510;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -10249,10 +10217,6 @@
 			<treenode node="cells;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f2;10965;7;10965;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="change;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-1.11.3.min.js;f4572;3;4578;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-			</treenode>
-			<treenode node="charachtersRefAnimated;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;28;26;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;28;26;28;;;;vposHover;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
 			</treenode>
 			<treenode node="classAnimationActions;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f4;10036;25;10036;;;;vposArray;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -10308,12 +10272,8 @@
 			</treenode>
 			<treenode node="colors;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f1;9496;7;9496;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="communityRefAnimated;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;26;24;26;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;26;24;26;;;;vposHover;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="contacts;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;30;12;30;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;28;12;28;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;20;12;20;;C:\OpenServer\domains\savchenkoPortfolio\js\404.js;f4;7;12;7;;C:\OpenServer\domains\savchenkoPortfolio\js\contacts.js;f0;3;8;3;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;17;12;17;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;30;12;30;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;28;12;28;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;20;12;20;;C:\OpenServer\domains\savchenkoPortfolio\js\404.js;f4;7;12;7;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;17;12;17;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;17;12;17;;;;vposMakingContactsPage;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="contacts;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;30;12;30;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;17;12;17;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;28;12;28;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;20;12;20;;C:\OpenServer\domains\savchenkoPortfolio\js\contacts.js;f0;3;8;3;;C:\OpenServer\domains\savchenkoPortfolio\js\404.js;f4;7;12;7;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;30;12;30;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;17;12;17;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;28;12;28;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;20;12;20;;C:\OpenServer\domains\savchenkoPortfolio\js\404.js;f4;7;12;7;;;;vposMakingContactsPage;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="cProps;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f2;11215;8;11215;;;;vposArray;;v;;r;;d-1,-1;;b0,0;;m">
@@ -10324,7 +10284,7 @@
 			</treenode>
 			<treenode node="current;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f1;9209;8;9209;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="currentPlace;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;12;16;12;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;12;16;12;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;15;16;15;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;15;16;15;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;12;16;12;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;8;16;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="currentPlace;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;12;16;12;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;8;16;8;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;12;16;12;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;12;16;12;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;15;16;15;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;15;16;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="d;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.min.js;f13657;5;15212;9;;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-2.1.4.min.js;f274;1;275;1;;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-1.11.3.min.js;f274;1;275;1;;;;vpos;;v;;r;;d15142,9;;b0,0;;m">
 				<treenode node="degrees;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.min.js;f15185;9;15211;9;;;;vpos;;v;;r;;d15193,9;;b0,0;;m">
@@ -10498,8 +10458,8 @@
 			</treenode>
 			<treenode node="disabled;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f2;547;10;547;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="display;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;10;11;10;;C:\OpenServer\domains\savchenkoPortfolio\js\404.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;3;11;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;10;11;10;;C:\OpenServer\domains\savchenkoPortfolio\js\404.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;3;11;3;;;;vpossoftDisplaying;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="display;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;10;11;10;;C:\OpenServer\domains\savchenkoPortfolio\js\404.js;f4;3;11;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;3;11;3;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;10;11;10;;C:\OpenServer\domains\savchenkoPortfolio\js\404.js;f4;3;11;3;;;;vpossoftDisplaying;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="distance;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f11;10663;19;10663;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -12684,10 +12644,6 @@
 			</treenode>
 			<treenode node="events;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f6;327;12;327;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="eventsRefAnimated;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;18;21;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;18;21;18;;;;vposHover;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="execResult;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f20;9387;30;9387;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="existingConstructor;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f15;345;34;345;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -12750,10 +12706,6 @@
 				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;20;10;20;;;;vposFillTheArticle;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="filmsRefAnimated;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;20;20;20;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;20;20;20;;;;vposHover;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="fit;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f1;1349;4;1349;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="fixLeft;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f2;11742;9;11742;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -12766,8 +12718,8 @@
 			</treenode>
 			<treenode node="focusin;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-1.11.3.min.js;f4582;3;4589;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="footerGlued;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;35;15;35;;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;7;15;7;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;17;15;17;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;7;15;7;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;25;15;25;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;22;15;22;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;35;15;35;;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;7;15;7;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;17;15;17;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;7;15;7;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;25;15;25;;C:\OpenServer\domains\savchenkoPortfolio\js\404.js;f4;6;15;6;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;22;15;22;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;22;15;22;;;;vposGlueElementBottom;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="footerGlued;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;35;15;35;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;22;15;22;;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;7;15;7;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;17;15;17;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;7;15;7;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;25;15;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;35;15;35;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;22;15;22;;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;7;15;7;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;17;15;17;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;7;15;7;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;25;15;25;;;;vposGlueElementBottom;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="frag;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\html5shiv\html5shiv.js;f14;42;18;42;;C:\OpenServer\domains\savchenkoPortfolio\js\html5shiv\html5shiv-printshiv.js;f14;42;18;42;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -12788,10 +12740,6 @@
 			</treenode>
 			<treenode node="Ga;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-1.11.3.min.js;f24545;3;24547;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="gamesRefAnimated;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;24;20;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;24;20;24;;;;vposHover;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="gb;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-2.1.4.min.js;f5771;3;5773;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="Gb;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-2.1.4.min.js;f15682;3;15684;3;;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-1.11.3.min.js;f16690;4;16692;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -12800,8 +12748,8 @@
 			</treenode>
 			<treenode node="getWithinInfo;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f1;1148;14;1148;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="glueHeader;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;7;14;7;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;7;14;7;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;6;14;6;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;7;14;7;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;7;14;7;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;7;14;7;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;6;14;6;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;7;14;7;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;7;14;7;;;;vposGlueElementTop;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="glueHeader;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;7;14;7;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;7;14;7;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;7;14;7;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;6;14;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;7;14;7;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;7;14;7;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;7;14;7;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;6;14;6;;;;vposGlueElementTop;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="h;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-2.1.4.min.js;f316;1;320;1;;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-1.11.3.min.js;f316;1;320;1;;;;vpos;;v;;r;;d318,1;;b0,0;;m">
@@ -12898,8 +12846,8 @@
 			</treenode>
 			<treenode node="inputLength;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f2;462;13;462;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="insertDate;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;13;14;13;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;13;14;13;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;16;14;16;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;16;14;16;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;13;14;13;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;9;14;9;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;13;14;13;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;13;14;13;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;16;14;16;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;16;14;16;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;13;14;13;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;13;14;13;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;9;14;9;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;9;14;9;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;9;14;9;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;9;14;9;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;9;14;9;;;;vposInsertCurrenDate;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="insertDate;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;13;14;13;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;9;14;9;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;13;14;13;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;13;14;13;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;16;14;16;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;16;14;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f4;13;14;13;;C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js;f4;9;14;9;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f4;13;14;13;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f4;13;14;13;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f4;16;14;16;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f4;16;14;16;;;;vposInsertCurrenDate;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="instance;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f17;289;25;289;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -13223,10 +13171,6 @@
 			<treenode node="newOverRight;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f4;1357;16;1357;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="newOverTop;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f4;1480;14;1480;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-			</treenode>
-			<treenode node="newsRefAnimated;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;14;19;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;14;19;14;;;;vposHover;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
 			</treenode>
 			<treenode node="o;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f5;10113;6;10113;;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-2.1.4.min.js;f424;1;425;1;;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-1.11.3.min.js;f451;1;452;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				<treenode node="mode;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f8;11243;12;11243;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -13868,10 +13812,6 @@
 			</treenode>
 			<treenode node="transfer;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f2;11751;10;11751;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="tvShowsRefAnimated;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;22;22;22;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;22;22;22;;;;vposHover;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="type;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f21;789;25;789;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="typeClasses;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f1;3384;12;3384;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
@@ -13996,10 +13936,6 @@
 			</treenode>
 			<treenode node="vertical;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f2;10657;10;10657;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="videoRefAnimated;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;16;20;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				<treenode node="prototype;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f4;16;20;16;;;;vposHover;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="void;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-1.11.3.min.js;f24955;4;24959;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="vProps;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f2;11216;8;11216;;;;vposArray;;v;;r;;d-1,-1;;b0,0;;m">
@@ -14030,7 +13966,7 @@
 			</treenode>
 			<treenode node="widthFirst;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f2;11094;12;11094;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="window;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f36;1149;42;1149;;C:\OpenServer\domains\savchenkoPortfolio\js\html5shiv\html5shiv.js;f11;3;17;3;;C:\OpenServer\domains\savchenkoPortfolio\js\html5shiv\html5shiv-printshiv.js;f11;3;17;3;;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f2;37;8;37;;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f2;9;8;9;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f2;19;8;19;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f2;9;8;9;;C:\OpenServer\domains\savchenkoPortfolio\js\jquery.bxslider.js;f22;109;28;109;;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-2.1.4.min.js;f232;1;238;1;;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-1.11.3.min.js;f232;1;238;1;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f2;27;8;27;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f2;24;8;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="window;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js;f36;1149;42;1149;;C:\OpenServer\domains\savchenkoPortfolio\js\html5shiv\html5shiv.js;f11;3;17;3;;C:\OpenServer\domains\savchenkoPortfolio\js\html5shiv\html5shiv-printshiv.js;f11;3;17;3;;C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js;f2;37;8;37;;C:\OpenServer\domains\savchenkoPortfolio\js\summary.js;f2;24;8;24;;C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js;f2;9;8;9;;C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js;f2;19;8;19;;C:\OpenServer\domains\savchenkoPortfolio\js\meetAStar.js;f2;9;8;9;;C:\OpenServer\domains\savchenkoPortfolio\js\jquery.bxslider.js;f22;109;28;109;;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-2.1.4.min.js;f232;1;238;1;;C:\OpenServer\domains\savchenkoPortfolio\js\jquery-1.11.3.min.js;f232;1;238;1;;C:\OpenServer\domains\savchenkoPortfolio\js\index.js;f2;27;8;27;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				<treenode node="attachEvent;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\html5shiv\html5shiv-printshiv.js;f20;338;31;338;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="html5;JS:JS Var Name;C:\OpenServer\domains\savchenkoPortfolio\js\html5shiv\html5shiv.js;f9;316;14;316;;C:\OpenServer\domains\savchenkoPortfolio\js\html5shiv\html5shiv-printshiv.js;f9;316;14;316;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -14111,15 +14047,7 @@
 		</scsstree>
 		<lesstree>
 		</lesstree>
-	</codestructure><cakedata>
-	</cakedata>
-	<dplmenupath>
-	</dplmenupath><laravael>
-	</laravael><smartyassings>
-	</smartyassings><twigtemplate>
-	</twigtemplate><yiidata>
-	</yiidata>
-	<todoblock>
+	</codestructure><todoblock>
 		<todofile name="C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js">
 			<todo name="TODO: remove support for widgetEventPrefix" pos="3;424"/>
 			<todo name="TODO: make sure destroying one instance of mouse doesn't mess with" pos="2;900"/>
@@ -14157,7 +14085,7 @@
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\workExemples.js" crc="-1292604113"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\travelingCompany.js" crc="-2006246584"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\summary.js" crc="-572933822"/>
-		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js" crc="402037236"/>
+		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\starWarsCharacters.js" crc="940417913"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWordsLoaded.js" crc="-1728211276"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\repeatTheWords.js" crc="-136142657"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\queryLoader.js" crc="1216576748"/>
@@ -14167,9 +14095,9 @@
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\jquery-1.11.3.min.js" crc="-1822063090"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\index.js" crc="-1802055720"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\contacts.js" crc="1816087709"/>
-		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\common.js" crc="1053506393"/>
+		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\common.js" crc="-428144545"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\404.js" crc="676278455"/>
-		<file name="C:\OpenServer\domains\savchenkoPortfolio\css\style.css" crc="-773649255"/>
+		<file name="C:\OpenServer\domains\savchenkoPortfolio\css\style.css" crc="2138118130"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\css\queryLoader.css" crc="1916208210"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\css\jquery.bxslider.css" crc="538502716"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\.htaccess" crc="516357713"/>

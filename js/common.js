@@ -1208,28 +1208,6 @@ LoadNewCelebrities.prototype.load = function(){
 }
 
 /*
-  The class Hover makes soft color animation.
-  It adopts an element selector(string), a final color(string) and an animation time(number).
-*/
-function Hover(elementSelector, finalColor, nativeColor, animTime){
-  this.animatedElem = document.body.querySelector(elementSelector);
-  this.finalColor = finalColor;
-  this.nativeColor = nativeColor;
-  this.animTime = animTime;
-}
-Hover.prototype.animation = function(){
-  var self = this;
-  
-  $(this.animatedElem).mouseenter(function(event){
-    $(self.animatedElem).animate({backgroundColor: self.finalColor}, self.animTime);
-  });
-
-  $(self.animatedElem).mouseleave(function(){
-    $(self.animatedElem).animate({backgroundColor: self.nativeColor}, self.animTime);
-  });
-}
-
-/*
   Class RedioReplacer replaces radio-buttons by pretty images.
 */
 function RedioReplacer(buttonsName, divIdentifier){
@@ -1314,39 +1292,3 @@ DripdownLnks.prototype.makePlace = function(){
     'left':$(self.targetedLink).width() + 'px'
   });
 }
-/*
-  Class ListItemDecorating adopts element class name and decorates it's children.
-  The class adopts class name.
-*/
-/*
-function ListItemDecorating(className){
-  this.className = className;
-}
-ListItemDecorating.prototype.run = function(){
-  var self = this;
-
-  $('div').mousemove(function(){
-  
-    var element = $(this);
-    
-    if( $(element).attr('class') == self.className ){
-      var children = $(element).children();
-      var caption = children[0];
-      var description = children[1];
-      $(caption).css({'background-color':'rgba(0,210,255, 0.1'});
-    }
-  });
-  $('div').mouseout(function(){
-    
-    var element = $(this);
-    
-    if( $(element).attr('class') == self.className ){
-      var children = $(element).children();
-      var caption = children[0];
-      var description = children[1];
-      $(caption).css({'background-color':''});
-      $(description).css({'text-decoration':''});
-    }
-  });
-}
-*/

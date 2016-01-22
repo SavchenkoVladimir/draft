@@ -4,9 +4,8 @@
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\css\style.css"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\common.js"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\html\starWarsCharacters.html"/>
+		<file name="C:\OpenServer\domains\savchenkoPortfolio\html\index.html"/>
 	</lastopfiles>
-	<errors version="5.3">
-	</errors>
 	<codestructure version="5.8">
 		<phptree>
 			<treenode node="_REQUEST;PHP:Var Name;C:\OpenServer\domains\savchenkoPortfolio\php\contactsHandle.php;f11;1;20;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -14048,15 +14047,7 @@
 		</scsstree>
 		<lesstree>
 		</lesstree>
-	</codestructure><cakedata>
-	</cakedata>
-	<dplmenupath>
-	</dplmenupath><laravael>
-	</laravael><smartyassings>
-	</smartyassings><twigtemplate>
-	</twigtemplate><yiidata>
-	</yiidata>
-	<todoblock>
+	</codestructure><todoblock>
 		<todofile name="C:\OpenServer\domains\savchenkoPortfolio\js\jquery-ui-1.11.4\jquery-ui.js">
 			<todo name="TODO: remove support for widgetEventPrefix" pos="3;424"/>
 			<todo name="TODO: make sure destroying one instance of mouse doesn't mess with" pos="2;900"/>
@@ -14106,7 +14097,7 @@
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\contacts.js" crc="1816087709"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\common.js" crc="-428144545"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\js\404.js" crc="676278455"/>
-		<file name="C:\OpenServer\domains\savchenkoPortfolio\css\style.css" crc="-89006052"/>
+		<file name="C:\OpenServer\domains\savchenkoPortfolio\css\style.css" crc="2138118130"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\css\queryLoader.css" crc="1916208210"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\css\jquery.bxslider.css" crc="538502716"/>
 		<file name="C:\OpenServer\domains\savchenkoPortfolio\.htaccess" crc="516357713"/>

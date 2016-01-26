@@ -64,6 +64,7 @@ div.star
   {
     border: 0;
     width: 100%;
+/*    min-width: 970px;*/
     padding: 0;
     position: relative;
     margin-top: 60px;
@@ -394,6 +395,7 @@ div.star
       padding: 15px;
       background-color: rgb(255, 255, 255);
       font-weight: bolder;
+      border-radius: 10px;
     }
       p.addressType
       {
@@ -1455,11 +1457,12 @@ div.star
   }
     header.starWarsCharackters
     {
-    width: 100%;
-    min-width: 970px;
-    height: 360px;
-    margin: 0;
-  }
+      width: 100%;
+      min-width: 970px;
+      height: 360px;
+      margin: 0;
+      background-color: rgb(21,21,21);
+    }
     div.starWarsLogo
     {
       height: 295px;
@@ -1467,16 +1470,19 @@ div.star
       background-position: top;
       background-repeat: no-repeat;
       background-color: rgb(21,21,21);
+      position: relative;
     }
        div.headerWrapper
       {
         height: 295px;
+        max-width: 1600px;
         margin: auto;
+        position: relative;
       }
         div#sw_headerBlur_right,
         div#sw_headerBlur_left
         {
-          height: 295px;
+          height: 100%;
           width: 215px;
           position: relative;      
         }
@@ -1501,8 +1507,10 @@ div.star
         div.socialHeader
         {
           padding: 40px 0 0 0;
+          position: relative;
         }
-          div.socialHeader > ul > li
+          div.socialHeader > ul > li,
+          div.swSocialHeaderDeputy > ul > li
           {
             list-style: none;
             list-style-type: none;
@@ -1517,51 +1525,100 @@ div.star
               background-size: 200px;
               margin: 0 0 0 15px;
             }
-              a#sw_tumblrHeader
-              {
-                background-position: -28px 0px;
-              }
-             a#sw_twitterHeader
+            a#sw_tumblrHeader,
+            a#sw_tumblrHeaderDeputy
+            {
+              background-position: -28px 0px;
+            }
+             a#sw_twitterHeader,
+             a#sw_twitterHeaderDeputy
              {
                background-position: -56px 0px;
              }
-             a#sw_instagramHeader
+             a#sw_instagramHeader,
+             a#sw_instagramHeaderDeputy
              {
                background-position: -84px 0px;
              }
-             a#sw_googleHeader
+             a#sw_googleHeader,
+             a#sw_googleHeaderDeputy
              {
                background-position: -112px 0px;
              }
-             a#sw_youtubeHeader
+             a#sw_youtubeHeader,
+             a#sw_youtubeHeaderDeputy
              {
-               background-position: -140px 0px;
+               background-position: -142px 0px;
              }
-        div.swlogo > a
+        div.swlogo
         {
-          display: block;
+          position: relative; 
+        }
+        div.swlogo > div
+        {
           width: 350px;
           height: 150px;
           margin: auto;
           background-image: url('../img/starWars/sw_logo.png');
-          background-position: center;
-          background-size: cover;
-        }      
-    nav.starWarsCharackters
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: relative;          
+        }
+        div.swHeaderDeputy
+        {
+          display: none;
+          width: 100%;
+          height: 163px;
+          padding: 10px 0 0 0;
+          background-color: rgb(21, 21, 21);
+          position: fixed;
+          top: 0;
+          z-index: 50;
+        }
+      div.swHeaderDeputyWrapper
+      {
+        width: 970px;
+        height: 95px;
+        margin: auto;
+      }
+        div.swSocialHeaderDeputy > ul > li > a
+        {
+          display: block;
+          width: 30px;
+          height: 30px;
+          background-image: url('../img/starWars/social_sprite.png');
+          background-size: 200px;
+          margin: 0 0 0 15px;
+        }
+          div.swHeaderDeputyLogo
+          {
+            width: 250px;
+            height: 90%;
+            margin: auto;
+            background-image: url('../img/starWars/sw_logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+    nav.starWarsCharackters,
+    nav.starWarsCharacktersDeputy
     {
       height: 65px;
       width: 100%;
       background-color: rgb(34, 34, 34);
+      position: relative;
     }
-      ul.starWarsCharackters
+      ul.starWarsCharackters,
+      ul.starWarsCharacktersDeputy
       {
         width: 970px;
         height: inherit;
         border-left: 1px solid rgb(85, 85, 85);
         border-right: 1px solid rgb(85, 85, 85);
         margin: auto;
+        position: relative;
       }
-        ul.starWarsCharackters > li
+        ul.starWarsCharackters > li,
+        ul.starWarsCharacktersDeputy > li
         {
           width: 12.5%;
           height: inherit;
@@ -1569,8 +1626,10 @@ div.star
           list-style-type: none;
           display: block;
           float: left;
+          position: relative;
         }
-          ul.starWarsCharackters > li > a
+          ul.starWarsCharackters > li > a,
+          ul.starWarsCharacktersDeputy > li > a
           {
             display: block;
             margin: 1px 0 0 0;
@@ -1583,47 +1642,57 @@ div.star
             font-size: 0.8em;
             border-right: 1px solid rgb(85, 85, 85);
             transition: 1s;
-          }
-            ul.starWarsCharackters > li > a:hover
+          }  
+            ul.starWarsCharackters > li > a:hover,
+            ul.starWarsCharacktersDeputy > li > a:hover
             {
               background-color: rgb(10, 10, 10);
             }
-            div.sprite
+            div.sprite,
+            div.spriteDeputy
             {
               width: 44px;
               height: 44px;
               margin: auto;
               background-image: url('../img/starWars/section_icon_sprite.png');
             }
-            a#video > div.sprite
+            a#video > div.sprite,
+            a#videoDeputy > div.spriteDeputy
             {
               background-position: -44px 0px; 
             }
-            a#events > div.sprite
+            a#events > div.sprite,
+            a#eventsDeputy > div.spriteDeputy
             {
               background-position: -88px 0px;
             }
-            a#films > div.sprite
+            a#films > div.sprite,
+            a#filmsDeputy > div.spriteDeputy
             {
               background-position: -132px 0px;
             } 
-            a#tvShows > div.sprite
+            a#tvShows > div.sprite,
+            a#tvShowsDeputy > div.spriteDeputy
             {
               background-position: -176px 0px;
             }
-            a#games > div.sprite
+            a#games > div.sprite,
+            a#gamesDeputy > div.spriteDeputy
             {
              background-position: -220px 0px;
             }
-            a#community > div.sprite
+            a#community > div.sprite,
+            a#communityDeputy > div.spriteDeputy
             {
               background-position: -264px 0px;
             }
-            a#characters > div.sprite
+            a#characters > div.sprite,
+            a#charactersDeputy > div.spriteDeputy
             {
               background-position: -308px 0px;
             }
-            a#characters
+            a#characters,
+            a#charactersDeputy
             {
               border-right-width: 0;
             }
@@ -1657,28 +1726,28 @@ div.star
       div.famousCharachters > div
       {
       width: 400px;
-      height: 125px;
-      border-radius: 7px;
-      margin: 15px 0 0 15px;
+      height: 135px;
+      border-radius: 8px;
+      margin: 10px 0 0 15px;
       overflow: hidden;
     }
       div.famousCharachters > div > a > img
       {
         width: 150px;
-        height: 125px;
+        height: 135px;
       }
       div.sw_blur
       {
-	  	width: 250px;
-	  	height: 125px;
-	  	background: -webkit-linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
-	  	background: -moz-linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
-	  	background: -ms-linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
-	  	background: -o-linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
-	  	background: -linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
-	  	position: absolute;
-	  	z-index: 1;	  	
-	  }
+      width: 250px;
+      height: 135px;
+      background: -webkit-linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
+      background: -moz-linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
+      background: -ms-linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
+      background: -o-linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
+      background: -linear-gradient(top, rgba(34, 34, 34, 0) 60%, rgba(34, 34, 34, 1) 99%);
+      position: absolute;
+      z-index: 1;      
+    }
       div.famousCharachters > div > div
       {
         width: 250px;

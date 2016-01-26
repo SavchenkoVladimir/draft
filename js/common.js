@@ -65,7 +65,7 @@ function softDisplaying(elemSelector, time){
   The class  GlueElementTop keeps element visible on the top of screen. It adopts element id.
 */
 function GlueElementTop(elementId){
-  this.element = document.getElementById(elementId);
+  this.element = document.getElementById(elementId);  
   this.elementMetrics = getComputedStyle(this.element);
   this.marginTop = this.elementMetrics.marginTop;
   this.elementHeight = this.elementMetrics.height;
@@ -206,7 +206,7 @@ function DescribeRef(refSelector, descrAddress){
   this.windowWidth;
   this.windowHeight;
 }
-/* This method defines reference's coordinates and depict a hint under or over the reference depend on top and left value. */
+/* This method defines reference's coordinates and depict a hint under or over the reference depend on top and left value.*/
 DescribeRef.prototype.depict = function(){
   var self = this;
   
@@ -322,7 +322,7 @@ MakingContactsPage.prototype.loadPage = function(){
       url: self.pageAddress,
       dataType: 'html',
       async: true,
-      timeout: 10000,
+      timeout: 10000
     });
     $.ajax({
       success: function(data){
@@ -351,11 +351,14 @@ MakingContactsPage.prototype.displayPage = function(coverSelector, pageSelector)
 MakingContactsPage.prototype.makeSize = function(){
 
   if( $(window).width() > 700 ){
-    $(this.page).css({'margin-left': $(window).width()/4, 'margin-top': '5%', 'border-radius': '10px'});
+    $(this.page).css({'margin-left': $(window).width()/4, 'margin-top': '5%'});
     $('body').css('overflow-x', 'hidden');
   }
   if( $(window).height() > 700 ){
     $('body').css('overflow-y', 'hidden');
+  }
+  if( $(window).width() < 700){
+    $(this.cover).css('width', '970px');
   }
   $(this.cover).css('height', $('body').height());
 }
@@ -370,7 +373,7 @@ MakingContactsPage.prototype.loadScripts = function(scriptsAddress){
     async: true,
     url: self.scripsAddress,
     dataType: 'script',
-    timeout: 10000,
+    timeout: 10000
   });
   $.ajax({
     error: function(){
@@ -484,7 +487,7 @@ MakingContactsPage.prototype.send = function(handlerAddress, respContId){
       dataType: 'text',
       url: handlerAddress,
       timeout: 15000,
-      async: true,
+      async: true
     });
     $.ajax({      
       success: function(data){
@@ -606,7 +609,7 @@ RepeatTheWords.prototype.load = function(buttonIdentifyer, scriptsAddress){
       async: true,
       url: self.address,
       dataType: 'html',
-      timeout: 10000,
+      timeout: 10000
     });
     $.ajax({
       success: function(data){        
@@ -625,7 +628,7 @@ RepeatTheWords.prototype.load = function(buttonIdentifyer, scriptsAddress){
       async: true,
       url: self.scriptsAddress,
       dataType: 'script',
-      timeout: 10000,
+      timeout: 10000
     });
     $.ajax({
       error: function(){
@@ -942,12 +945,12 @@ IncreaseElement.prototype.animate = function(){
         self.writeName();
         self.animateName();
           
-        $(this.elementTarget).css({'position':'relative', 'z-index':999,});
+        $(this.elementTarget).css({'position':'relative', 'z-index':999});
         $(this.elementTarget).animate({
           'width':'230px', 
           'height':'230px',
           'border-radius':'7px',
-          'margin-top':'-50px',        
+          'margin-top':'-50px'        
         }, 500);
         $(this.elementTarget).animate({}, 500);
         
@@ -963,7 +966,7 @@ IncreaseElement.prototype.animate = function(){
         'height':'230px',
         'border-radius':'7px',
         'margin-top':'-50px',        
-        'margin-left':'-50px',          
+        'margin-left':'-50px'          
       }, 500);
       $(this.elementTarget).animate({}, 500);
       
@@ -978,7 +981,7 @@ IncreaseElement.prototype.animate = function(){
         'width':'230px', 
         'height':'230px',        
         'border-radius':'7px',
-        'margin-left':'-50px',
+        'margin-left':'-50px'
       }, 500);
       $(this.elementTarget).animate({}, 500);
       
@@ -991,7 +994,7 @@ IncreaseElement.prototype.animate = function(){
       $(this.elementTarget).animate({
         'width':'230px', 
         'height':'230px',         
-        'border-radius':'7px',
+        'border-radius':'7px'
       }, 500);        
     }    
   });
@@ -1010,7 +1013,7 @@ IncreaseElement.prototype.decrease = function(){
         'width':'180px', 
         'height':'180px',         
         'border-radius':'0',
-        'margin':'0',
+        'margin':'0'
       }, 500);
       $(this.elementTarget).css('position', 'static');
       $(this.elementTarget).css('z-index', 0);
@@ -1086,7 +1089,7 @@ FillTheArticle.prototype.load = function(address, errorPageAddress){
     async: true,
     url: self.address,
     timeout: 10000,
-    dataType: 'json',
+    dataType: 'json'
   });
   
   $.ajax({
@@ -1095,7 +1098,7 @@ FillTheArticle.prototype.load = function(address, errorPageAddress){
     },
     error: function(){
       window.location = self.errorPageAddress;
-    },
+    }
   });
 }
 FillTheArticle.prototype.fill = function(data){
@@ -1152,7 +1155,7 @@ FillTheArticle.prototype.refresh = function(buttName, contName, address, errorPa
         async: true,
         url: self.address,
         dataType: 'json',
-        timeout: 10000,
+        timeout: 10000
       });
       $.ajax({
         success: function(data){
@@ -1192,7 +1195,7 @@ LoadNewCelebrities.prototype.load = function(){
         async: true,
         url: self.address,
         dataType: 'json',
-        timeout: 10000,
+        timeout: 10000
       });
       $.ajax({
         success: function(data){
@@ -1292,3 +1295,160 @@ DripdownLnks.prototype.makePlace = function(){
     'left':$(self.targetedLink).width() + 'px'
   });
 }
+/*
+  The class ListCharacters fills a container with characters links by AJAX method.
+*/
+function ListCharacters(contSelector, dataAddress, errorPageAddress, characterClass, textContClass){
+  this.container = document.body.querySelector('article.starWarsCharackters');
+  this.dataAddress = dataAddress;
+  this.errorPageAddress = errorPageAddress;
+  this.dataArray;
+  this.charachter;
+  this.characterClass = characterClass;
+  this.link_;
+  this.img;
+  this.textCont;
+  this.textContClass = textContClass;
+  this.paragraph;
+  this.div;
+}
+/* The method firstDownload downloads first 15 charachters and execute the fill method during the page is primary downloaded. */
+ListCharacters.prototype.firstDownload = function(){
+  var self = this;
+
+  $.ajaxSetup({
+    type: 'POST',
+    async: true,
+    url: self.dataAddress,
+    timeout: 10000,
+    dataType: 'json'
+  });
+  
+  $.ajax({
+    success: function(data){
+      self.fill(data);
+    },
+    error: function(){
+      window.location = self.errorPageAddress;
+    }
+  }); 
+}
+/* The method fill adopts the received data, parse thim to array and depicts them. */
+ListCharacters.prototype.fill = function(data){
+  var self = this;
+  this.dataArray = JSON.parse(data)
+  
+  for( var i = 0; i < this.dataArray.length; i++ ){
+    
+    self.charachter = document.createElement('div');
+    $(self.charachter).attr('class', self.characterClass);
+    
+    self.link_ = document.createElement('a');
+    $(self.link_).attr('href', self.dataArray[i][0]);
+    $(self.charachter).append(self.link_);
+    
+    self.img =document.createElement('img');
+    $(self.img).attr('src', self.dataArray[i][1]);
+    $(self.img).attr('alt', self.dataArray[i][2]);
+    $(self.link_).append(self.img);
+    
+    self.textCont = document.createElement('div');
+    $(self.textCont).attr('class', self.textContClass);
+    $(self.charachter).append(self.textCont);
+    
+    self.paragraph = document.createElement('p');
+    $(self.paragraph).html(self.dataArray[i][2]);
+    $(self.textCont).append(self.paragraph);
+    
+    self.div = document.createElement('div');
+    $(self.textCont).append(self.div);
+    
+    $(self.container).append(self.charachter);
+  }
+}
+
+/*
+  The class ChangeHeader changes header depends on scrolling position.
+*/
+function ChangeHeader(blockIdentifier){
+  this.block = document.body.querySelector(blockIdentifier);
+  this.shrinkedElement;
+  this.elementsCollection = [];
+  this.parentElement = this.block.parentElement;
+}
+/* The method transparencyChange changes transparency level depends on scrolling position. */
+ChangeHeader.prototype.transparencyChange = function(){
+  var self = this; 
+
+  $(document).scroll(function(){
+    if(window.pageYOffset < 200){
+      $(self.block).css('opacity', ( (0.09 * 295) / window.pageYOffset ) );
+    }
+    if(!window.pageYOffset){
+      $(self.block).css('opacity', 1);
+    }
+  });
+}
+/* The method shrinkElement shrinks an element depends on scrolling position. */
+ChangeHeader.prototype.shrinkElement = function(elementIdentifier, chidrenIdentArray){
+  var self = this;
+  this.shrinkedElement = document.body.querySelector(elementIdentifier);
+  for( var i = 0; i < chidrenIdentArray.length; i++ ){
+    this.elementsCollection[i] = document.body.querySelector(chidrenIdentArray[i]);    
+  }
+
+  $(document).scroll(function(){
+    if(window.pageYOffset <= 120){
+      
+      $('header.starWarsCharackters').css({'height': 361 - window.pageYOffset});
+      
+      for( var i = 0; i < self.elementsCollection.length; i++ ){
+        $(self.elementsCollection[i]).css({'height': 295 - window.pageYOffset});  
+      }
+     
+      $(self.shrinkedElement).css({
+        'height': (150 - window.pageYOffset), 
+        'width': (350 - (window.pageYOffset * 2)),
+        'margin-top': (window.pageYOffset / 2)
+      });
+      
+      $('div.swHeaderDeputy').css('display', '');    
+    }
+    
+    if(window.pageYOffset > 93.5){
+      $('div.swHeaderDeputy').css('display', 'block');
+    }
+  });
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
